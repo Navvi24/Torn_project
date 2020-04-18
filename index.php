@@ -28,7 +28,7 @@
 
       <style>
 .dropbtn {
-  background-color: #173EF1;
+  background-color: #6c63ff;
   color: white;
   padding: 10px;
   font-size: 14px;
@@ -77,15 +77,15 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">Our Story</a></li>
+	          <li class="nav-item"><a href="our-story.php" class="nav-link">Our Story</a></li>
 	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
 	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact Us</a></li><br><br>
-	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post A JOB</a></button></div></li>&nbsp;&nbsp;
-            <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want A JOB</button>
+	          <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li><br><br>
+	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post Internship</a></button></div></li>&nbsp;&nbsp;
+            <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want Internship</button>
               <div class="dropdown-content">
                   <a href="login.php">Login</a>
-                  <a href="#">Signup</a>
+                  <a href="signup.php">Signup</a>
               </div>
           </div>
           </li>
@@ -102,8 +102,8 @@
 	      	<img class="one-third align-self-end order-md-last img-fluid" src="images/undraw_work_time_lhoj.svg" alt="">
 	        <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
 	        	<div class="text mt-5">
-	        		<p class="mb-4 mt-5 pt-5">We have <span class="number" data-number="200000">0</span> great job offers you deserve!</p>
-	            <h1 class="mb-5">Largets Job Site In The World</h1>
+	        		<p class="mb-4 mt-5 pt-5">We have <span class="number" data-number="200000">0</span> great internships offers you deserve!</p>
+	            <h1 class="mb-5">Largest Internship Site In The World</h1>
 
 
 	          </div>
@@ -119,7 +119,7 @@
             <div class="media block-6 services d-block">
               <div class="icon"><span class="flaticon-resume"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Search Millions of Jobs</h3>
+                <h3 class="heading mb-3">Search Millions of Internships</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
             </div>
@@ -128,7 +128,7 @@
             <div class="media block-6 services d-block">
               <div class="icon"><span class="flaticon-collaboration"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Easy To Manage Jobs</h3>
+                <h3 class="heading mb-3">Easy To Manage Internships</h3>
                 <p>A small river named Duden flows by their place and supplies.</p>
               </div>
             </div>
@@ -163,8 +163,8 @@
     			<div class="col-md-6">
     				<div class="browse-job p-5">
     					<span class="icon-search2 icon"></span>
-    					<span class="subheading">Search Job</span>
-    					<h2>Browse Job by Specialism</h2>
+    					<span class="subheading">Search Internship</span>
+    					<h2>Browse Internship by Specialism</h2>
     					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
     				</div>
     			</div>
@@ -178,8 +178,8 @@
 					<div class="col-lg-12 pr-lg-5">
 						<div class="row justify-content-center pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<span class="subheading">Recently Added Jobs</span>
-		            <h2 class="mb-4">Hot Jobs</h2>
+		          	<span class="subheading">Recently Added Internships</span>
+		            <h2 class="mb-4">Hot Internships</h2>
 		          </div>
 		        </div>
 						<div class="row">
@@ -427,18 +427,18 @@
     		<div class="row justify-content-center">
     			<div class="col-md-12">
 		    		<div class="row">
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
 		              	<div class="icon">
 		              		<span class="flaticon-employee"></span>
 		              	</div>
 		                <strong class="number" data-number="435000">0</strong>
-		                <span>Jobs</span>
+		                <span>Internships</span>
 		              </div>
 		            </div>
 		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
 		              	<div class="icon">
@@ -449,18 +449,7 @@
 		              </div>
 		            </div>
 		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		              	<div class="icon">
-		              		<span class="flaticon-resume"></span>
-		              	</div>
-		                <strong class="number" data-number="30000">0</strong>
-		                <span>Resume</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
 		              	<div class="icon">
@@ -593,8 +582,8 @@
         <div class="row mb-5">
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">Our Motto</h2>
+              <p>STOP RUNNING, WE'VE GOT YOU</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -604,27 +593,14 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Employers</h2>
+              <h2 class="ftco-heading-2">Navigate</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">How it works</a></li>
-                <li><a href="#" class="py-2 d-block">Register</a></li>
-                <li><a href="#" class="py-2 d-block">Post a Job</a></li>
-                <li><a href="#" class="py-2 d-block">Advance Skill Search</a></li>
-                <li><a href="#" class="py-2 d-block">Recruiting Service</a></li>
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
-                <li><a href="#" class="py-2 d-block">Faq</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Workers</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">How it works</a></li>
-                <li><a href="#" class="py-2 d-block">Register</a></li>
-                <li><a href="#" class="py-2 d-block">Post Your Skills</a></li>
-                <li><a href="#" class="py-2 d-block">Job Search</a></li>
-                <li><a href="#" class="py-2 d-block">Emploer Search</a></li>
+                <li><a href="index.php" class="py-2 d-block">Home</a></li>
+               <li><a href="our-story.php" class="py-2 d-block">Our Story</a></li>
+               <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
+               <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+
               </ul>
             </div>
           </div>

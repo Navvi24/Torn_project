@@ -38,12 +38,12 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="our-story.php" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Canditates</a></li>
 	          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta mr-md-1"><a href="new-post.php" class="nav-link">Post a Job</a></li>
-	          <li class="nav-item cta cta-colored"><a href="job-post.php" class="nav-link">Want a Job</a></li>
+	          <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta mr-md-1"><a href="new-post.php" class="nav-link">Post Internship</a></li>
+	          <li class="nav-item cta cta-colored"><a href="job-post.php" class="nav-link">Want Internship</a></li>
 
 	        </ul>
 	      </div>
@@ -302,7 +302,7 @@
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
+              <h2>Subscribe to Internship</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
@@ -340,7 +340,7 @@
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">How it works</a></li>
                 <li><a href="#" class="py-2 d-block">Register</a></li>
-                <li><a href="#" class="py-2 d-block">Post a Job</a></li>
+                <li><a href="#" class="py-2 d-block">Post Internship</a></li>
                 <li><a href="#" class="py-2 d-block">Advance Skill Search</a></li>
                 <li><a href="#" class="py-2 d-block">Recruiting Service</a></li>
                 <li><a href="#" class="py-2 d-block">Blog</a></li>

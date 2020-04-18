@@ -28,7 +28,7 @@
 
       <style>
 .dropbtn {
-  background-color: #173EF1;
+  background-color: #6c63ff;
   color: white;
   padding: 10px;
   font-size: 14px;
@@ -76,16 +76,16 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item "><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">Our Story</a></li>
+	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="our-story.php" class="nav-link">Our Story</a></li>
 	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
 	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
-	          <li class="nav-item active"><a href="contact.php" class="nav-link">Contact Us</a></li><br><br>
-	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post A JOB</a></button></div></li>&nbsp;&nbsp;
-            <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want A JOB</button>
+	          <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li><br><br>
+	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post Internship</a></button></div></li>&nbsp;&nbsp;
+            <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want Internship</button>
               <div class="dropdown-content">
                   <a href="login.php">Login</a>
-                  <a href="#">Signup</a>
+                  <a href="signup.php">Signup</a>
               </div>
           </div>
           </li>
@@ -100,68 +100,57 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
           <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
-          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact</span></p>
-            <h1 class="mb-3 bread">Contact Us</h1>
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Signup</span></p>
+            <h1 class="mb-3 bread">Signup</h1>
+            <p class="breadcrumbs mb-0"><span>Students/Intern Signup Only</span></p>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="ftco-section contact-section bg-light">
+    <div class="ftco-section bg-light">
       <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h3">Contact Information</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3">
-            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-          </div>
-        </div>
-        <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+        <div class="row">
+
+          <div class="col-md-12 col-lg-12 mb-5">
+
+			     <form action="#" class="p-5 bg-white">
+             <h1>Signup Here</h1>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="username">Enter Your Email</label>
+                  <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="password">Enter Your Password</label>
+                  <input type="password" id="fullname" class="form-control" placeholder="Enter your password" name="password" required>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="cnfpassword">Confirm Password</label>
+                  <input type="password" id="fullname" class="form-control" placeholder="Re-type password" name="pass_retype" required>
+                </div>
               </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Signup" class="btn btn-primary  py-2 px-5">
+                </div>
               </div>
             </form>
-
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
 		<section class="ftco-section-parallax">
       <div class="parallax-img d-flex align-items-center">
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
+              <h2>Subscribe to Internship</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
@@ -184,8 +173,8 @@
         <div class="row mb-5">
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">Our Motto</h2>
+              <p>STOP RUNNING, WE'VE GOT YOU</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -195,27 +184,14 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Employers</h2>
+              <h2 class="ftco-heading-2">Navigate</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">How it works</a></li>
-                <li><a href="#" class="py-2 d-block">Register</a></li>
-                <li><a href="#" class="py-2 d-block">Post a Job</a></li>
-                <li><a href="#" class="py-2 d-block">Advance Skill Search</a></li>
-                <li><a href="#" class="py-2 d-block">Recruiting Service</a></li>
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
-                <li><a href="#" class="py-2 d-block">Faq</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Workers</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">How it works</a></li>
-                <li><a href="#" class="py-2 d-block">Register</a></li>
-                <li><a href="#" class="py-2 d-block">Post Your Skills</a></li>
-                <li><a href="#" class="py-2 d-block">Job Search</a></li>
-                <li><a href="#" class="py-2 d-block">Emploer Search</a></li>
+                <li><a href="index.php" class="py-2 d-block">Home</a></li>
+               <li><a href="our-story.php" class="py-2 d-block">Our Story</a></li>
+               <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
+               <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+
               </ul>
             </div>
           </div>
@@ -242,7 +218,6 @@
         </div>
       </div>
     </footer>
-
 
 
   <!-- loader -->

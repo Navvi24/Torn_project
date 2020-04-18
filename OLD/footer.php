@@ -18,7 +18,7 @@
           <ul class="list-unstyled">
             <li><a href="#" class="py-2 d-block">How it works</a></li>
             <li><a href="#" class="py-2 d-block">Register</a></li>
-            <li><a href="#" class="py-2 d-block">Post a Job</a></li>
+            <li><a href="#" class="py-2 d-block">Post Internship</a></li>
             <li><a href="#" class="py-2 d-block">Advance Skill Search</a></li>
             <li><a href="#" class="py-2 d-block">Recruiting Service</a></li>
             <li><a href="#" class="py-2 d-block">Blog</a></li>

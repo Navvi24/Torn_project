@@ -40,12 +40,12 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">Our Story</a></li>
+	          <li class="nav-item"><a href="our-story.php" class="nav-link">Our Story</a></li>
 	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
 	          <!--<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact Us</a></li>
-	          <li class="nav-item cta mr-md-1"><a href="new-post.php" class="nav-link">Post a Job</a></li>
-	          <li class="nav-item cta cta-colored"><a href="job-post.php" class="nav-link">Want a Job</a></li>
+	          <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li>
+	          <li class="nav-item cta mr-md-1"><a href="new-post.php" class="nav-link">Post Internship</a></li>
+	          <li class="nav-item cta cta-colored"><a href="job-post.php" class="nav-link">Want Internship</a></li>
 	        </ul>
 	      </div>
 	    </div>
