@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>TORM</title>
-    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+ <head>
+    <title>TORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,6 +26,44 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+      <style>
+.dropbtn {
+  background-color: #173EF1;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+
   </head>
   <body>
 
@@ -42,20 +79,21 @@
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">Our Story</a></li>
 	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
-	          <!--<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact Us</a></li>
-	          <li class="nav-item cta mr-md-1"><a href="new-post.php" class="nav-link">Post a Job</a></li>
-	          <li class="nav-item cta cta-colored"><a href="job-post.php" class="nav-link">Want a Job</a></li>
-
+	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact Us</a></li><br><br>
+	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post A JOB</a></button></div></li>&nbsp;&nbsp;
+            <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want A JOB</button>
+              <div class="dropdown-content">
+                  <a href="login.php">Login</a>
+                  <a href="#">Signup</a>
+              </div>
+          </div>
+          </li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-    </body>
-</html>
-
-
 
     <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -138,7 +176,8 @@
               <div class="row form-group mb-4">
                 <div class="col-md-12"><h3>Location</h3></div>
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <input type="text" class="form-control" placeholder="Western City, UK">
+                  <input type="text" class="form-control" placeholder="Western City, UK
+">
                 </div>
               </div>
 

@@ -77,14 +77,14 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="our-story.php" class="nav-link">Our Story</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">Our Story</a></li>
 	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
 	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
-	          <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li><br><br>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact Us</a></li><br><br>
 	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post A JOB</a></button></div></li>&nbsp;&nbsp;
             <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want A JOB</button>
               <div class="dropdown-content">
-                  <a href="#">Login</a>
+                  <a href="login.php">Login</a>
                   <a href="#">Signup</a>
               </div>
           </div>
@@ -558,136 +558,6 @@
                     <span class="position">System Analyst</span>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section ftco-candidates bg-primary">
-    	<div class="container">
-    		<div class="row justify-content-center pb-3">
-          <div class="col-md-10 heading-section heading-section-white text-center ftco-animate">
-          	<span class="subheading">Candidates</span>
-            <h2 class="mb-4">Latest Candidates</h2>
-          </div>
-        </div>
-    	</div>
-    	<div class="container">
-        <div class="row">
-        	<div class="col-md-12 ftco-animate">
-        		<div class="carousel-candidates owl-carousel">
-        			<div class="item">
-		        		<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_1.jpg);"></div>
-		        			<h2>Danica Lewis</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-        			</div>
-        			<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-		        			<h2>Nicole Simon</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_3.jpg);"></div>
-		        			<h2>Cloe Meyer</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_4.jpg);"></div>
-		        			<h2>Rachel Clinton</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_5.jpg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(images/person_6.jpg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-        		</div>
-        	</div>
-        </div>
-    	</div>
-    </section>
-
-    <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Our Blog</span>
-            <h2><span>Recent</span> Blog</h2>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text mt-3">
-              	<div class="meta mb-2">
-                  <div><a href="#">May 3, 2019</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text mt-3">
-              	<div class="meta mb-2">
-                  <div><a href="#">May 3, 2019</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text mt-3">
-              	<div class="meta mb-2">
-                  <div><a href="#">May 3, 2019</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_4.jpg');">
-              </a>
-              <div class="text mt-3">
-              	<div class="meta mb-2">
-                  <div><a href="#">May 3, 2019</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
               </div>
             </div>
           </div>

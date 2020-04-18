@@ -78,13 +78,13 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item "><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="our-story.php" class="nav-link">Our Story</a></li>
-	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
+	          <li class="nav-item"><a href="our-our-clients.php" class="nav-link">Our Clients</a></li>
 	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
 	          <li class="nav-item active"><a href="contact-us.php" class="nav-link">Contact Us</a></li><br><br>
 	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post A JOB</a></button></div></li>&nbsp;&nbsp;
             <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want A JOB</button>
               <div class="dropdown-content">
-                  <a href="#">Login</a>
+                  <a href="login.php">Login</a>
                   <a href="#">Signup</a>
               </div>
           </div>
