@@ -4,12 +4,12 @@
     <title>TORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -21,13 +21,52 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+      <style>
+.dropbtn {
+  background-color: #173EF1;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+
   </head>
   <body>
-    
+
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php"><img src="images/Logo.png" alt="" width="100px" height="72px"></a>
@@ -37,14 +76,19 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="clients.php" class="nav-link">Canditates</a></li>
-	          <li class="nav-item active"><a href="blog.php" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta mr-md-1"><a href="new-post.php" class="nav-link">Post a Job</a></li>
-	          <li class="nav-item cta cta-colored"><a href="job-post.php" class="nav-link">Want a Job</a></li>
-
+	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">Our Story</a></li>
+	          <li class="nav-item"><a href="clients.php" class="nav-link">Our Clients</a></li>
+	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact Us</a></li><br><br>
+	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post A JOB</a></button></div></li>&nbsp;&nbsp;
+            <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want A JOB</button>
+              <div class="dropdown-content">
+                  <a href="#">Login</a>
+                  <a href="#">Signup</a>
+              </div>
+          </div>
+          </li>
 	        </ul>
 	      </div>
 	    </div>
