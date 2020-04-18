@@ -116,6 +116,24 @@
 
 			     <form action="#" class="p-5 bg-white">
              <h1>Signup Here</h1>
+             <div class="row form-group">
+               <div class="col-md-12 mb-3 mb-md-0">
+                 <label class="font-weight-bold" for="firstname">First Name</label>
+                 <input type="text" id="fullname" class="form-control" placeholder="Enter your First Name" name="fname" required>
+               </div>
+             </div>
+             <div class="row form-group">
+               <div class="col-md-12 mb-3 mb-md-0">
+                 <label class="font-weight-bold" for="lastname">Last Name</label>
+                 <input type="text" id="fullname" class="form-control" placeholder="Enter your Last Name" name="lname" required>
+               </div>
+             </div>
+             <div class="row form-group">
+               <div class="col-md-12 mb-3 mb-md-0">
+                 <label class="font-weight-bold" for="phone">Phone</label>
+                 <input type="tel" id="fullname" class="form-control" placeholder="Enter your Phone number" name="fname" required>
+               </div>
+             </div>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="username">Enter Your Email</label>
@@ -132,6 +150,12 @@
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="cnfpassword">Confirm Password</label>
                   <input type="password" id="fullname" class="form-control" placeholder="Re-type password" name="pass_retype" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="firstname">Select Your Resume</label><span> (optional)</span>
+                  <input type="file" id="fullname" class="form-control"  name="resume" accept=".pdf">
                 </div>
               </div>
               <div class="row form-group">
