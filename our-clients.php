@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+  <head>
     <title>TORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -77,10 +77,10 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item "><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">Our Story</a></li>
-	          <li class="nav-item"><a href="clients.php" class="nav-link">Our Clients</a></li>
+	          <li class="nav-item"><a href="our-story.php" class="nav-link">Our Story</a></li>
+	          <li class="nav-item active"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
 	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
-	          <li class="nav-item active"><a href="contact.php" class="nav-link">Contact Us</a></li><br><br>
+	          <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li><br><br>
 	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post A JOB</a></button></div></li>&nbsp;&nbsp;
             <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want A JOB</button>
               <div class="dropdown-content">
@@ -94,66 +94,116 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-
     <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
           <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
-          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact</span></p>
-            <h1 class="mb-3 bread">Contact Us</h1>
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Candidates</span></p>
+            <h1 class="mb-3 bread">Candidates</h1>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="ftco-section contact-section bg-light">
-      <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h3">Contact Information</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3">
-            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+    <section class="ftco-section ftco-candidates ftco-candidates-2 bg-light">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="team d-md-flex">
+        			<div class="img" style="background-image: url(images/person_1.jpg);"></div>
+        			<div class="text pl-md-4">
+        				<span class="location mb-0">Western City, UK</span>
+        				<h2>Danica Lewis</h2>
+	        			<span class="position">Graduate</span>
+	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			<span class="seen">Last Activity 4 months ago</span>
+	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+        			</div>
+        		</div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="team d-md-flex">
+        			<div class="img" style="background-image: url(images/person_2.jpg);"></div>
+        			<div class="text pl-md-4">
+        				<span class="location mb-0">Western City, UK</span>
+        				<h2>Danica Lewis</h2>
+	        			<span class="position">Graduate</span>
+	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			<span class="seen">Last Activity 4 months ago</span>
+	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+        			</div>
+        		</div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="team d-md-flex">
+        			<div class="img" style="background-image: url(images/person_3.jpg);"></div>
+        			<div class="text pl-md-4">
+        				<span class="location mb-0">Western City, UK</span>
+        				<h2>Danica Lewis</h2>
+	        			<span class="position">Graduate</span>
+	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			<span class="seen">Last Activity 4 months ago</span>
+	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+        			</div>
+        		</div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="team d-md-flex">
+        			<div class="img" style="background-image: url(images/person_4.jpg);"></div>
+        			<div class="text pl-md-4">
+        				<span class="location mb-0">Western City, UK</span>
+        				<h2>Danica Lewis</h2>
+	        			<span class="position">Graduate</span>
+	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			<span class="seen">Last Activity 4 months ago</span>
+	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+        			</div>
+        		</div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="team d-md-flex">
+        			<div class="img" style="background-image: url(images/person_5.jpg);"></div>
+        			<div class="text pl-md-4">
+        				<span class="location mb-0">Western City, UK</span>
+        				<h2>Danica Lewis</h2>
+	        			<span class="position">Graduate</span>
+	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			<span class="seen">Last Activity 4 months ago</span>
+	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+        			</div>
+        		</div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="team d-md-flex">
+        			<div class="img" style="background-image: url(images/person_6.jpg);"></div>
+        			<div class="text pl-md-4">
+        				<span class="location mb-0">Western City, UK</span>
+        				<h2>Danica Lewis</h2>
+	        			<span class="position">Graduate</span>
+	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        			<span class="seen">Last Activity 4 months ago</span>
+	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+        			</div>
+        		</div>
+    			</div>
+    		</div>
+    		<div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
-          </div>
-        </div>
-      </div>
+    	</div>
     </section>
 
 		<section class="ftco-section-parallax">
