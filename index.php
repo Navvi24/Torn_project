@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
 
       <style>
 .dropbtn {
@@ -69,7 +69,12 @@
 
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.php"><img src="images/Logo.png" alt="" width="100px" height="72px"></a>
+	      <a class="navbar-brand" href="index.php">
+          <picture>
+            <source srcset="images/Logo_white.png" media="(max-width: 991.98px)">
+            <img src="images/Logo.png" alt="" width="100px" height="72px">
+          </picture>
+        </a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -635,6 +640,7 @@
 
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
