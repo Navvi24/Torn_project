@@ -119,7 +119,7 @@
 
           <div class="col-md-12 col-lg-12 mb-5">
 
-			     <form action="#" class="p-5 bg-white">
+			     <form action="./inputdata/signup_d.php"; class="p-5 bg-white"; method="post";>
              <h1>Signup Here</h1>
              <div class="row form-group">
                <div class="col-md-12 mb-3 mb-md-0">
@@ -136,7 +136,7 @@
              <div class="row form-group">
                <div class="col-md-12 mb-3 mb-md-0">
                  <label class="font-weight-bold" for="phone">Phone</label>
-                 <input type="tel" id="fullname" class="form-control" placeholder="Enter your Phone number" name="fname" required>
+                 <input type="tel" id="fullname" class="form-control" placeholder="Enter your Phone number" name="phn" required>
                </div>
              </div>
               <div class="row form-group">
