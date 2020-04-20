@@ -1,9 +1,10 @@
 <?php
-   require("../connect/connect.php"); 
+   require("../connect/connect.php");
 
 
 $fname    = "";
 $lname    = "";
+$mailerr  ="";
 $phn      = "";
 $email    = "";
 $password = "";
@@ -13,7 +14,7 @@ if(isset($_POST['signup']))
 {
 
 if(!empty($_POST['signup']))
-{ 
+{
     $fname = $_POST['fname'];
         echo $fname;
     $lname = $_POST['lname'];
@@ -26,7 +27,7 @@ if(!empty($_POST['signup']))
         echo $password;
     $pass_retype = $_POST['pass_retype'];
         echo $pass_retype;
-    
+
   }
 }
 
@@ -36,11 +37,11 @@ if(!empty($_POST['signup']))
 
 		if (!mysqli_query($con,$sql)) {
 			$error = "Error: ".mysqli_error($con);
+      header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
         }else{
             $msg = "signup successfully";
             $description = "";
+            header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
         }
-
-header("Location: ../login.php");
 
 ?>

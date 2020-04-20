@@ -116,10 +116,17 @@
     <div class="ftco-section bg-light">
       <div class="container">
         <div class="row">
-
           <div class="col-md-12 col-lg-12 mb-5">
-
 			     <form action="#" class="p-5 bg-white">
+             <?php if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010) {?>
+               <div class="alert alert-success" role="alert">
+                 <?php echo "Signup successfully "; ?>
+               </div>
+             <?php }  else {?>
+               <div class="alert alert-danger" role="alert">
+                   <?php echo "Mail already registered"; ?>
+             </div>
+             <?php } ?>
              <h1>Login Here</h1>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
