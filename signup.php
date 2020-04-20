@@ -30,8 +30,8 @@ require("./connect/connect.php");
     <link rel="stylesheet" href="css/style.css">
 
       <style>
-          
-          
+
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -41,7 +41,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-}          
+}
 .dropbtn {
   background-color: #6c63ff;
   color: white;
@@ -115,7 +115,7 @@ input[type=number] {
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/signup_bg.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -148,20 +148,20 @@ input[type=number] {
                  <input type="text" id="fullname" class="form-control" placeholder="Enter your Last Name" name="lname" required>
                </div>
              </div>
-                     
-                     <script> 
+
+                     <script>
 var maxAmount = 10;
 function textCounter(textField, showCountField) {
     if (textField.value.length > maxAmount) {
         textField.value = textField.value.substring(0, maxAmount);
-	} else { 
+	} else {
         showCountField.value = maxAmount - textField.value.length;
 	}
 }
 </script>
-              
-                     
-                     
+
+
+
              <div class="row form-group">
                <div class="col-md-12 mb-3 mb-md-0">
              <label class="font-weight-bold" for="phone">Phone</label>
@@ -174,7 +174,7 @@ function textCounter(textField, showCountField) {
                   <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
                 </div>
               </div>
-                     
+
                      <script>
                         var check = function() {
   if (document.getElementById('password').value ==
@@ -199,7 +199,7 @@ function textCounter(textField, showCountField) {
         return true;
     }
 </script>
-                     
+
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="password">Enter Your Password</label>
@@ -217,7 +217,7 @@ function textCounter(textField, showCountField) {
                   <label class="font-weight-bold" for="firstname">Select Your Resume</label><span> (optional)</span>
                   <input type="file" id="fullname" class="form-control"  name="resume" accept=".pdf">
                 </div>
-              </div>              
+              </div>
               <div class="row form-group">
                 <div class="col-md-12">
                   <input type="submit"  id="btnSubmit"  value="signup" name="signup" class="btn btn-primary  py-2 px-5" onclick="return Validate()">
