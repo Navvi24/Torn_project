@@ -1,3 +1,6 @@
+<?php
+require("./connect/connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -27,6 +30,18 @@
     <link rel="stylesheet" href="css/style.css">
 
       <style>
+          
+          
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}          
 .dropbtn {
   background-color: #6c63ff;
   color: white;
@@ -133,10 +148,24 @@
                  <input type="text" id="fullname" class="form-control" placeholder="Enter your Last Name" name="lname" required>
                </div>
              </div>
+                     
+                     <script> 
+var maxAmount = 10;
+function textCounter(textField, showCountField) {
+    if (textField.value.length > maxAmount) {
+        textField.value = textField.value.substring(0, maxAmount);
+	} else { 
+        showCountField.value = maxAmount - textField.value.length;
+	}
+}
+</script>
+              
+                     
+                     
              <div class="row form-group">
                <div class="col-md-12 mb-3 mb-md-0">
-                 <label class="font-weight-bold" for="phone">Phone</label>
-                 <input type="tel" id="fullname" class="form-control" placeholder="Enter your Phone number" name="phn" required>
+             <label class="font-weight-bold" for="phone">Phone</label>
+                 <input type="number" id="nmsg" class="form-control" maxlength="10" placeholder="Enter your Phone number" name="phn" onKeyDown="textCounter(this.form.nmsg,this.form.countDisplay);" onKeyUp="textCounter(this.form.nmsg,this.form.countDisplay);" required>
                </div>
              </div>
               <div class="row form-group">
@@ -145,16 +174,42 @@
                   <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
                 </div>
               </div>
+                     
+                     <script>
+                        var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
+  }
+    }
+     </script>
+
+                     <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+                     
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="password">Enter Your Password</label>
-                  <input type="password" id="fullname" class="form-control" placeholder="Enter your password" name="password" required>
+                  <input type="password" id="password" class="form-control" onkeyup='check();' / placeholder="Enter your password" name="password" required>
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="cnfpassword">Confirm Password</label>
-                  <input type="password" id="fullname" class="form-control" placeholder="Re-type password" name="pass_retype" required>
+                  <input type="password" id="confirm_password" class="form-control" onkeyup='check();' / placeholder="Re-type password" name="pass_retype" required><br><span id="message"></span>
                 </div>
               </div>
               <div class="row form-group">
@@ -162,11 +217,11 @@
                   <label class="font-weight-bold" for="firstname">Select Your Resume</label><span> (optional)</span>
                   <input type="file" id="fullname" class="form-control"  name="resume" accept=".pdf">
                 </div>
-              </div>
+              </div>              
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Signup" class="btn btn-primary  py-2 px-5">
-                </div>
+                  <input type="submit"  id="btnSubmit"  value="signup" name="signup" class="btn btn-primary  py-2 px-5" onclick="return Validate()">
+                  </div>
               </div>
             </form>
           </div>
