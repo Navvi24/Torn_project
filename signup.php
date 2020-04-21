@@ -1,5 +1,5 @@
 <?php
-require("./connect/connect.php");
+include("./Inputdata/connect.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

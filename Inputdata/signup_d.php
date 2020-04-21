@@ -1,5 +1,5 @@
 <?php
-   require("../connect/connect.php");
+   include("connect.php");
 
 
 $fname    = "";
