@@ -17,16 +17,16 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
-
+    <link rel="stylesheet" href="css/bs-stepper.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
-
+    <link rel="stylesheet" href="fonts/FontAwesome/css/all.css">
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-      <style>
+<style>
 .dropbtn {
   background-color: #6c63ff;
   color: white;
@@ -61,6 +61,8 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+.active .bs-stepper-circle{background-color:#6c63ff;}
+.step-trigger:focus{color:#6c63ff;outline:0;}
 </style>
 
 
@@ -116,113 +118,209 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-md-12 col-lg-8 mb-5">
+          <div class="col-md-12 col-lg-12 mb-5">
 
-			     <form action="#" class="p-5 bg-white">
-
-              <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-price-1">
-                    <input type="checkbox" id="option-price-1"> <span class="text-success">$500</span> For 30 days
-                  </label>
-                </div>
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-price-2">
-                    <input type="checkbox" id="option-price-2"> <span class="text-success">$300</span> / Monthly Recurring
-                  </label>
-                </div>
+			    <!-- <form action="#" class="p-5 bg-white"></form> -->
+          <div id="stepper1" class="bs-stepper">
+            <div class="bs-stepper-header">
+              <div class="step" data-target="#test-l-1">
+                <button type="button" class="btn step-trigger">
+                  <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-user-tie"></i></div></span>
+                  <span class="bs-stepper-label">Personal Details</span>
+                </button>
               </div>
-
-              <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="fullname">Job Title</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="eg. Professional UI/UX Designer">
-                </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-l-2">
+                <button type="button" class="btn step-trigger">
+                  <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-hotel"></i></div></span>
+                  <span class="bs-stepper-label">Company Details</span>
+                </button>
               </div>
-
-              <div class="row form-group mb-5">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="fullname">Company</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="eg. Facebook, Inc.">
-                </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-l-3">
+                <button type="button" class="btn step-trigger">
+                  <span class="bs-stepper-circle"><div class="icon"><i class="far fa-file-alt"></i></div></span>
+                  <span class="bs-stepper-label">Post Internship</span>
+                </button>
               </div>
-
-
-              <div class="row form-group">
-                <div class="col-md-12"><h3>Job Type</h3></div>
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-job-type-1">
-                    <input type="radio" id="option-job-type-1" name="job-type"> Full Time
-                  </label>
+            </div>
+            <div class="bs-stepper-content">
+              <form action="#" class="p-5 bg-white">
+                <div id="test-l-1" class="content">
+                  <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="firstname">First Name</label>
+                      <input type="text" id="fullname" class="form-control" placeholder="Enter your First Name" name="fname" required>
+                    </div>
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="lastname">Last Name</label>
+                      <input type="text" id="fullname" class="form-control" placeholder="Enter your Last Name" name="lname" required>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="username">Enter Your Email</label>
+                      <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="phone">Phone</label>
+                      <input type="number" id="nmsg" class="form-control" maxlength="10" placeholder="Enter your Phone number" name="phn" onKeyDown="textCounter(this.form.nmsg,this.form.countDisplay);" onKeyUp="textCounter(this.form.nmsg,this.form.countDisplay);" required>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary py-2 px-5" onclick="stepper1.next()">Next</button>
                 </div>
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-job-type-2">
-                    <input type="radio" id="option-job-type-2" name="job-type"> Part Time
-                  </label>
+                <div id="test-l-2" class="content">
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="company_name">Company Name</label>
+                      <input type="text" id="company_name" class="form-control" placeholder="Enter your Company Name" name="comp_name" required>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="about_company">About Company</label>
+                      <textarea name="comp_about" class="form-control" id="about_company" cols="30" rows="6" required></textarea>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="company_website">Company Website</label><span>(Optional)</span>
+                      <input type="url" id="company_website" class="form-control" placeholder="Enter your Company Website" name="comp_web">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary py-2 px-5" onclick="stepper1.previous()">Previous</button>
+                  <button class="btn btn-primary py-2 px-5" onclick="stepper1.next()">Next</button>
                 </div>
+                <div id="test-l-3" class="content">
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="internship_type">Internship Type</label>
+                      <input type="text" id="internship_detail" class="form-control" placeholder="Example : Campus Ambassador, Content Writing, Web Development, Digital Marketing etc." name="internship_detail" required>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="internship_detail">Internship Details</label>
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <input type="radio"  name="internship_detail" value="Regular">
+                        <label for=internship_detail>Regular (In-office/On-field)</label>
+                      </div>
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <input type="radio"  name="internship_detail" value="Work from home">
+                      <label for="internship_detail">Work from home</label>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="internship_city">City</label>
+                      <input type="text" id="internship_city" class="form-control" placeholder="Example : Mumbai, Pune, Delhi etc." name="internship_city" required>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="total_opening">Number of openings</label>
+                      <input type="number" id="total_opening" class="form-control" placeholder="Example : 10 " name="total_opening" required>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="internship_start_date">Internship Start Date</label>
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <input type="radio"  name="internship_start_date" value="Immediately">
+                        <label for=internship_start_date>Immediately (within next 30 days)</label>
+                      </div>
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <input type="radio"  name="internship_start_date" value="Later">
+                      <label for="internship_start_date">Later</label>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="internship_duration">Internship Duration</label>
+                        <div class="form-group row">
+                          <div class="col-md-8 mb-3 mb-md-0">
+                            <select id="durations" name="duration_number" class="form-control">
+                              <option label="Choose Duration" selected>Choose Duration</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                           </select>
+                          </div>
+                          <div class="col-md-4 mb-3 mb-md-0">
+                            <select id="durations" name="duration_type" class="form-control">
+                              <option value="months">Months</option>
+                              <option value="weeks">Weeks</option>
+                           </select>
+                          </div>
+                        </div>
+                    </div>
 
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-job-type-3">
-                    <input type="radio" id="option-job-type-3" name="job-type"> Freelance
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="about_internship">Internship Description</label>
+                      <textarea name="about_internship" class="form-control" id="about_internship" cols="30" rows="6" required></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <h3 class="font-weight-bold">Stipend And Perks</h3>
+                  <br>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="stipend_amount">Stipend(₹)</label>
+                      <div class="form-group row">
+                        <div class="col-md-8 mb-3 mb-md-0">
+                            <input type="number" id="total_opening" class="form-control" placeholder="Example : ₹5000 " name="stipend_amount" required>
+                        </div>
+                        <div class="col-md-4 mb-3 mb-md-0">
+                          <select id="durations" name="stipend_type" class="form-control">
+                            <option value="/Month">/Month</option>
+                            <option value="/week">/week</option>
+                            <option value="lump-sum">lump-sum</option>
+                         </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="font-weight-bold" for="total_opening">Perks</label>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="Certificate" name="perks"> Certificate</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="Letter of recommendation" name="perks"> Letter of recommendation</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="Flexible Work hours" name="perks"> Flexible Work hours</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="5 days a week" name="perks"> 5 days a week</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="Informal dress code" name="perks"> Informal dress code</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" value="Free Snacks and beverages" name="perks"> Free Snacks and beverages</label>
+                      </div>
+                    </div>
+                  </div>
+                    <button class="btn btn-primary py-2 px-5" onclick="stepper1.previous()">Previous</button>
+                    <button type="submit" class="btn btn-primary  py-2 px-5">Submit</button>
                 </div>
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-job-type-4">
-                    <input type="radio" id="option-job-type-4" name="job-type"> Internship
-                  </label>
-                </div>
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-job-type-4">
-                    <input type="radio" id="option-job-type-4" name="job-type"> Termporary
-                  </label>
-                </div>
-
-              </div>
-
-              <div class="row form-group mb-4">
-                <div class="col-md-12"><h3>Location</h3></div>
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <input type="text" class="form-control" placeholder="Western City, UK
-">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12"><h3>Job Description</h3></div>
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="Post" class="btn btn-primary  py-2 px-5">
-                </div>
-              </div>
-
-
-            </form>
+              </form>
+            </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">Contact Info</h3>
-              <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
-
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
-
-              <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#"><span class="__cf_email__" data-cfemail="671e081215020a060e0b2703080a060e094904080a">[email&#160;protected]</span></a></p>
-
-            </div>
-
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">More Info</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
-              <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p>
-            </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -300,13 +398,42 @@
         </div>
       </div>
     </footer>
-
+<script>
+  var maxAmount = 10;
+  function textCounter(textField, showCountField) {
+    if (textField.value.length > maxAmount) {
+      textField.value = textField.value.substring(0, maxAmount);
+    } else {
+      showCountField.value = maxAmount - textField.value.length;
+    }
+ }
+ </script>
 
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <script src="js/bs-stepper.min.js"></script>
+  <script>
+    var stepper1Node = document.querySelector('#stepper1')
+    var stepper1 = new Stepper(document.querySelector('#stepper1'))
 
+    stepper1Node.addEventListener('show.bs-stepper', function (event) {
+      console.warn('show.bs-stepper', event)
+    })
+    stepper1Node.addEventListener('shown.bs-stepper', function (event) {
+      console.warn('shown.bs-stepper', event)
+    })
+
+    var stepper2 = new Stepper(document.querySelector('#stepper2'), {
+      linear: false,
+      animation: true
+    })
+    var stepper3 = new Stepper(document.querySelector('#stepper3'), {
+      animation: true
+    })
+    var stepper4 = new Stepper(document.querySelector('#stepper4'))
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
