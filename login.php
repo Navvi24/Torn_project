@@ -119,7 +119,7 @@
           <div class="col-md-12 col-lg-12 mb-5">
 			     <form action="#" class="p-5 bg-white">
              <?php
-             if(!$_SERVER['REQUEST_METHOD'] == 'POST')
+             if($_SERVER['REQUEST_METHOD'] != 'POST')
              {
              if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
              {
@@ -133,7 +133,7 @@
              {
              ?>
                <div class="alert alert-danger" role="alert">
-                   <?php echo "Mail already registered"; ?>
+                   <?php echo "Mail already registered Signup Failed"; ?>
                </div>
              <?php
              }
