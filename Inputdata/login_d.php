@@ -1,6 +1,5 @@
  <?php
  session_start();
- $error="";
  include("connect.php");
 
  if(isset($_SESSION['login_user'])){
@@ -14,15 +13,17 @@
    $mypassword = mysqli_real_escape_string($con,$_POST['password']);
 
    $sql = "SELECT mail FROM logindetails WHERE mail = '$myusername' and password = '$mypassword'";
-   $result = mysqli_query($con,$sql);
+      $result = mysqli_query($con,$sql);
 
    // If result matched $myusername and $mypassword, table row must be 1 row
    if(mysqli_num_rows($result) > 0) {
      $_SESSION['login_user'] = $myusername;
      header("location: ../internships.php");
    }else {
-     $error = "Your Login Name or Password is invalid ";
+    header("location: ../login.php?kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ=10100");
    }
+
+
 
  }
 

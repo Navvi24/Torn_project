@@ -121,27 +121,10 @@ include("Inputdata/login_d.php");
         <div class="row">
           <div class="col-md-12 col-lg-12 mb-5">
 			     <form action="./inputdata/login_d.php" method="post" class="p-5 bg-white">
-             <?php
-             if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
-             {
-             if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
-             {
-             ?>
-               <div class="alert alert-success" role="alert">
-                 <?php echo "Signup successfully "; ?>
-               </div>
-             <?php
-             }
-             else
-             {
-             ?>
-               <div class="alert alert-danger" role="alert">
-                   <?php echo "Mail already registered Signup Failed"; ?>
-               </div>
-             <?php
-             }
-           }
-             ?>
+          <?php
+          include("Inputdata/signup_check.php");
+          include("Inputdata/login_check.php");
+          ?>
              <h1>Login Here</h1>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
