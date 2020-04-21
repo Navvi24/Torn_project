@@ -119,7 +119,7 @@
           <div class="col-md-12 col-lg-12 mb-5">
 			     <form action="#" class="p-5 bg-white">
              <?php
-             if($_SERVER['REQUEST_METHOD'] != 'POST')
+             if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
              {
              if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
              {
