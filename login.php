@@ -1,3 +1,6 @@
+<?php
+include("Inputdata/login_d.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -117,7 +120,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-12 mb-5">
-			     <form action="#" class="p-5 bg-white">
+			     <form action="./inputdata/login_d.php" method="post" class="p-5 bg-white">
              <?php
              if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
              {
