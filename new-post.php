@@ -123,31 +123,31 @@
         <div class="row">
           <div class="col-md-12 col-lg-12 mb-5 mt-5">
             <div id="stepper1" class="bs-stepper">
-              <div class="bs-stepper-header" role="tablist">
+              <div class="bs-stepper-header">
                 <div class="step" data-target="#test-l-1">
-                  <button type="button" class="btn step-trigger" role="tab" id="stepperFormTrigger1" aria-controls="test-l-1">
+                  <button type="button" class="btn step-trigger">
                     <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-user-tie"></i></div></span>
                     <span class="bs-stepper-label">Personal Details</span>
                   </button>
                 </div>
                 <div class="bs-stepper-line"></div>
                 <div class="step" data-target="#test-l-2">
-                  <button type="button" class="btn step-trigger" role="tab" id="stepperFormTrigger2" aria-controls="test-l-2">
+                  <button type="button" class="btn step-trigger">
                     <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-hotel"></i></div></span>
                     <span class="bs-stepper-label">Company Details</span>
                   </button>
                 </div>
                 <div class="bs-stepper-line"></div>
                 <div class="step" data-target="#test-l-3">
-                  <button type="button" class="btn step-trigger" role="tab" id="stepperFormTrigger3" aria-controls="test-l-3">
+                  <button type="button" class="btn step-trigger">
                     <span class="bs-stepper-circle"><div class="icon"><i class="far fa-file-alt"></i></div></span>
                     <span class="bs-stepper-label">Post Internship</span>
                   </button>
                 </div>
               </div>
               <div class="bs-stepper-content">
-                <form class="needs-validation p-5 bg-white" onSubmit="return false" autocomplete="on" novalidate>
-                  <div id="test-l-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger1">
+                <form class="needs-validation p-5 bg-white"  novalidate>
+                  <div id="test-l-1" class="content">
                     <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="firstname">First Name</label>
@@ -174,9 +174,9 @@
                         <div class="invalid-feedback">Please Enter Phone no.</div>
                       </div>
                     </div>
-                    <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.next()"/>
+                    <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.next()"/>
                   </div>
-                  <div id="test-l-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger2">
+                  <div id="test-l-2" class="content">
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="company_name">Company Name</label>
@@ -197,10 +197,10 @@
                         <input type="url" id="company_website" class="form-control" placeholder="Enter your Company Website" name="comp_web">
                       </div>
                     </div>
-                    <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.previous()"/>
-                    <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.next()"/>
+                    <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.previous()"/>
+                    <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.next()"/>
                   </div>
-                  <div id="test-l-3" role="tabpanel" class="bs-stepper-pane fade">
+                  <div id="test-l-3" class="content">
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_type">Internship Type</label>
@@ -332,8 +332,8 @@
                         </div>
                       </div>
                     </div>
-                      <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.previous()"/>
-                      <button type="submit" class="btn btn-primary py-2 px-5">Submit</button>
+                      <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.previous()"/>
+                      <button type="submit" class="btn btn-primary py-2 px-10">Submit</button>
                   </div>
                 </form>
               </div>
