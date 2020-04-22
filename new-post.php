@@ -212,14 +212,12 @@
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_detail">Internship Details</label>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <label for=internship_detail>
-                          <input type="radio"  name="internship_detail" value="Regular" required> Regular (In-office/On-field)
-                         </label>
+                          <input type="radio" name="internship_detail" value="Regular" checked>
+                          <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <label for="internship_detail">
-                          <input type="radio"  name="internship_detail" value="Work from home"> Work from home
-                         </label>
+                          <input type="radio"  name="internshipdetail" value="Work from home">
+                          <label for="internship_detail"> Work from home</label>
                       </div>
                       </div>
                     </div>
@@ -241,12 +239,12 @@
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_start_date">Internship Start Date</label>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio"  name="internship_start_date" value="Immediately" required>
+                          <input type="radio" name="internship_start_date" value="Immediately" checked>
                           <label for=internship_start_date>Immediately (within next 30 days)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
                           <input type="radio"  name="internship_start_date" value="Later">
-                        <label for="internship_start_date">Later</label>
+                          <label for="internship_start_date">Later</label>
                       </div>
                       </div>
                     </div>
@@ -255,7 +253,7 @@
                           <label class="font-weight-bold" for="internship_duration">Internship Duration</label>
                           <div class="form-group row">
                             <div class="col-md-8 mb-3 mb-md-0">
-                              <select id="durations" name="duration_number" class="form-control">
+                              <select name="duration_number" class="form-control" required>
                                 <option label="Choose Duration" selected>Choose Duration</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
