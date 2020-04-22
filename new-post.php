@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -25,44 +24,50 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
 <style>
-.dropbtn {
-  background-color: #6c63ff;
-  color: white;
-  padding: 10px;
-  font-size: 14px;
-  border: none;
-}
+  .dropbtn
+  {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+  }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+  .dropdown
+  {
+    position: relative;
+    display: inline-block;
+  }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+  .dropdown-content
+  {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+  .dropdown-content a
+  {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
-.dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover
+  {
+    background-color: #ddd;
+  }
 
-.dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-.active .bs-stepper-circle{background-color:#6c63ff;}
-.step-trigger:focus{color:#6c63ff;outline:0;}
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .active .bs-stepper-circle{background-color:#6c63ff;}
+  .step-trigger:focus{color:#6c63ff;outline:0;}
 </style>
 
   </head>
@@ -117,244 +122,222 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-12 mb-5 mt-5">
-              <div id="stepper1" class="bs-stepper">
-                <div class="bs-stepper-header">
-                  <div class="step" data-target="#test-l-1">
-                    <button type="button" class="btn step-trigger">
-                      <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-user-tie"></i></div></span>
-                      <span class="bs-stepper-label">Personal Details</span>
-                    </button>
-                  </div>
-                  <div class="line"></div>
-                  <div class="step" data-target="#test-l-2">
-                    <button type="button" class="btn step-trigger">
-                      <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-hotel"></i></div></span>
-                      <span class="bs-stepper-label">Company Details</span>
-                    </button>
-                  </div>
-                  <div class="line"></div>
-                  <div class="step" data-target="#test-l-3">
-                    <button type="button" class="btn step-trigger">
-                      <span class="bs-stepper-circle"><div class="icon"><i class="far fa-file-alt"></i></div></span>
-                      <span class="bs-stepper-label">Post Internship</span>
-                    </button>
-                  </div>
+            <div id="stepper1" class="bs-stepper">
+              <div class="bs-stepper-header" role="tablist">
+                <div class="step" data-target="#test-l-1">
+                  <button type="button" class="btn step-trigger" role="tab" id="stepperFormTrigger1" aria-controls="test-l-1">
+                    <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-user-tie"></i></div></span>
+                    <span class="bs-stepper-label">Personal Details</span>
+                  </button>
                 </div>
-                <div class="bs-stepper-content">
-                  <form action="#" class="needs-validation p-5 bg-white" id="myform" novalidate>
-                    <div id="test-l-1" class="content">
-                      <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="firstname">First Name</label>
-                          <input type="text" id="fullname" class="form-control" placeholder="Enter your First Name" name="fname" required>
-                          <div class="invalid-feedback">
-                            Please Enter firstname.
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="lastname">Last Name</label>
-                          <input type="text" id="fullname" class="form-control" placeholder="Enter your Last Name" name="lname" required>
-                          <div class="invalid-feedback">
-                            Please Enter Lastname.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="username">Enter Your Email</label>
-                          <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
-                          <div class="invalid-feedback">
-                            Please Enter Email.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="phone">Phone</label>
-                          <input type="number" id="nmsg" class="form-control" maxlength="10" placeholder="Enter your Phone number" name="phn" onKeyDown="textCounter(this.form.nmsg,this.form.countDisplay);" onKeyUp="textCounter(this.form.nmsg,this.form.countDisplay);" required>
-                          <div class="invalid-feedback">
-                            Please Enter Phone no.
-                          </div>
-                        </div>
-                      </div>
-                      <button class="btn btn-primary py-2 px-5" onclick="stepper1.next()">Next</button>
-                    </div>
-                    <div id="test-l-2" class="content">
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="company_name">Company Name</label>
-                          <input type="text" id="company_name" class="form-control" placeholder="Enter your Company Name" name="comp_name" required>
-                          <div class="invalid-feedback">
-                            Please Enter Company Name.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="about_company">About Company</label>
-                          <textarea name="comp_about" class="form-control" id="about_company" cols="30" rows="6" required></textarea>
-                          <div class="invalid-feedback">
-                            Please Enter Company details.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="company_website">Company Website</label><span>(Optional)</span>
-                          <input type="url" id="company_website" class="form-control" placeholder="Enter your Company Website" name="comp_web">
-                        </div>
-                      </div>
-                      <button class="btn btn-primary py-2 px-5" onclick="stepper1.previous()">Previous</button>
-                      <button class="btn btn-primary py-2 px-5" onclick="stepper1.next()">Next</button>
-                    </div>
-                    <div id="test-l-3" class="content">
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="internship_type">Internship Type</label>
-                          <input type="text" id="internship_detail" class="form-control" placeholder="Example : Campus Ambassador, Content Writing, Web Development, Digital Marketing etc." name="internship_detail" required>
-                          <div class="invalid-feedback">
-                            Please enter internship type.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="internship_detail">Internship Details</label>
-                          <div class="col-md-12 mb-3 mb-md-0">
-                            <label for=internship_detail>
-                            <input type="radio"  name="internship_detail" value="Regular" required> Regular (In-office/On-field)
-                           </label>
-                          </div>
-                          <div class="col-md-12 mb-3 mb-md-0">
-                            <label for="internship_detail">
-                            <input type="radio"  name="internship_detail" value="Work from home"> Work from home
-                           </label>
-                        </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="internship_city">City</label>
-                          <input type="text" id="internship_city" class="form-control" placeholder="Example : Mumbai, Pune, Delhi etc." name="internship_city" required>
-                          <div class="invalid-feedback">
-                            Please enter internship city.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="total_opening">Number of openings</label>
-                          <input type="number" id="total_opening" class="form-control" placeholder="Example : 10 " name="total_opening" required>
-                          <div class="invalid-feedback">
-                            Please enter no. of openings.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="internship_start_date">Internship Start Date</label>
-                          <div class="col-md-12 mb-3 mb-md-0">
-                            <input type="radio"  name="internship_start_date" value="Immediately" required>
-                            <label for=internship_start_date>Immediately (within next 30 days)</label>
-                          </div>
-                          <div class="col-md-12 mb-3 mb-md-0">
-                            <input type="radio"  name="internship_start_date" value="Later">
-                          <label for="internship_start_date">Later</label>
-                        </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                            <label class="font-weight-bold" for="internship_duration">Internship Duration</label>
-                            <div class="form-group row">
-                              <div class="col-md-8 mb-3 mb-md-0">
-                                <select id="durations" name="duration_number" class="form-control">
-                                  <option label="Choose Duration" selected>Choose Duration</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                  <option value="6">6</option>
-                               </select>
-                               <div class="invalid-feedback">
-                                 Please choose duration.
-                               </div>
-                              </div>
-                              <div class="col-md-4 mb-3 mb-md-0">
-                                <select id="durations" name="duration_type" class="form-control">
-                                  <option value="months">Months</option>
-                                  <option value="weeks">Weeks</option>
-                               </select>
-                               <div class="invalid-feedback">
-                                 Please choose duration.
-                               </div>
-                              </div>
-                            </div>
-                        </div>
-
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="about_internship">Internship Description</label>
-                          <textarea name="about_internship" class="form-control" id="about_internship" cols="30" rows="6" required></textarea>
-                          <div class="invalid-feedback">
-                            Please enter internship details.
-                          </div>
-                        </div>
-                      </div>
-                      <br>
-                      <h3 class="font-weight-bold">Stipend And Perks</h3>
-                      <br>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="stipend_amount">Stipend(₹)</label>
-                          <div class="form-group row">
-                            <div class="col-md-8 mb-3 mb-md-0">
-                                <input type="number" id="total_opening" class="form-control" placeholder="Example : ₹5000 " name="stipend_amount" required>
-                                <div class="invalid-feedback">
-                                  Please enter stipend amount.
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3 mb-md-0">
-                              <select id="durations" name="stipend_type" class="form-control">
-                                <option value="/Month">/Month</option>
-                                <option value="/week">/week</option>
-                                <option value="lump-sum">lump-sum</option>
-                             </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <label class="font-weight-bold" for="total_opening">Perks</label>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="Certificate" name="perks"> Certificate</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="Letter of recommendation" name="perks"> Letter of recommendation</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="Flexible Work hours" name="perks"> Flexible Work hours</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="5 days a week" name="perks"> 5 days a week</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="Informal dress code" name="perks"> Informal dress code</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="Free Snacks and beverages" name="perks"> Free Snacks and beverages</label>
-                          </div>
-                        </div>
-                      </div>
-                        <button class="btn btn-primary py-2 px-5" onclick="stepper1.previous()">Previous</button>
-                        <button type="submit" class="btn btn-primary  py-2 px-5">Submit</button>
-                    </div>
-                  </form>
+                <div class="bs-stepper-line"></div>
+                <div class="step" data-target="#test-l-2">
+                  <button type="button" class="btn step-trigger" role="tab" id="stepperFormTrigger2" aria-controls="test-l-2">
+                    <span class="bs-stepper-circle"><div class="icon"><i class="fas fa-hotel"></i></div></span>
+                    <span class="bs-stepper-label">Company Details</span>
+                  </button>
+                </div>
+                <div class="bs-stepper-line"></div>
+                <div class="step" data-target="#test-l-3">
+                  <button type="button" class="btn step-trigger" role="tab" id="stepperFormTrigger3" aria-controls="test-l-3">
+                    <span class="bs-stepper-circle"><div class="icon"><i class="far fa-file-alt"></i></div></span>
+                    <span class="bs-stepper-label">Post Internship</span>
+                  </button>
                 </div>
               </div>
+              <div class="bs-stepper-content">
+                <form class="needs-validation p-5 bg-white" onSubmit="return false" autocomplete="on" novalidate>
+                  <div id="test-l-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger1">
+                    <div class="row form-group">
+                      <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="firstname">First Name</label>
+                        <input type="text" id="fullname" class="form-control" placeholder="Enter your First Name" name="fname" required>
+                        <div class="invalid-feedback">Please Enter firstname.</div>
+                      </div>
+                      <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="lastname">Last Name</label>
+                        <input type="text" id="fullname" class="form-control" placeholder="Enter your Last Name" name="lname" required>
+                        <div class="invalid-feedback">Please Enter Lastname.</div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="username">Enter Your Email</label>
+                        <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
+                        <div class="invalid-feedback">Please Enter Email.</div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="phone">Phone</label>
+                        <input type="number" id="nmsg" class="form-control" maxlength="10" placeholder="Enter your Phone number" name="phn" onKeyDown="textCounter(this.form.nmsg,this.form.countDisplay);" onKeyUp="textCounter(this.form.nmsg,this.form.countDisplay);" required>
+                        <div class="invalid-feedback">Please Enter Phone no.</div>
+                      </div>
+                    </div>
+                    <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.next()"/>
+                  </div>
+                  <div id="test-l-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger2">
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="company_name">Company Name</label>
+                        <input type="text" id="company_name" class="form-control" placeholder="Enter your Company Name" name="comp_name" required>
+                        <div class="invalid-feedback">Please Enter Company Name.</div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="about_company">About Company</label>
+                        <textarea name="comp_about" class="form-control" id="about_company" cols="30" rows="6" required></textarea>
+                        <div class="invalid-feedback">Please Enter Company details.</div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="company_website">Company Website</label><span>(Optional)</span>
+                        <input type="url" id="company_website" class="form-control" placeholder="Enter your Company Website" name="comp_web">
+                      </div>
+                    </div>
+                    <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.previous()"/>
+                    <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.next()"/>
+                  </div>
+                  <div id="test-l-3" role="tabpanel" class="bs-stepper-pane fade">
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="internship_type">Internship Type</label>
+                        <input type="text" id="internship_detail" class="form-control" placeholder="Example : Campus Ambassador, Content Writing, Web Development, Digital Marketing etc." name="internship_detail" required>
+                        <div class="invalid-feedback">Please enter internship type.</div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="internship_detail">Internship Details</label>
+                        <div class="col-md-12 mb-3 mb-md-0">
+                          <label for=internship_detail>
+                          <input type="radio"  name="internship_detail" value="Regular" required> Regular (In-office/On-field)
+                         </label>
+                        </div>
+                        <div class="col-md-12 mb-3 mb-md-0">
+                          <label for="internship_detail">
+                          <input type="radio"  name="internship_detail" value="Work from home"> Work from home
+                         </label>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="internship_city">City</label>
+                        <input type="text" id="internship_city" class="form-control" placeholder="Example : Mumbai, Pune, Delhi etc." name="internship_city" required>
+                        <div class="invalid-feedback">Please enter internship city.</div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="total_opening">Number of openings</label>
+                        <input type="number" id="total_opening" class="form-control" placeholder="Example : 10 " name="total_opening" required>
+                        <div class="invalid-feedback">Please enter no. of openings.</div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="internship_start_date">Internship Start Date</label>
+                        <div class="col-md-12 mb-3 mb-md-0">
+                          <input type="radio"  name="internship_start_date" value="Immediately" required>
+                          <label for=internship_start_date>Immediately (within next 30 days)</label>
+                        </div>
+                        <div class="col-md-12 mb-3 mb-md-0">
+                          <input type="radio"  name="internship_start_date" value="Later">
+                        <label for="internship_start_date">Later</label>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                          <label class="font-weight-bold" for="internship_duration">Internship Duration</label>
+                          <div class="form-group row">
+                            <div class="col-md-8 mb-3 mb-md-0">
+                              <select id="durations" name="duration_number" class="form-control">
+                                <option label="Choose Duration" selected>Choose Duration</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                             </select>
+                             <div class="invalid-feedback">Please choose duration.</div>
+                            </div>
+                            <div class="col-md-4 mb-3 mb-md-0">
+                              <select id="durations" name="duration_type" class="form-control">
+                                <option value="months">Months</option>
+                                <option value="weeks">Weeks</option>
+                             </select>
+                             <div class="invalid-feedback">Please choose duration.</div>
+                            </div>
+                          </div>
+                      </div>
+
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="about_internship">Internship Description</label>
+                        <textarea name="about_internship" class="form-control" id="about_internship" cols="30" rows="6" required></textarea>
+                        <div class="invalid-feedback">
+                          Please enter internship details.
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <h3 class="font-weight-bold">Stipend And Perks</h3>
+                    <br>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="stipend_amount">Stipend(₹)</label>
+                        <div id="Fixed" class="form-group row">
+                          <div class="col-md-8 mb-3 mb-md-0">
+                              <input type="number" id="total_opening" class="form-control" placeholder="Example : ₹5000 " name="stipend_amount" required>
+                              <div class="invalid-feedback">
+                                Please enter stipend amount.
+                              </div>
+                          </div>
+                          <div class="col-md-4 mb-3 mb-md-0">
+                            <select id="durations" name="stipend_method" class="form-control">
+                              <option value="/Month">/Month</option>
+                              <option value="/week">/week</option>
+                              <option value="lump-sum">lump-sum</option>
+                           </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="total_opening">Perks</label>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="Certificate" name="perks"> Certificate</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="Letter of recommendation" name="perks"> Letter of recommendation</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="Flexible Work hours" name="perks"> Flexible Work hours</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="5 days a week" name="perks"> 5 days a week</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="Informal dress code" name="perks"> Informal dress code</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="Free Snacks and beverages" name="perks"> Free Snacks and beverages</label>
+                        </div>
+                      </div>
+                    </div>
+                      <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-5" onclick="stepper1.previous()"/>
+                      <button type="submit" class="btn btn-primary py-2 px-5">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
