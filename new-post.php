@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="alert/dist/sweetalert.css">
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
@@ -438,6 +439,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
       </div>
     </footer>
+    <?php include('Inputdata/post_check.php'); ?>
 <script>
   var maxAmount = 10;
   function textCounter(textField, showCountField) {
@@ -494,6 +496,7 @@ s0.parentNode.insertBefore(s1,s0);
     })
     var stepper4 = new Stepper(document.querySelector('#stepper4'))
   </script>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>

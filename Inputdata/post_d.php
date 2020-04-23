@@ -57,7 +57,7 @@ if(isset($_POST['post_sub']))
       //  echo $stipend_amount;
     $stipend_method = $_POST['stipend_method'];
      //   echo $stipend_method;
-    
+
   //}
 
 
@@ -65,14 +65,13 @@ if(isset($_POST['post_sub']))
  $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method )
        VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$internship_city', '$total_opening', '$internship_start_date', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method')";
 
-	if (!mysqli_query($con,$sql)) {
+	if (!mysqli_query($conn,$sql)) {
    $error = "Error: ".mysqli_error($con);
         echo $error;
-   //header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+   header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
       }else{
         echo "posted successfully";
            $description = "";
-           //header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+           header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
 }
-
