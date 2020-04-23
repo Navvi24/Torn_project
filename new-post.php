@@ -216,7 +216,7 @@
                           <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio"  name="internshipdetail" value="Work from home">
+                          <input type="radio"  name="internship_detail" value="Work from home">
                           <label for="internship_detail"> Work from home</label>
                       </div>
                       </div>
