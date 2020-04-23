@@ -81,7 +81,7 @@ input[type=number] {
 </style>
 
   </head>
-    
+
      <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -170,7 +170,7 @@ s0.parentNode.insertBefore(s1,s0);
                 </div>
               </div>
               <div class="bs-stepper-content">
-                <form class="needs-validation p-5 bg-white"  novalidate>
+                <form class="needs-validation p-5 bg-white" action="Inputdata/post_d.php" method="post" novalidate>
                   <div id="test-l-1" class="content">
                     <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
@@ -228,7 +228,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_type">Internship Type</label>
-                        <input type="text" id="internship_detail" class="form-control" placeholder="Example : Campus Ambassador, Content Writing, Web Development, Digital Marketing etc." name="internship_detail" required>
+                        <input type="text" id="internship_detail" class="form-control" placeholder="Example : Campus Ambassador, Content Writing, Web Development, Digital Marketing etc." name="internship_pos" required>
                         <div class="invalid-feedback">Please enter internship type.</div>
                       </div>
                     </div>
@@ -240,11 +240,7 @@ s0.parentNode.insertBefore(s1,s0);
                           <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
-<<<<<<< HEAD
-                          <input type="radio"  name="internshipdetail" value="Work from home"> 
-=======
                           <input type="radio"  name="internship_detail" value="Work from home">
->>>>>>> 5bc3fb0df81ba6bb88cf4e57c59dc4b0cdab34d8
                           <label for="internship_detail"> Work from home</label>
                       </div>
                       </div>
@@ -359,7 +355,7 @@ s0.parentNode.insertBefore(s1,s0);
                       </div>
                     </div>
                       <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.previous()"/>
-                      <button type="submit" class="btn btn-primary py-2 px-10">Submit</button>
+                      <button type="submit" class="btn btn-primary py-2 px-10" name="post_sub">Submit</button>
                   </div>
                 </form>
               </div>
