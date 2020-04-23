@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <title>STORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -65,7 +65,7 @@
 
 
   </head>
-    
+
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -79,7 +79,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-    
+
   <body>
 
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -129,52 +129,16 @@ s0.parentNode.insertBefore(s1,s0);
 	    	</div>
       </div>
     </div>
-
     <section class="ftco-section services-section bg-primary">
       <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-resume"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Search Millions of Internships</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-collaboration"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Easy To Manage Internships</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-promotions"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Top Careers</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-employee"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Search Expert Candidates</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2 style="font-size:40px;">Why Internstorm?</h2>
+            <p>We’ll do you one better, why not? We’re right here catering to almost all your internship needs and who better to understand you other than us, students who have been through the same hurdles, doubts, questions and scams!</p>
           </div>
         </div>
       </div>
     </section>
-
-
-
     <section class="ftco-section img" style="background-image: url(images/bg_1.jpg); background-position: top center;">
     	<div class="container">
     		<div class="row">
@@ -182,8 +146,8 @@ s0.parentNode.insertBefore(s1,s0);
     				<div class="browse-job p-5">
     					<span class="icon-search2 icon"></span>
     					<span class="subheading">Search Internship</span>
-    					<h2>Browse Internship by Specialism</h2>
-    					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+    					<h2>Browse Through Specialisations!</h2>
+    					<p>Colleges and their compulsory internships period can be stressful when you don’t even know where to begin from. Don’t worry though, we’ve solved that problem with ease, find internships hand-crafted just for your majors, and be it English, Psychology, Marketing, you name it! We’ve got you covered.</p>
     				</div>
     			</div>
     		</div>
@@ -197,7 +161,7 @@ s0.parentNode.insertBefore(s1,s0);
 						<div class="row justify-content-center pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
 		          	<span class="subheading">Recently Added Internships</span>
-		            <h2 class="mb-4">Hot Internships</h2>
+		            <h2 class="mb-4">Storm Recommends</h2>
 		          </div>
 		        </div>
 						<div class="row">
@@ -440,57 +404,13 @@ s0.parentNode.insertBefore(s1,s0);
 			</div>
 		</section>
 
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
-    	<div class="container">
-    		<div class="row justify-content-center">
-    			<div class="col-md-12">
-		    		<div class="row">
-		          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		              	<div class="icon">
-		              		<span class="flaticon-employee"></span>
-		              	</div>
-		                <strong class="number" data-number="435000">0</strong>
-		                <span>Internships</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		              	<div class="icon">
-		              		<span class="flaticon-collaboration"></span>
-		              	</div>
-		                <strong class="number" data-number="40000">0</strong>
-		                <span>Members</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		              	<div class="icon">
-		              		<span class="flaticon-promotions"></span>
-		              	</div>
-		                <strong class="number" data-number="10500">0</strong>
-		                <span>Company</span>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
-
 
     <section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
           	<span class="subheading">Testimonial</span>
-            <h2 class="mb-4">Happy Clients</h2>
+            <h2 class="mb-4">Truer Stories Weren’t Told!</h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -577,7 +497,7 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
+              <h2>Subscribe to Internships Alert!</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">

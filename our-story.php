@@ -113,7 +113,7 @@ s0.parentNode.insertBefore(s1,s0);
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/We.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -130,17 +130,22 @@ s0.parentNode.insertBefore(s1,s0);
     		<div class="row justify-content-center">
     			<div class="col-md-10">
     				<div class="intro row text-center justify-content-center">
-    					<div class="col-md-9">
-    						<img class="img-fluid" src="images/undraw_work_time_lhoj.svg" alt="">
+    					<div class="col-md-12">
+    						<img class="img-fluid" src="images/who.jpg" style="width: 1600px;height: 500px;margin: 20px;"alt="">
     					</div>
-    					<h2 class="mb-4">Welcome to Jobpply</h2>
-    					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-    					<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+    					<h2 class="mb-4"><b>Who we are</b></h2>
+    					<p>We’re students who sparked the idea over chai and charcha! Who better to understand a student’s internship needs better than one of them, eh? People who have excessive validation needs, amazing ideas and never ending recommendations to series, movies, books, clubs and more!</p>
+    					<p>Why trust us despite all this? We’re your best shot at landing your dream internship while enjoying the entire process as if it were cake walk! Past, come over to our side, we have cake.</p>
+
+              <h2 class="mb-4"><b>What we do</b></h2>
+    					<p>If you’re a student, we bring you the hottest and most awaited opportunities, always wanted to volunteer at an event or festival, believed that you’d be working alongside experts and not only gain experience but also network, or better yet wanted to cover that dream shot for your resume? Well, all of it is just a click away.</p>
+    					<p>If you’re a firm, we bring you the best in their game, dedicated and talented candidates for you to further choose from. It’s a win-win, so what’s stopping you?</p>
     				</div>
     			</div>
     		</div>
     	</div>
     </section>
+
 
     <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
       <div class="container">
