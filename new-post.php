@@ -240,7 +240,11 @@ s0.parentNode.insertBefore(s1,s0);
                           <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
+<<<<<<< HEAD
                           <input type="radio"  name="internshipdetail" value="Work from home"> 
+=======
+                          <input type="radio"  name="internship_detail" value="Work from home">
+>>>>>>> 5bc3fb0df81ba6bb88cf4e57c59dc4b0cdab34d8
                           <label for="internship_detail"> Work from home</label>
                       </div>
                       </div>
