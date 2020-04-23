@@ -2,7 +2,7 @@
 $value = 0;
 if (isset($_POST['sendMail']))
 {
-
+          $attachment = $_POST['file'];
           require 'PHPMailerAutoload.php';
           require 'secure.php';
 
@@ -17,7 +17,7 @@ if (isset($_POST['sendMail']))
           $mail->Password = PASS;                           // SMTP password
           $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
           $mail->Port = '465';                                    // TCP port to connect to
-
+          $mail->AddAttachment = $attachment;
           $mail->setFrom(EMAIL, $_POST['Name']);
           $mail->addAddress('admin@internstorm.com');     // Add a recipient
        //   $mail->addAddress('admin@internstorm.com');               // Name is optional

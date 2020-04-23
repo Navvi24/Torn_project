@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-    <title>STORM</title>><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <title>STORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -161,6 +161,9 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
               <div class="form-group">
                  <textarea name="content" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                 <input type="file" class="form-control" placeholder="Subject" name="file" required>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" name="sendMail" class="btn btn-primary py-3 px-5">
