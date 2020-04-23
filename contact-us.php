@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="alert/dist/sweetalert.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -145,28 +146,26 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
         </div>
         <div class="row block-9">
-
           <div class="col-md-12 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
+            <form action="Mail/contactus/contact_process.php" method="post" class="bg-white p-5 contact-form">
               <h1 class="font-weight-bold">Drop Your Query</h1>
               <br>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" name="Name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" placeholder="Your Email" name="from">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Subject" name="sub">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                 <textarea name="content" class="form-control" cols="30" rows="7" placeholder="Write something.."></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Message" name="sendMail" class="btn btn-primary py-3 px-5">
               </div>
             </form>
-
           </div>
         </div>
       </div>
@@ -247,7 +246,7 @@ s0.parentNode.insertBefore(s1,s0);
     </footer>
 
 
-
+    <?php include('Inputdata/contact-us_check.php'); ?>
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
