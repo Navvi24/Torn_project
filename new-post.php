@@ -25,6 +25,16 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 <style>
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
   .dropbtn
   {
     background-color: #6c63ff;
@@ -212,7 +222,7 @@
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_detail">Internship Details</label>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio" name="internship_detail" value="Regular" checked>
+                          <input type="radio" name="internship_detail" value="Regular" required>
                           <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
@@ -239,7 +249,7 @@
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_start_date">Internship Start Date</label>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio" name="internship_start_date" value="Immediately" checked>
+                          <input type="radio" name="internship_start_date" value="Immediately" required>
                           <label for=internship_start_date>Immediately (within next 30 days)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
