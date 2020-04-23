@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-    <title>TORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <title>STORM</title>><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -151,13 +151,13 @@ s0.parentNode.insertBefore(s1,s0);
               <h1 class="font-weight-bold">Drop Your Query</h1>
               <br>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name" name="Name">
+                <input type="text" class="form-control" placeholder="Your Name" name="Name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email" name="from">
+                <input type="email" class="form-control" placeholder="Your Email" name="from" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" name="sub">
+                <input type="text" class="form-control" placeholder="Subject" name="sub" required>
               </div>
               <div class="form-group">
                  <textarea name="content" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
