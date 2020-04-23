@@ -84,7 +84,7 @@
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="our-story.php" class="nav-link">Our Story</a></li>
 	          <li class="nav-item"><a href="our-clients.php" class="nav-link">Our Clients</a></li>
-	          <!--<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>-->
+            <li class="nav-item"><a href="work-with-us.php" class="nav-link">Work with us</a></li>
 	          <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li><br><br>
 	          <li><div><button class="dropbtn"><a href="new-post.php" style="color:white;">Post Internship</a></button></div></li>&nbsp;&nbsp;
             <li><div class="dropdown"><button class="dropbtn"  style="background-color: #09090A">Want Internship</button>
@@ -107,10 +107,8 @@
 	      	<img class="one-third align-self-end order-md-last img-fluid" src="images/undraw_work_time_lhoj.svg" alt="">
 	        <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
 	        	<div class="text mt-5">
-	        		<p class="mb-4 mt-5 pt-5">We have <span class="number" data-number="200000">0</span> great internships offers you deserve!</p>
-	            <h1 class="mb-5">Largest Internship Site In The World</h1>
-
-
+	            <h1 class="mb-5">The Newest Student Run Internship Platform</h1>
+              <p class="mb-4 mt-5">“Internships of the students, set up by the students for the students” <br><i>-By our content writer at some point probably</i></p>
 	          </div>
 	        </div>
 	    	</div>
