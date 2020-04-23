@@ -149,24 +149,21 @@ s0.parentNode.insertBefore(s1,s0);
 
     <section class="" id="section-counter">
         <br>
-         <center><h2 class="mb-4" style="font-size:40px; color:white;"><b>Join The Revoluion</b></h2></center>
+         <center><h2 class="mb-4" style="font-size:40px; color:white;"><b>Join The Revolution</b></h2></center>
         <br>
       <div class="container">
         <div class="row mb-5">
-
-<div class="col-md">
+          <div class="col-md">
             <div class="ftco-footer-widget mb-10">
-           <a href="new-post.php" target="_blank"> <button type="button" class="btn btn-outline-light  btn-block"> <strong><p>Are you A Company ?</p></strong><br> <p style="text-align:left;">If you’re a company, we’re here to bring you the best of the lot selected carefully from the herd to fit your requirements and requests. What better than to sit and sip on your coffee looking overbigger worries that need to be taken care while we make work easier for you by bringing top-notch candidate.We agree, it’s a hard to pass off on offer, right?</p></button></a>
+              <a href="new-post.php" target="_blank"> <button type="button" class="btn btn-outline-light  btn-block"> <strong><p>Are you A Company ?</p></strong><br> <p style="text-align:left;">If you’re a company, we’re here to bring you the best of the lot selected carefully from the herd to fit your requirements and requests. What better than to sit and sip on your coffee looking overbigger worries that need to be taken care while we make work easier for you by bringing top-notch candidate.We agree, it’s a hard to pass off on offer, right?</p></button></a>
             </div>
           </div>
-         
-            <div class="col-md">
+          <div class="col-md">
             <div class="ftco-footer-widget mb-5">
-<a href="login.php" target="_blank"> <button type="button" class="btn btn-outline-light btn-block "> <strong><p>Are you A Student ?</p></strong> <br> <p style="text-align:left;">Well, we indeed are your saviours in disguise! Bringing you opportunities and varies ones at that to choose from, you can official forget what “settling for” means!With internships crafted just to your liking and need, you can say goodbye to scams and compromises. We wouldn’t go as far as to call ourselves superheroes, only if you insist.</p></button></a>
+              <a href="login.php" target="_blank"> <button type="button" class="btn btn-outline-light btn-block "> <strong><p>Are you A Student ?</p></strong> <br> <p style="text-align:left;">Well, we indeed are your saviours in disguise! Bringing you opportunities and varies ones at that to choose from, you can official forget what “settling for” means!With internships crafted just to your liking and need, you can say goodbye to scams and compromises. We wouldn’t go as far as to call ourselves superheroes, only if you insist.</p></button></a>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -175,7 +172,7 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
           	<span class="subheading">Testimonial</span>
-            <h2 class="mb-4">Happy Clients</h2>
+            <h2 class="mb-4">Truer Stories Weren’t Told!</h2>
           </div>
         </div>
         <div class="row ftco-animate">
