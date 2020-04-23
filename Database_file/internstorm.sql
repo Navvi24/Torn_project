@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2020 at 03:20 PM
+-- Generation Time: Apr 23, 2020 at 03:39 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -21,6 +21,47 @@ SET time_zone = "+00:00";
 --
 -- Database: `internstorm`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `username` varchar(30) NOT NULL,
+  `password` varchar(10) NOT NULL DEFAULT 'root'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`) VALUES
+('admin@internstorm.com', 'root');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logindetails`
+--
+
+CREATE TABLE `logindetails` (
+  `fname` varchar(30) NOT NULL,
+  `lname` varchar(30) NOT NULL,
+  `phn` varchar(12) NOT NULL,
+  `mail` varchar(50) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `resume_url` varchar(100) NOT NULL DEFAULT 'No Resume',
+  `regdate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `logindetails`
+--
+
+INSERT INTO `logindetails` (`fname`, `lname`, `phn`, `mail`, `password`, `resume_url`, `regdate`) VALUES
+('piyush', 'gupta', '8740893628', 'piyushgupta2599@gmail.com', '123', 'No Resume', '2020-04-21 07:12:35');
 
 -- --------------------------------------------------------
 
@@ -53,6 +94,12 @@ CREATE TABLE `posted_internship` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `logindetails`
+--
+ALTER TABLE `logindetails`
+  ADD PRIMARY KEY (`mail`);
 
 --
 -- Indexes for table `posted_internship`
