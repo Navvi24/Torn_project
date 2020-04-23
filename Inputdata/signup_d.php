@@ -28,6 +28,7 @@ if(!empty($_POST['signup']))
     $pass_retype = $_POST['pass_retype'];
        // echo $pass_retype;
 
+
   }
 }
 

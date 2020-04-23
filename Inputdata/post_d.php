@@ -1,6 +1,7 @@
 <?php
    include("connect.php");
 
+
 $fname    = "";
 $lname    = "";
 $phn      = "";
@@ -75,4 +76,3 @@ if(isset($_POST['post_sub']))
      }
 }
 
-?>

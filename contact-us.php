@@ -65,8 +65,8 @@
 
 
   </head>
-    
-    
+
+
      <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -134,22 +134,22 @@ s0.parentNode.insertBefore(s1,s0);
             <h2 class="h3">Contact Information</h2>
           </div>
           <div class="w-100"></div>
-          <div class="col-md-3">
-            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+          <div class="col-md-4">
+            <p><span>Phone:</span> <a href="tel://+918078646927">+918078646927</a>, <a href="tel://+917972360161">+917972360161</a></p>
           </div>
-          <div class="col-md-3">
-            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+          <div class="col-md-4">
+            <p><span>Email:</span> <a href="mailto:admin@internstorm.com">admin@internstorm.com</a></p>
           </div>
-          <div class="col-md-3">
-            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+          <div class="col-md-4">
+            <p><span>Website</span> <a href="http://www.internstorm.com/" target="_blank">www.internstorm.com</a></p>
           </div>
         </div>
         <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
+
+          <div class="col-md-12 order-md-last d-flex">
             <form action="#" class="bg-white p-5 contact-form">
+              <h1 class="font-weight-bold">Drop Your Query</h1>
+              <br>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Your Name">
               </div>
@@ -167,10 +167,6 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
             </form>
 
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
           </div>
         </div>
       </div>
