@@ -149,7 +149,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     <section class="" id="section-counter">
         <br>
-         <center><h2 style="font-size:40px; color:white; ">Join The Revolution</h2></center>
+         <center><h2 class="mb-4" style="font-size:40px; color:white;"><b>Join The Revoluion</b></h2></center>
         <br>
       <div class="container">
         <div class="row mb-5">
