@@ -160,7 +160,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <input type="text" class="form-control" placeholder="Subject" name="sub">
               </div>
               <div class="form-group">
-                 <textarea name="content" class="form-control" cols="30" rows="7" placeholder="Write something.."></textarea>
+                 <textarea name="content" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" name="sendMail" class="btn btn-primary py-3 px-5">
