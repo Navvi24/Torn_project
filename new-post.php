@@ -81,6 +81,20 @@ input[type=number] {
 </style>
 
   </head>
+    
+     <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5ea1438469e9320caac67cea/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
   <body>
 
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -226,7 +240,7 @@ input[type=number] {
                           <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio"  name="internshipdetail" value="Work from home" required> 
+                          <input type="radio"  name="internshipdetail" value="Work from home"> 
                           <label for="internship_detail"> Work from home</label>
                       </div>
                       </div>
