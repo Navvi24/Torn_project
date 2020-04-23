@@ -149,45 +149,25 @@ s0.parentNode.insertBefore(s1,s0);
 
     <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <div class="icon">
-                      <span class="flaticon-employee"></span>
-                    </div>
-                    <strong class="number" data-number="435000">0</strong>
-                    <span>Internships</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <div class="icon">
-                      <span class="flaticon-collaboration"></span>
-                    </div>
-                    <strong class="number" data-number="40000">0</strong>
-                    <span>Members</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                  <div class="text">
-                    <div class="icon">
-                      <span class="flaticon-promotions"></span>
-                    </div>
-                    <strong class="number" data-number="10500">0</strong>
-                    <span>Company</span>
-                  </div>
-                </div>
-              </div>
+        <div class="row mb-5">
+
+<div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+           <a href="new-post.php" target="_blank">     <button type="button" class="btn btn-outline-light  btn-block"> <strong><p>Are you A Compnay ?</p></strong><br> <p style="text-align:left;">If you’re a company, we’re here to bring you the best of the lot selected carefully from the herd to fit your requirements and requests. What better than to sit and sip on your coffee looking overbigger worries that need to be taken care while we make work easier for you by bringing top-notch candidate.We agree, it’s a hard to pass off on offer, right?</p></button></a>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+
+            </div>
+          </div>
+            <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+<a href="login.php" target="_blank"> <button type="button" class="btn btn-outline-light btn-block "> <strong><p>Are you A Student ?</p></strong> <br> <p style="text-align:left;">Well, we indeed are your saviours in disguise! Bringing you opportunities and varies ones at that to choose from, you can official forget what “settling for” means!With internships crafted just to your liking and need, you can say goodbye to scams and compromises. We wouldn’t go as far as to call ourselves superheroes, only if you insist.</p></button></a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
