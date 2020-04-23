@@ -162,6 +162,10 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="col-md-12">
                   <a href="#">Forget Password</a>
                 </div>
+              </div><div class="row form-group">
+                <div class="col-md-12">
+                  <a href="signup.php">Signup</a>
+                </div>
               </div>
 
             </form>
