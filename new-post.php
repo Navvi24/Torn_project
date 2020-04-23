@@ -323,8 +323,8 @@ s0.parentNode.insertBefore(s1,s0);
                           </div>
                           <div class="col-md-4 mb-3 mb-md-0">
                             <select id="durations" name="stipend_method" class="form-control">
-                              <option value="/Month">/Month</option>
-                              <option value="/week">/week</option>
+                              <option value="/Month">Month</option>
+                              <option value="/week">week</option>
                               <option value="lump-sum">lump-sum</option>
                            </select>
                           </div>

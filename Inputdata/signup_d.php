@@ -16,17 +16,17 @@ if(isset($_POST['signup']))
 if(!empty($_POST['signup']))
 {
     $fname = $_POST['fname'];
-        echo $fname;
+       // echo $fname;
     $lname = $_POST['lname'];
-        echo $lname;
+      //  echo $lname;
     $phn = $_POST['phn'];
-        echo $phn;
+       // echo $phn;
     $email = $_POST['email'];
-        echo $email;
+       // echo $email;
     $password = $_POST['password'];
-        echo $password;
+       // echo $password;
     $pass_retype = $_POST['pass_retype'];
-        echo $pass_retype;
+       // echo $pass_retype;
 
   }
 }
