@@ -81,7 +81,42 @@ if(isset($_POST['post_sub']))
       else{
         echo "posted successfully";
            $description = "";
-           
+           $value = 0;
+                     require 'PHPMailerAutoload.php';
+                     require 'secure.php';
+
+                     $mail = new PHPMailer;
+
+                     $mail->SMTPDebug = 0;                               // Enable verbose debug output
+
+                     $mail->isSMTP();                                      // Set mailer to use SMTP
+                     $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
+                     $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                     $mail->Username = EMAIL;                 // SMTP username
+                     $mail->Password = PASS;                           // SMTP password
+                     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+                     $mail->Port = 587;                                    // TCP port to connect to
+
+                     $mail->setFrom(EMAIL, 'Internstorm');
+                     $mail->addAddress($email);     // Add a recipient
+                  //   $mail->addAddress('admin@internstorm.com');               // Name is optional
+                     $mail->addReplyTo(EMAIL);
+
+                     $mail->isHTML(true);                                  // Set email format to HTML
+
+                     $mail->Subject = 'HELLO';
+                     $mail->Body    = file_get_contents('post_email_layout.php');
+                     $mail->AltBody =file_get_contents('post_email_layout.php');
+
+                     if(!$mail->send()) {
+                       echo 'Message could not be sent.';
+                       echo 'Mailer Error: ' . $mail->ErrorInfo;
+                     }
+                     else {
+                       echo "Message Sent";
+                     }
+
            header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
 }
+?>
