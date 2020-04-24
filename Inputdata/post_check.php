@@ -7,10 +7,10 @@ if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
 <script type="text/javascript">
 function JSalert(){
   swal({
-  title: "Your Internship Posted Successfully",
-  text: "The Internstorm Team Contact You Shortly",
+  title: "Thank you!",
+  text: "Your internship has now been posted successfully. Team Internstorm will get in touch with you shortly. We look forward to providing you with the best interns and great reviews.",
   icon: "success",
-  button: "OK",
+  button: "CLOSE",
 });
 }JSalert();
 </script>
@@ -22,10 +22,10 @@ else
 <script type="text/javascript">
 function JSalert(){
   swal({
-  title: "Your Internship Not Posted Successfully",
-  text: "Please contact support@internstorm.com",
+  title: "Oh dang!",
+  text: "It looks like due to some glitch your internship couldn't be posted! Please try again and we'll make sure this doesn't happen again.",
   icon: "error",
-  button: "OK",
+  button: "CLOSE",
 });
 }JSalert();
 </script>

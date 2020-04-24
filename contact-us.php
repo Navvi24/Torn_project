@@ -116,7 +116,7 @@ s0.parentNode.insertBefore(s1,s0);
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/contact_bg.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -139,14 +139,20 @@ s0.parentNode.insertBefore(s1,s0);
             <p><span>Phone:</span> <a href="tel://+918078646927">+918078646927</a>, <a href="tel://+917972360161">+917972360161</a></p>
           </div>
           <div class="col-md-4">
-            <p><span>Email:</span> <a href="mailto:admin@internstorm.com">admin@internstorm.com</a></p>
+            <p><span>Email:</span> <a href="mailto:support@internstorm.com">support@internstorm.com</a></p>
           </div>
           <div class="col-md-4">
             <p><span>Website</span> <a href="http://www.internstorm.com/" target="_blank">www.internstorm.com</a></p>
           </div>
         </div>
         <div class="row block-9">
-          <div class="col-md-12 order-md-last d-flex">
+          <div class="col-lg-4">
+              <div class="p-4 mb-3 bg-white">
+                <h3 class="h5 text-black mb-3">Send message</h3>
+                <p>Got absolutely any doubts/queries? Well, why don't you hit us up and we can solve them as soon as we can! Ask away, we won't judge, really. We are pretty irresistible to not text though, we know!</p>
+              </div>
+            </div>
+          <div class="col-md-8 order-md-last d-flex">
             <form action="Mail/contactus/contact_process.php" method="post" class="bg-white p-5 contact-form" enctype="multipart/form-data">
               <h1 class="font-weight-bold">Drop Your Query</h1>
               <br>
@@ -183,8 +189,8 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subscribe to Internship</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <h2>Subscribe to Internships Alerts!</h2>
+              <p>We knew you just couldn't get enough of us! Don't worry, we love the attention and appreciate your effort to stay connected. Subscribe to alerts to be on the top of your game and never miss an opportunity. You know what they say,<br>“You snooze, you lose!”</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
                   <form action="#" class="subscribe-form">

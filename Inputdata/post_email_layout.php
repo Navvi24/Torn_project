@@ -71,7 +71,7 @@
                   </tr>
                   <tr>
                     <td class="h1" style="padding: 5px 0 0 0;">
-                      Posted Notification
+                      Post Notification
                     </td>
                   </tr>
                 </table>
@@ -90,12 +90,16 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td class="h2">
-                Welcome to our responsive email!
+                Congratulations! Your Internship Has Been Posted Successfully!
               </td>
             </tr>
             <tr>
               <td class="bodycopy">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
+                We take utmost pleasure in informing you that your internship has now been sent to out activation bar where we will look into it ourselves and approve it to be posted on our portal! <br><br>
+                We look forward to looking with you and creating a wave.<br><br>
+                Thinking of waves, don't forget to hydrate yourself and stay healthy. Great things are coming!<br><br>
+                Regards,<br>
+                Team Internstorm.
               </td>
             </tr>
               <tr>
@@ -103,7 +107,7 @@
                     <table class="buttonwrapper" bgcolor="#e05443" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td class="button" height="45">
-                            <a href="#">Go to website</a>
+                            <a href="http://www.internstorm.com/" target="_blank">Go to website</a>
                           </td>
                         </tr>
                     </table>
@@ -118,7 +122,7 @@
             <tr>
               <td align="center" class="footercopy">
                 <a href="#" class="unsubscribe"><font color="#ffffff">www.internstorm.com</font></a><br/>
-                <span class="hide">Contact Us : support@internstorm.com</span>
+                <span class="hide">Contact Us : <a href="mailto:support@internstorm.com" target="_blank">support@internstorm.com</a></span>
               </td>
             </tr>
 

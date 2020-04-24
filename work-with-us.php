@@ -298,8 +298,8 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subscribe to Internship</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <h2>Subscribe to Internships Alerts!</h2>
+              <p>We knew you just couldn't get enough of us! Don't worry, we love the attention and appreciate your effort to stay connected. Subscribe to alerts to be on the top of your game and never miss an opportunity. You know what they say,<br>“You snooze, you lose!”</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
                   <form action="#" class="subscribe-form">
