@@ -10,6 +10,7 @@ if (isset($_POST['sendMail']))
 
           $mail->SMTPDebug = 0;                               // Enable verbose debug output
 
+
           $mail->isSMTP();                                      // Set mailer to use SMTP
           $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
           $mail->SMTPAuth = true;                               // Enable SMTP authentication
