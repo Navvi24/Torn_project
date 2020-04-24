@@ -219,7 +219,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="company_website">Company Website</label><span>(Optional)</span>
-                        <input type="url" id="company_website" class="form-control" placeholder="Enter your Company Website" name="comp_web">
+                        <input type="url" id="company_website" class="form-control" placeholder="Example : https://www.internstorm.com" name="comp_web">
                       </div>
                     </div>
                     <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.previous()"/>
@@ -237,7 +237,7 @@ s0.parentNode.insertBefore(s1,s0);
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_detail">Internship Details</label>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio" name="internship_detail" value="Regular" required>
+                          <input type="radio" name="internship_detail" value="Regular" required checked>
                           <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
@@ -264,7 +264,7 @@ s0.parentNode.insertBefore(s1,s0);
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_start_date">Internship Start Date</label>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio" name="internship_start_date" value="Immediately" required>
+                          <input type="radio" name="internship_start_date" value="Immediately" required checked>
                           <label for=internship_start_date>Immediately (within next 30 days)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
@@ -290,7 +290,7 @@ s0.parentNode.insertBefore(s1,s0);
                              <div class="invalid-feedback">Please choose duration.</div>
                             </div>
                             <div class="col-md-4 mb-3 mb-md-0">
-                              <select id="durations" name="duration_type" class="form-control">
+                              <select id="durations" name="duration_type" class="form-control" required>
                                 <option value="months">Months</option>
                                 <option value="weeks">Weeks</option>
                              </select>
@@ -314,7 +314,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <br>
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold" for="stipend_amount">Stipend(₹)</label>
+                        <label class="font-weight-bold" for="stipend_amount">Stipend(₹)</label><span>(if internship is unpaid mention 0 in stipend)</span>
                         <div id="Fixed" class="form-group row">
                           <div class="col-md-8 mb-3 mb-md-0">
                               <input type="number" id="total_opening" class="form-control" placeholder="Example : ₹5000 " name="stipend_amount" required>
@@ -336,22 +336,22 @@ s0.parentNode.insertBefore(s1,s0);
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="total_opening">Perks</label>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="Certificate" name="perks"> Certificate</label>
+                          <label><input type="checkbox" value="Certificate" name="perks[]"> Certificate</label>
                         </div>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="Letter of recommendation" name="perks"> Letter of recommendation</label>
+                          <label><input type="checkbox" value="Letter of recommendation" name="perks[]"> Letter of recommendation</label>
                         </div>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="Flexible Work hours" name="perks"> Flexible Work hours</label>
+                          <label><input type="checkbox" value="Flexible Work hours" name="perks[]"> Flexible Work hours</label>
                         </div>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="5 days a week" name="perks"> 5 days a week</label>
+                          <label><input type="checkbox" value="5 days a week" name="perks[]"> 5 days a week</label>
                         </div>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="Informal dress code" name="perks"> Informal dress code</label>
+                          <label><input type="checkbox" value="Informal dress code" name="perks[]"> Informal dress code</label>
                         </div>
                         <div class="checkbox">
-                          <label><input type="checkbox" value="Free Snacks and beverages" name="perks"> Free Snacks and beverages</label>
+                          <label><input type="checkbox" value="Free Snacks and beverages" name="perks[]"> Free Snacks and beverages</label>
                         </div>
                       </div>
                     </div>

@@ -18,6 +18,9 @@ $duration_type ="";
 $about_internship ="";
 $stipend_amount ="";
 $stipend_method ="";
+$perks="";
+$perks_value="";
+$perks_tmp_value="";
 //print_r($_POST);
 
 if(isset($_POST['post_sub']))
@@ -57,13 +60,17 @@ if(isset($_POST['post_sub']))
       //  echo $stipend_amount;
     $stipend_method = $_POST['stipend_method'];
      //   echo $stipend_method;
-
+     $perks = $_POST['perks'];
+     foreach ($perks as $key => $perks_tmp_value)
+     {
+       $perks_value .= $perks_tmp_value.",";
+     }
   //}
 
 
 
- $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method )
-       VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$internship_city', '$total_opening', '$internship_start_date', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method')";
+ $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method,perks )
+       VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$internship_city', '$total_opening', '$internship_start_date', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method','$perks_value')";
 
 	if (!mysqli_query($con,$sql)) {
    $error = "Error: ".mysqli_error($con);
