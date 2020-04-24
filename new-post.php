@@ -1,11 +1,3 @@
-<?php include "mobile_detact.php";
-
-$detect = new Mobile_Detect();
-if ($detect->isMobile()){
-echo "please open in desktop only";
-}
-else {
-?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -105,7 +97,14 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
   <body>
+    <?php include "mobile_detact.php";
 
+    $detect = new Mobile_Detect();
+    if ($detect->isMobile()){
+    echo "please open in desktop only";
+    }
+    else {
+    ?>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">
