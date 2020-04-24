@@ -1,3 +1,11 @@
+<?php include "mobile_detact.php";
+
+$detect = new Mobile_Detect();
+if ($detect->isMobile()){
+echo "please open in desktop only";
+}
+else {
+?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -516,3 +524,4 @@ s0.parentNode.insertBefore(s1,s0);
 
   </body>
 </html>
+  <?php                   }?>
