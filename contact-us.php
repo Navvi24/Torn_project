@@ -147,23 +147,27 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row block-9">
           <div class="col-md-12 order-md-last d-flex">
-            <form action="Mail/contactus/contact_process.php" method="post" class="bg-white p-5 contact-form">
+            <form action="Mail/contactus/contact_process.php" method="post" class="bg-white p-5 contact-form" enctype="multipart/form-data">
               <h1 class="font-weight-bold">Drop Your Query</h1>
               <br>
-              <div class="form-group">
+              <div class="need-validation form-group">
                 <input type="text" class="form-control" placeholder="Your Name" name="Name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
               </div>
               <div class="form-group">
                 <input type="email" class="form-control" placeholder="Your Email" name="from" required>
+                <div class="invalid-feedback">Please enter your email.</div>
               </div>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Subject" name="sub" required>
+                <div class="invalid-feedback">Please enter your subject.</div>
               </div>
               <div class="form-group">
                  <textarea name="content" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
+                 <div class="invalid-feedback">Please enter your message.</div>
               </div>
               <div class="form-group">
-                 <input type="file" class="form-control" placeholder="Subject" name="file" required>
+                 <input type="file" class="form-control" placeholder="Subject" name="file">
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" name="sendMail" class="btn btn-primary py-3 px-5">
@@ -218,6 +222,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <li><a href="index.php" class="py-2 d-block">Home</a></li>
                <li><a href="our-story.php" class="py-2 d-block">Our Story</a></li>
                <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
+               <li><a href="work-with-us.php" class="py-2 d-block">Work with us</a></li>
                <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
                 <li><a href="#" class="py-2 d-block">FAQ</a></li>
 

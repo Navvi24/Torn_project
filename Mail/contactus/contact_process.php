@@ -17,16 +17,20 @@ if (isset($_POST['sendMail']))
           $mail->Username = EMAIL;                 // SMTP username
           $mail->Password = PASS;                           // SMTP password
           $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-          $mail->Port = '465';                                    // TCP port to connect to
-          $mail->AddAttachment = $attachment;
+          $mail->Port = '465';    // TCP port to connect to
+
+          //$file_name = $_FILES["file"]["name"];
+          //move_uploaded_file($_FILES["file"]["tmp_name"], $file_name);
+          $mail->AddAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
+
           $mail->setFrom(EMAIL, $_POST['Name']);
-          $mail->addAddress('admin@internstorm.com');     // Add a recipient
+          $mail->addAddress('support@internstorm.com');     // Add a recipient
        //   $mail->addAddress('admin@internstorm.com');               // Name is optional
           $mail->addReplyTo($_POST['from']);
 
           $mail->isHTML(true);                                  // Set email format to HTML
 
-          $mail->Subject = $_POST['sub'];
+          $mail->Subject = "QUERY : ".$_POST['sub'];
           $mail->Body    = '<div><p></p>'.$_POST['content'].'</div>';
           $mail->AltBody = $_POST['content'];
 

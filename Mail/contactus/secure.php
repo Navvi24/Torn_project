@@ -1,4 +1,4 @@
 <?php
-  define('EMAIL', 'admin@internstorm.com');
-  define('PASS','admininternstorm');
+  define('EMAIL', 'support@internstorm.com');
+  define('PASS','supportinternstorm');
  ?>

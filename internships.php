@@ -381,6 +381,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <li><a href="index.php" class="py-2 d-block">Home</a></li>
                <li><a href="our-story.php" class="py-2 d-block">Our Story</a></li>
                <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
+               <li><a href="work-with-us.php" class="py-2 d-block">Work with us</a></li>
                <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
                 <li><a href="#" class="py-2 d-block">FAQ</a></li>
 

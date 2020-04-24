@@ -4,7 +4,7 @@ include("Inputdata/login_d.php");
 <!DOCTYPE html>
 <html lang="en">
  <head>
-    <title>TORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <title>STORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -68,8 +68,8 @@ include("Inputdata/login_d.php");
 
 
   </head>
-    
-    
+
+
      <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -218,6 +218,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <li><a href="index.php" class="py-2 d-block">Home</a></li>
                <li><a href="our-story.php" class="py-2 d-block">Our Story</a></li>
                <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
+               <li><a href="work-with-us.php" class="py-2 d-block">Work with us</a></li>
                <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
                 <li><a href="#" class="py-2 d-block">FAQ</a></li>
 
