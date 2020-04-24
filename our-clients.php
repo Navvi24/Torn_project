@@ -125,104 +125,134 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </div>
 
-    <section class="ftco-section ftco-candidates ftco-candidates-2 bg-light">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6">
-    				<div class="team d-md-flex">
-        			<div class="img" style="background-image: url(images/person_1.jpg);"></div>
-        			<div class="text pl-md-4">
-        				<span class="location mb-0">Western City, UK</span>
-        				<h2>Danica Lewis</h2>
-	        			<span class="position">Graduate</span>
-	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			<span class="seen">Last Activity 4 months ago</span>
-	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
-        			</div>
-        		</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="team d-md-flex">
-        			<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-        			<div class="text pl-md-4">
-        				<span class="location mb-0">Western City, UK</span>
-        				<h2>Danica Lewis</h2>
-	        			<span class="position">Graduate</span>
-	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			<span class="seen">Last Activity 4 months ago</span>
-	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
-        			</div>
-        		</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="team d-md-flex">
-        			<div class="img" style="background-image: url(images/person_3.jpg);"></div>
-        			<div class="text pl-md-4">
-        				<span class="location mb-0">Western City, UK</span>
-        				<h2>Danica Lewis</h2>
-	        			<span class="position">Graduate</span>
-	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			<span class="seen">Last Activity 4 months ago</span>
-	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
-        			</div>
-        		</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="team d-md-flex">
-        			<div class="img" style="background-image: url(images/person_4.jpg);"></div>
-        			<div class="text pl-md-4">
-        				<span class="location mb-0">Western City, UK</span>
-        				<h2>Danica Lewis</h2>
-	        			<span class="position">Graduate</span>
-	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			<span class="seen">Last Activity 4 months ago</span>
-	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
-        			</div>
-        		</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="team d-md-flex">
-        			<div class="img" style="background-image: url(images/person_5.jpg);"></div>
-        			<div class="text pl-md-4">
-        				<span class="location mb-0">Western City, UK</span>
-        				<h2>Danica Lewis</h2>
-	        			<span class="position">Graduate</span>
-	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			<span class="seen">Last Activity 4 months ago</span>
-	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
-        			</div>
-        		</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="team d-md-flex">
-        			<div class="img" style="background-image: url(images/person_6.jpg);"></div>
-        			<div class="text pl-md-4">
-        				<span class="location mb-0">Western City, UK</span>
-        				<h2>Danica Lewis</h2>
-	        			<span class="position">Graduate</span>
-	        			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			<span class="seen">Last Activity 4 months ago</span>
-	        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
-        			</div>
-        		</div>
-    			</div>
-    		</div>
-    		<div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
+	   <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Testimonial</span>
+            <h2 class="mb-4">Truer Stories Weren’t Told!</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">I've been selected as a student community manager for the Internstorm.Our company has jst started and it is really creating alot of placement ideas for the students within...</p>
+                    <p class="name">Yuvraj Patil</p>
+                    <span class="position">Sinhagad College of Engineering </span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">I am Shantanu, one of the scm's at Internstorm.Internstorm has helped me by making me a person who can help others in their internship related problems and also make them believe that they can have an internship they always wanted in their desired field and area of interest according to their skills and knowledge.
+</p>
+                    <p class="name">Shantanu Mundra</p>
+                    <span class="position">BMCC</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">I want to thank you for giving me the opportunity to serve as a Student Community Manager intern at Internstorm. I have gained valuable insight about the internstorm & how it’s different from the other platforms. Internstorm Provides the better opportunity to each student & it gives wings to their dream to achieve the opportunity. </p>
+                    <p class="name">Rahul Singh</p>
+                    <span class="position">Balaji Institute of Modern Management</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_4.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">"We all know that practical experience is the best, and internstorm gave me that hands-on experience which I needed. I feel internstorm helped me develop key skills that I can't get in a classroom.</p>
+                    <p class="name">Abhishek Meel</p>
+                    <span class="position">Army Institute of Technology</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_5.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4">"Hey guys, You are at the right platform to find your DREAM INTERNSHIP. I have gone through all so-call "Best Internships Places" but never could find the one I Love. Just a few days of getting in touch with InternStorm I was good to go. It's the best place for internships.</p>
+                    <p class="name">Avnish Oswal</p>
+                    <span class="position">Vishwakarma Institute of Information Technology</span>
+                  </div>
+                </div>
+              </div>
+                 <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_6.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4"> I was so bored of these internship. Internstorm played the role of a platforn for Me to explore the talent within Me along with on board internships - Practical knowledge and experience. In short: Boosting up CV along with practical experience and fun.</p>
+                    <p class="name">Rahul Agarwal</p>
+                    <span class="position">Symbiosis Institute of Computer Studies and Research</span>
+                  </div>
+                </div>
+              </div>
+                 <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_7.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4"> Internstorm helps a student to explore and realise their potential. They guide you and mentor you until you’ve found the internship of your choice. The people are kind and approachable and make will make sure that you are a priority.“ </p>
+                    <p class="name">Sanjana Pandit</p>
+                    <span class="position">Symbiosis School of Liberal Arts</span>
+                  </div>
+                </div>
+              </div>
+                 <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_8.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4"> So I was actively looking for a new opportunity to gain experience and knowledge through an internship that actually fits my criteria and my qualifications. InternStorm gave me a platform where I can easily gain experience to such internships and I ended up getting one that really fits my profile</p>
+                    <p class="name">Pallavi Daswani</p>
+                    <span class="position">Symbiosis Centre for Management Studies</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-    	</div>
+      </div>
     </section>
 
 		<section class="ftco-section-parallax">
