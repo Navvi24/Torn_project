@@ -72,13 +72,16 @@ if(isset($_POST['post_sub']))
  $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method,perks )
        VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$internship_city', '$total_opening', '$internship_start_date', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method','$perks_value')";
 
-	if (!mysqli_query($con,$sql)) {
-   $error = "Error: ".mysqli_error($con);
+	if (!mysqli_query($con,$sql))
+  {
+      $error = "Error: ".mysqli_error($con);
         echo $error;
-   header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
-      }else{
+        header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+   }
+      else{
         echo "posted successfully";
            $description = "";
+           
            header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
 }
