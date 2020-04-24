@@ -104,9 +104,9 @@ if(isset($_POST['post_sub']))
 
                      $mail->isHTML(true);                                  // Set email format to HTML
 
-                     $mail->Subject = 'HELLO';
+                     $mail->Subject = 'Internship Posted Successfully';
                      $mail->Body    = file_get_contents('post_email_layout.php');
-                     $mail->AltBody =file_get_contents('post_email_layout.php');
+                     $mail->AltBody = file_get_contents('post_email_layout.php');
 
                      if(!$mail->send()) {
                        echo 'Message could not be sent.';
@@ -115,7 +115,6 @@ if(isset($_POST['post_sub']))
                      else {
                        echo "Message Sent";
                      }
-
            header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
 }
