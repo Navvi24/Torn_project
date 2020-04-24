@@ -100,9 +100,17 @@ s0.parentNode.insertBefore(s1,s0);
     <?php include "mobile_detact.php";
 
     $detect = new Mobile_Detect();
-    if ($detect->isMobile()){
-    echo "please open in desktop only";
-    }
+    if ($detect->isMobile()){?>
+    <div class="alert alert-warning alert-dismissible fade show">
+    <center><h2 class="alert-heading"><i class="fa fa-warning"></i> Warning!</h2></center>
+    <p>Please Open In Desktop Mode Only </p>
+    <hr>
+    <p class="mb-0">Once you have filled all the details, click on the 'Submit' button to continue.</p>
+    <br><center><p class="mb-0">OR</p></center><br>
+    <p class="mb-0">Contact support@internstorm.com</p>
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+</div>
+    <?php }
     else {
     ?>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
