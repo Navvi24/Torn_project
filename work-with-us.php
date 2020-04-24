@@ -164,11 +164,11 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </section>
 
-	   <section class="ftco-section testimony-section">
+    <section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
+           <span class="subheading">Testimonial</span>
             <h2 class="mb-4">Truer Stories Weren’t Told!</h2>
           </div>
         </div>
@@ -183,7 +183,7 @@ s0.parentNode.insertBefore(s1,s0);
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">I've been selected as a student community manager for the Internstorm.Our company has jst started and it is really creating alot of placement ideas for the students within...</p>
+                    <p class="mb-4">I've been selected as a student community manager for the Internstorm. our company has just started and it is really creating alot of placement ideas for the students within working at a startup probably means you’re part of a small team, most likely in the single digits.</p>
                     <p class="name">Yuvraj Patil</p>
                     <span class="position">Sinhagad College of Engineering </span>
                   </div>
@@ -197,10 +197,9 @@ s0.parentNode.insertBefore(s1,s0);
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">I am Shantanu, one of the scm's at Internstorm.Internstorm has helped me by making me a person who can help others in their internship related problems and also make them believe that they can have an internship they always wanted in their desired field and area of interest according to their skills and knowledge.
-</p>
+                    <p class="mb-4">Internstorm has helped me by making me a person who can help others in their internship related problems and also make them believe that they can have an internship they always wanted in their desired field and area of interest according to their skills and knowledge.</p>
                     <p class="name">Shantanu Mundra</p>
-                    <span class="position">BMCC</span>
+                    <span class="position">BMCC College</span>
                   </div>
                 </div>
               </div>
@@ -226,7 +225,7 @@ s0.parentNode.insertBefore(s1,s0);
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">"We all know that practical experience is the best, and internstorm gave me that hands-on experience which I needed. I feel internstorm helped me develop key skills that I can't get in a classroom.</p>
+                    <p class="mb-4">We all know that practical experience is the best, and internstorm gave me that hands-on experience which I needed. I feel internstorm helped me develop key skills that I can't get in a classroom.</p>
                     <p class="name">Abhishek Meel</p>
                     <span class="position">Army Institute of Technology</span>
                   </div>
@@ -240,7 +239,7 @@ s0.parentNode.insertBefore(s1,s0);
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4">"Hey guys, You are at the right platform to find your DREAM INTERNSHIP. I have gone through all so-call "Best Internships Places" but never could find the one I Love. Just a few days of getting in touch with InternStorm I was good to go. It's the best place for internships.</p>
+                    <p class="mb-4">You are at the right platform to find your DREAM INTERNSHIP. I have gone through all so-call "Best Internships Places" but never could find the one I Love. Just a few days of getting in touch with InternStorm I was good to go. It's the best place for internships.</p>
                     <p class="name">Avnish Oswal</p>
                     <span class="position">Vishwakarma Institute of Information Technology</span>
                   </div>
@@ -254,7 +253,7 @@ s0.parentNode.insertBefore(s1,s0);
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4"> I was so bored of these internship. Internstorm played the role of a platforn for Me to explore the talent within Me along with on board internships - Practical knowledge and experience. In short: Boosting up CV along with practical experience and fun.</p>
+                    <p class="mb-4"> I was so bored of these internship. Internstorm played the role of a platform for me to explore the talent within me along with on board internships and also Practical knowledge and experience. In short Boosting up CV along with practical experience and fun.</p>
                     <p class="name">Rahul Agarwal</p>
                     <span class="position">Symbiosis Institute of Computer Studies and Research</span>
                   </div>
@@ -268,7 +267,7 @@ s0.parentNode.insertBefore(s1,s0);
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4"> Internstorm helps a student to explore and realise their potential. They guide you and mentor you until you’ve found the internship of your choice. The people are kind and approachable and make will make sure that you are a priority.“ </p>
+                    <p class="mb-4"> Internstorm helps a student to explore and realise their potential. They guide you and mentor you until you’ve found the internship of your choice. The people are kind and approachable and make will make sure that you are a priority.</p>
                     <p class="name">Sanjana Pandit</p>
                     <span class="position">Symbiosis School of Liberal Arts</span>
                   </div>
@@ -282,7 +281,7 @@ s0.parentNode.insertBefore(s1,s0);
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4"> So I was actively looking for a new opportunity to gain experience and knowledge through an internship that actually fits my criteria and my qualifications. InternStorm gave me a platform where I can easily gain experience to such internships and I ended up getting one that really fits my profile</p>
+                    <p class="mb-4">I was actively looking for a new opportunity to gain experience and knowledge through an internship that actually fits my criteria and my qualifications. InternStorm gave me a platform where I can easily gain experience to such internships and I ended up getting one that really fits my profile</p>
                     <p class="name">Pallavi Daswani</p>
                     <span class="position">Symbiosis Centre for Management Studies</span>
                   </div>
