@@ -1,5 +1,5 @@
 <?php
-include("./Inputdata/connect.php");
+include("./inputdata/connect.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -298,7 +298,7 @@ function textCounter(textField, showCountField) {
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                
+
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
 	              </ul>

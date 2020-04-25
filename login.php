@@ -1,5 +1,5 @@
 <?php
-include("Inputdata/login_d.php");
+include("inputdata/login_d.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -137,8 +137,8 @@ s0.parentNode.insertBefore(s1,s0);
           <div class="col-md-12 col-lg-12 mb-5">
 			     <form action="./inputdata/login_d.php" method="post" class="p-5 bg-white">
           <?php
-          include("Inputdata/signup_check.php");
-          include("Inputdata/login_check.php");
+          include("inputdata/signup_check.php");
+          include("inputdata/login_check.php");
           ?>
              <h1>Login Here</h1>
               <div class="row form-group">
@@ -230,7 +230,7 @@ s0.parentNode.insertBefore(s1,s0);
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                
+
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
 	              </ul>

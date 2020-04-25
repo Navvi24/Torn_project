@@ -186,7 +186,7 @@ s0.parentNode.insertBefore(s1,s0);
                 </div>
               </div>
               <div class="bs-stepper-content">
-                <form class="needs-validation p-5 bg-white" action="Inputdata/post_d.php" method="post" novalidate>
+                <form class="needs-validation p-5 bg-white" action="inputdata/post_d.php" method="post" novalidate>
                   <div id="test-l-1" class="content">
                     <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
@@ -437,7 +437,7 @@ s0.parentNode.insertBefore(s1,s0);
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                
+
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
 	              </ul>
@@ -455,7 +455,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
       </div>
     </footer>
-    <?php include('Inputdata/post_check.php'); ?>
+    <?php include('inputdata/post_check.php'); ?>
 <script>
   var maxAmount = 10;
   function textCounter(textField, showCountField) {

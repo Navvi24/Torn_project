@@ -1,5 +1,5 @@
 <?php
-include('Inputdata/session.php');
+include('inputdata/session.php');
  ?>
 <!DOCTYPE html>
 <html lang="en">

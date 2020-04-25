@@ -122,7 +122,7 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td align="center" class="footercopy">
-                <a href="http://www.internstorm.com/" class="unsubscribe"><font color="#ffffff">www.internstorm.com</font></a><br/>
+                <a href="http://www.internstorm.com/"><font color="#ffffff">www.internstorm.com</font></a><br/>
                 <span class="hide">Contact Us : <a href="mailto:support@internstorm.com" target="_blank">support@internstorm.com</a></span>
               </td>
             </tr>

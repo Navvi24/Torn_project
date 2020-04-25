@@ -1,7 +1,6 @@
-<?php
-$value = 0;
-          require 'PHPMailerAutoload.php';
-          require 'secure.php';
+        <?php
+          include 'PHPMailerAutoload.php';
+          include 'secure.php';
 
           $mail = new PHPMailer;
 
@@ -16,7 +15,7 @@ $value = 0;
           $mail->Port = 587;                                    // TCP port to connect to
 
           $mail->setFrom(EMAIL, 'Internstorm');
-          $mail->addAddress($email);     // Add a recipient
+          $mail->addAddress("navdeepsharma8594@gmail.com");     // Add a recipient
        //   $mail->addAddress('admin@internstorm.com');               // Name is optional
           $mail->addReplyTo(EMAIL);
 

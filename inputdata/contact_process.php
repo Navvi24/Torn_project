@@ -2,20 +2,15 @@
 $value = 0;
 if (isset($_POST['sendMail']))
 {
-          $attachment = $_POST['file'];
-          require 'PHPMailerAutoload.php';
-          require 'secure.php';
+        require 'PHPMailerAutoload.php';
 
           $mail = new PHPMailer;
-
-          $mail->SMTPDebug = 0;                               // Enable verbose debug output
-
 
           $mail->isSMTP();                                      // Set mailer to use SMTP
           $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
           $mail->SMTPAuth = true;                               // Enable SMTP authentication
-          $mail->Username = EMAIL;                 // SMTP username
-          $mail->Password = PASS;                           // SMTP password
+          $mail->Username = 'support@internstorm.com';                 // SMTP username
+          $mail->Password = 'supportinternstorm';                           // SMTP password
           $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
           $mail->Port = '465';    // TCP port to connect to
 
@@ -23,7 +18,7 @@ if (isset($_POST['sendMail']))
           //move_uploaded_file($_FILES["file"]["tmp_name"], $file_name);
           $mail->AddAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
 
-          $mail->setFrom(EMAIL, $_POST['Name']);
+          $mail->setFrom('support@internstorm.com', $_POST['Name']);
           $mail->addAddress('support@internstorm.com');     // Add a recipient
        //   $mail->addAddress('admin@internstorm.com');               // Name is optional
           $mail->addReplyTo($_POST['from']);
@@ -46,10 +41,10 @@ if (isset($_POST['sendMail']))
  <?php
  if($value == 1)
  {
-   header("Location: ../../contact-us.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+   header("Location: ../contact-us.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
  }
  else
  {
-    header("Location: ../../contact-us.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+    header("Location: ../contact-us.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
  }
  ?>

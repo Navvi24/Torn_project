@@ -153,7 +153,7 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
             </div>
           <div class="col-md-8 order-md-last d-flex">
-            <form action="Mail/contactus/contact_process.php" method="post" class="bg-white p-5 contact-form" enctype="multipart/form-data">
+            <form action="inputdata/contact_process.php" method="post" class="bg-white p-5 contact-form" enctype="multipart/form-data">
               <h1 class="font-weight-bold">Drop Your Query</h1>
               <br>
               <div class="need-validation form-group">
@@ -240,7 +240,7 @@ s0.parentNode.insertBefore(s1,s0);
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                
+
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
 	              </ul>
@@ -260,7 +260,7 @@ s0.parentNode.insertBefore(s1,s0);
     </footer>
 
 
-    <?php include('Inputdata/contact-us_check.php'); ?>
+    <?php include('inputdata/contact-us_check.php'); ?>
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
