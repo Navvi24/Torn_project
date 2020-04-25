@@ -98,6 +98,7 @@
                 Greetings!<br><br>
                 We take utmost pleasure in informing you that your internship has now been sent to our activation bar where we will look into it ourselves and approve it to be posted on our portal.<br><br>
                 We look forward to working with you and creating a wave.<br><br>
+                Thinking of waves, don't forget to hydrate yourself and stay healthy. Great things are coming!<br><br>
                 Regards,<br>
                 Team Internstorm.
               </td>
