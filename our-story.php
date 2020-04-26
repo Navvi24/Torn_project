@@ -79,7 +79,6 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
   <body>
-
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">
@@ -310,7 +309,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="form-group d-flex">
                       <input type="email" class="form-control" name="email" placeholder="Enter email address">
                       <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
-                       
+
                     </div>
                   </form>
                 </div>
@@ -320,7 +319,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
       </div></form>
     </section>
-      
+
    <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -354,7 +353,7 @@ s0.parentNode.insertBefore(s1,s0);
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                
+
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
 	              </ul>

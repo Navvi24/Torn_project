@@ -1,6 +1,6 @@
 <?php
-//if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
-//{
+if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
+{
 if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
 {
 ?>
@@ -23,7 +23,7 @@ else
 function JSalert(){
   swal({
   title: "Oh dang!",
-  text: "Please Try Again",
+  text: "Already Subscribed",
   icon: "error",
   button: "CLOSE",
 });
@@ -31,5 +31,5 @@ function JSalert(){
 </script>
 <?php
 }
-//}
+}
 ?>

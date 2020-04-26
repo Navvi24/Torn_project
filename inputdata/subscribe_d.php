@@ -11,10 +11,10 @@ if(isset($_POST['subscribe']))
 
 if(!empty($_POST['subscribe']))
 {
-    
+
     $email = $_POST['email'];
       //echo $email;
-    
+
   }
 
 

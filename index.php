@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +20,8 @@
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
-
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="alert/dist/sweetalert.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -535,7 +535,7 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </section>
 
-    
+
 		<section class="ftco-section-parallax">
             <form action="./inputdata/subscribe_d.php" method="post">
       <div class="parallax-img d-flex align-items-center">
@@ -550,7 +550,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="form-group d-flex">
                       <input type="email" class="form-control" name="email" placeholder="Enter email address">
                       <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
-                       
+
                     </div>
                   </form>
                 </div>
@@ -594,7 +594,7 @@ s0.parentNode.insertBefore(s1,s0);
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                
+
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
 	              </ul>
@@ -613,8 +613,7 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </footer>
 
-
-
+<?php include("./inputdata/subscribe_check.php") ?>
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 

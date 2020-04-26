@@ -261,12 +261,13 @@ s0.parentNode.insertBefore(s1,s0);
                       </div>
                       </div>
                     </div>
-                                       
+
                       <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_state">State</label>
-                      
-                      <select name="state" id="state" class="form-control" required>
+
+                    <select name="state" id="state" class="form-control" required>
+                    <option label="Choose State" selected>Choose State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -295,7 +296,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <option value="Nagaland">Nagaland</option>
                     <option value="Odisha">Odisha</option>
                     <option value="Punjab">Punjab</option>
-                    <option value="Rajasthan" selected>Rajasthan</option>
+                    <option value="Rajasthan">Rajasthan</option>
                     <option value="Sikkim">Sikkim</option>
                     <option value="Tamil Nadu">Tamil Nadu</option>
                     <option value="Telangana">Telangana</option>
@@ -304,10 +305,10 @@ s0.parentNode.insertBefore(s1,s0);
                     <option value="Uttarakhand">Uttarakhand</option>
                     <option value="West Bengal">West Bengal</option>
                     </select>
-                      
+
                           </div>
                       </div>
-                    
+
                        <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_city">City</label>
@@ -315,8 +316,8 @@ s0.parentNode.insertBefore(s1,s0);
                         <div class="invalid-feedback">Please enter internship city.</div>
                       </div>
                     </div>
-                              
-                              
+
+
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="total_opening">Number of openings</label>
@@ -444,7 +445,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="form-group d-flex">
                       <input type="email" class="form-control" name="email" placeholder="Enter email address">
                       <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
-                       
+
                     </div>
                   </form>
                 </div>
