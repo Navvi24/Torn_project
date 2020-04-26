@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Posted Internships Details</h1>
+            <h1>Registered Users</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Posted Internships</li>
+              <li class="breadcrumb-item active">Registered Users</li>
             </ol>
           </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">POSTED DETAILS</h3>
+              <h3 class="card-title">Registered Users</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">

@@ -138,7 +138,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Mainpage.php" class="nav-link">
+            <a href="contactdetails.php" class="nav-link">
               <i class="nav-icon far fa-address-book"></i>
               <p>
                 Contacts Details
