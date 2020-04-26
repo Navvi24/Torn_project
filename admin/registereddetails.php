@@ -34,14 +34,10 @@
                 <thead>
                 <tr>
                   <th>SR</th>
-                  <th>Post Time</th>
-                  <th>Company Name</th>
-                  <th>Website</th>
-                  <th>Internship Profile</th>
-                  <th>Openings</th>
-                  <th>Start Date</th>
-                  <th>Stipend</th>
-                  <th>Perks</th>
+                  <th>Reg. Time</th>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
                   <th>Options</th>
                 </tr>
                 </thead>
@@ -52,11 +48,7 @@
                   <td>1</td>
                   <td>1</td>
                   <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
+                  <td>Send Mail</td>
                 </tr>
                 </tbody>
               </table>

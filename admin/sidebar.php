@@ -122,7 +122,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Mainpage.php" class="nav-link">
+            <a href="registereddetails.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Registered Users
@@ -138,7 +138,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="contactdetails.php" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-address-book"></i>
               <p>
                 Contacts Details
