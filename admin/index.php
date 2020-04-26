@@ -4,7 +4,7 @@ $error="";
 require("./connectivity/dbconnect.php");
 if(isset($_SESSION['login_user']))
 {
-  header("location: Mainpage.php");
+  header("location: mainpage.php");
   die();
 }
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   // If result matched $myusername and $mypassword, table row must be 1 row
   if(mysqli_num_rows($result) > 0) {
     $_SESSION['login_user'] = $myusername;
-    header("location: Mainpage.php");
+    header("location: mainpage.php");
   }else {
     $error = "Your Login Name or Password is invalid ";
   }
@@ -82,7 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember">
+              <input type="checkbox" id="remember" name="remember">
               <label for="remember">
                 Remember Me
               </label>
