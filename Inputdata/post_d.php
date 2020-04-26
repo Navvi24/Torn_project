@@ -1,4 +1,11 @@
 <?php
+function callmail()
+{
+
+}
+?>
+
+<?php
    include("connect.php");
       $fname    = "";
       $lname    = "";
@@ -19,7 +26,7 @@
       $perks="";
       $perks_value="";
       $perks_tmp_value="";
-
+      $send_mail="";
     if(isset($_POST['post_sub']))
     {
       $fname = $_POST['fname'];
@@ -53,35 +60,35 @@
             header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
           }
         else
-        {
-                     require 'PHPMailerAutoload.php';
-                     $mail = new PHPMailer;
-                     $mail->isSMTP();
-                     $mail->Host = 'smtp.yandex.com';
-                     $mail->SMTPAuth = true;
-                     $mail->Username = 'admin@internstorm.com';
-                     $mail->Password = 'admininternstorm';
-                     $mail->SMTPSecure = 'tls';
-                     $mail->Port = 587;
-                     $mail->setFrom('admin@internstorm.com', 'Internstorm');
-                     $mail->addAddress($_POST['email']);
-                     $mail->addReplyTo('admin@internstorm.com');
-                     $mail->isHTML(true);
-                     $mail->Subject = 'Internship Posted Successfully';
-                     $mail->Body    = file_get_contents('post_email_layout.php');
-                     $mail->AltBody = file_get_contents('post_email_layout.php');
+          {
+            require 'PHPMailerAutoload.php';
+            $mail = new PHPMailer();
+            $mail->isSMTP();
+            $mail->isSMTPDebug = 3;
+            $mail->Host = 'smtp.yandex.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'admin@internstorm.com';
+            $mail->Password = 'admininternstorm';
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 587;
+            $mail->setFrom('admin@internstorm.com', 'Internstorm');
+            $mail->addAddress($_POST['email']);
+            $mail->addReplyTo('admin@internstorm.com');
+            $mail->isHTML(true);
+            $mail->Subject = 'Internship Posted Successfully';
+            $mail->Body    = file_get_contents('post_email_layout.php');
+            $mail->AltBody = file_get_contents('post_email_layout.php');
 
-                     if(!$mail->send())
-                     {
-                       echo 'Message could not be sent.';
-                       echo 'Mailer Error: ' . $mail->ErrorInfo;
-                     }
-                     else
-                     {
-                       echo "Message Sent";
-                     }
-
+            if(!$mail->send())
+            {
+              echo 'Message could not be sent.';
+              echo 'Mailer Error: ' . $mail->ErrorInfo;
+            }
+            else
+            {
+              echo "Message Sent";
+            }
                      header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
-     }
+          }
 }
 ?>
