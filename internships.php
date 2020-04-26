@@ -64,6 +64,16 @@ include('inputdata/session.php');
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+#namelink
+{
+  color: black;
+}
+@media(max-width: 500px)
+{
+    #namelink{
+      color:white;
+    }
+}
 </style>
 
 
@@ -100,7 +110,7 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
             <div class="row">
-              <li><div class="col-sm"><button class="btn btn-outline-*"><a href="#"  style="color:black;">Welcome, <?php echo $login_session; ?></a></button></div></li>
+              <li><div class="col-sm"><button class="btn btn-outline-*"><a href="#" id="namelink" style="@media(max-width: 500px){ color:white;}">Welcome, <?php echo $login_session; ?></a></button></div></li>
   	          <li><div class="col-sm"><button class="btn btn-danger"><a href="signout.php" style="color:white;">Sign out</a></button></div></li>&nbsp;&nbsp;
             </div>
 	        </ul>
