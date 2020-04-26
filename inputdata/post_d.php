@@ -14,6 +14,7 @@
       $internship_pos ="";
       $internship_detail ="";
       $internship_city = "";
+      $state ="";
       $total_opening = "";
       $internship_start_date="";
       $duration_type ="";
@@ -35,6 +36,7 @@
       $comp_web = $_POST['comp_web'];
       $internship_pos = $_POST['internship_pos'];
       $internship_detail = $_POST['internship_detail'];
+      $state = $_POST['state']; 
       $internship_city = $_POST['internship_city'];
       $total_opening  = $_POST['total_opening'];
       $internship_start_date = $_POST['internship_start_date'];
@@ -47,8 +49,8 @@
       {
         $perks_value .= $perks_tmp_value.",";
       }
-      $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method,perks)
-        VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$internship_city', '$total_opening', '$internship_start_date', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method','$perks_value')";
+      $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, state, internship_city, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method,perks)
+        VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$state', '$internship_city', '$total_opening', '$internship_start_date', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method','$perks_value')";
 
          if (!mysqli_query($con,$sql))
          {

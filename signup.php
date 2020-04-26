@@ -243,6 +243,7 @@ function textCounter(textField, showCountField) {
     </div>
 
 		<section class="ftco-section-parallax">
+            <form action="./inputdata/subscribe_d.php" method="post">
       <div class="parallax-img d-flex align-items-center">
         <div class="container">
           <div class="row d-flex justify-content-center">
@@ -253,8 +254,9 @@ function textCounter(textField, showCountField) {
                 <div class="col-md-12">
                   <form action="#" class="subscribe-form">
                     <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
+                      <input type="email" class="form-control" name="email" placeholder="Enter email address">
+                      <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
+                       
                     </div>
                   </form>
                 </div>
@@ -262,9 +264,10 @@ function textCounter(textField, showCountField) {
             </div>
           </div>
         </div>
-      </div>
+      </div></form>
     </section>
-
+      
+      
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">

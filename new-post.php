@@ -261,13 +261,62 @@ s0.parentNode.insertBefore(s1,s0);
                       </div>
                       </div>
                     </div>
-                    <div class="row form-group">
+                                       
+                      <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="internship_state">State</label>
+                      
+                      <select name="state" id="state" class="form-control" required>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan" selected>Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    </select>
+                      
+                          </div>
+                      </div>
+                    
+                       <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_city">City</label>
                         <input type="text" id="internship_city" class="form-control" placeholder="Example : Mumbai, Pune, Delhi etc." name="internship_city" required>
                         <div class="invalid-feedback">Please enter internship city.</div>
                       </div>
                     </div>
+                              
+                              
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="total_opening">Number of openings</label>
@@ -382,6 +431,7 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
 
 		<section class="ftco-section-parallax">
+            <form action="./inputdata/subscribe_d.php" method="post">
       <div class="parallax-img d-flex align-items-center">
         <div class="container">
           <div class="row d-flex justify-content-center">
@@ -392,8 +442,9 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="col-md-12">
                   <form action="#" class="subscribe-form">
                     <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
+                      <input type="email" class="form-control" name="email" placeholder="Enter email address">
+                      <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
+                       
                     </div>
                   </form>
                 </div>
@@ -401,7 +452,7 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
           </div>
         </div>
-      </div>
+      </div></form>
     </section>
 
    <footer class="ftco-footer ftco-bg-dark ftco-section">
