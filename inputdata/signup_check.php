@@ -6,7 +6,7 @@ if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
 {
 ?>
   <div class="alert alert-success" role="alert">
-    <?php echo "Signup successfully "; ?>
+    <?php echo "Signup Successful. "; ?>
   </div>
 <?php
 }
@@ -14,7 +14,7 @@ else
 {
 ?>
   <div class="alert alert-danger" role="alert">
-      <?php echo "Mail already registered Signup Failed"; ?>
+      <?php echo "Mail already registered Signup Failed."; ?>
   </div>
 <?php
 }

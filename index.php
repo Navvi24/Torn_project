@@ -124,7 +124,7 @@ s0.parentNode.insertBefore(s1,s0);
 	        <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
 	        	<div class="text mt-5">
 	            <h1 class="mb-5">The Newest Student Run Internship Platform</h1>
-              <p class="mb-4 mt-5">“Internships of the students, set up by the students for the students” <br><i>-By our content writer at some point probably</i></p>
+              <p class="mb-4 mt-5">“Internships of the students, set up by the students, for the students.” <br><i>- By our content writer at some point probably.</i></p>
 	          </div>
 	        </div>
 	    	</div>
@@ -148,7 +148,7 @@ s0.parentNode.insertBefore(s1,s0);
     					<span class="icon-search2 icon"></span>
     					<span class="subheading">Search Internship</span>
     					<h2>Browse Through Specialisations!</h2>
-    					<p>Colleges and their compulsory internships period can be stressful when you don’t even know where to begin from. Don’t worry though, we’ve solved that problem with ease, find internships hand-crafted just for your majors, and be it English, Psychology, Marketing, you name it! We’ve got you covered.</p>
+    					<p>Colleges and their compulsory internships period can be stressful when you don’t even know where to begin from. Don’t worry though, we’ve solved that problem with ease, find internships hand-crafted just for your majors, be it English, Psychology, Marketing, you name it! We’ve got you covered.</p>
     				</div>
     			</div>
     		</div>
@@ -542,7 +542,7 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subscribe to Internships Alerts!</h2>
+              <h2>Subscribe to Internship Alerts!</h2>
               <p>We knew you just couldn't get enough of us! Don't worry, we love the attention and appreciate your effort to stay connected. Subscribe to alerts to be on the top of your game and never miss an opportunity. You know what they say,<br>“You snooze, you lose!”</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
@@ -591,7 +591,7 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 

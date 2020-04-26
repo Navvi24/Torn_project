@@ -126,7 +126,7 @@ s0.parentNode.insertBefore(s1,s0);
           <div class="col-lg-12 pr-lg-5">
             <div class="row justify-content-center pb-3">
               <div class="col-md-12 heading-section ftco-animate">
-                <center><h2 class="mb-4">All Internships</h2></center>
+                <center><h2 class="mb-4">Internships to Opportunities</h2></center>
               </div>
             </div>
             <div class="row">
@@ -400,7 +400,7 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>

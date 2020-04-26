@@ -132,13 +132,17 @@ s0.parentNode.insertBefore(s1,s0);
     					<div class="col-md-12">
     						<img class="img-fluid" src="images/who.jpg" style="width: 1600px;height: 500px;margin: 20px;"alt="">
     					</div>
-    					<h2 class="mb-4"><b>Who we are</b></h2>
-    					<p>We’re students who sparked the idea over chai and charcha! Who better to understand a student’s internship needs better than one of them, eh? People who have excessive validation needs, amazing ideas and never ending recommendations to series, movies, books, clubs and more!</p>
-    					<p>Why trust us despite all this? We’re your best shot at landing your dream internship while enjoying the entire process as if it were cake walk! Past, come over to our side, we have cake.</p>
-
-              <h2 class="mb-4"><b>What we do</b></h2>
-    					<p>If you’re a student, we bring you the hottest and most awaited opportunities, always wanted to volunteer at an event or festival, believed that you’d be working alongside experts and not only gain experience but also network, or better yet wanted to cover that dream shot for your resume? Well, all of it is just a click away.</p>
-    					<p>If you’re a firm, we bring you the best in their game, dedicated and talented candidates for you to further choose from. It’s a win-win, so what’s stopping you?</p>
+              <div class="col-md-12">
+                	<h2 class="mb-4"><b>Who we are</b></h2>
+                  <p>We’re students who sparked the idea over chai and charcha! Who better to understand a student’s internship needs better than one of them, eh? Who are we but people who have excessive validation needs, amazing ideas, and never ending recommendations to series, movies, books, clubs, and more!</p>
+                  <p>Why trust us despite all this? We’re your best shot at landing your dream internship while enjoying the entire process as if it were a cakewalk!</p>
+                  <p>Psst, come over to our side, we have cake!</p>
+              </div>
+              <div class="col-md-12">
+                <h2 class="mb-4"><b>What we do</b></h2>
+      					<p>If you’re a student, we bring you the hottest and most awaited opportunities, always wanted to volunteer at an event or festival, believed that you’d be working alongside experts and not only gain experience but also network, or better yet wanted to cover that dream shot for your resume? Well, all of it is just a click away.</p>
+      					<p>If you’re a firm, we bring you the best in their game, dedicated and talented candidates for you to further choose from. It’s a win-win, so what’s stopping you?</p>
+              </div>
     				</div>
     			</div>
     		</div>
@@ -154,12 +158,12 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-10">
-              <a href="new-post.php" target="_blank"> <button type="button" class="btn btn-outline-light  btn-block"> <strong><p>Are you A Company ?</p></strong><br> <p style="text-align:left;">If you’re a company, we’re here to bring you the best of the lot selected carefully from the herd to fit your requirements and requests. What better than to sit and sip on your coffee looking overbigger worries that need to be taken care while we make work easier for you by bringing top-notch candidate.We agree, it’s a hard to pass off on offer, right?</p></button></a>
+              <a href="new-post.php" target="_blank"> <button type="button" class="btn btn-outline-light  btn-block"> <strong><p>Are you a company ?</p></strong><br> <p style="text-align:left;">If you’re a company, we’re here to bring you the best of the lot selected carefully from the many to fit your requirements and requests. What better than to sit and sip on your coffee looking over bigger worries that need to be taken care of while we make work easier for you by bringing top-notch candidates. We agree, it’s a hard to pass off on offer, right?</p></button></a>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-5">
-              <a href="login.php" target="_blank"> <button type="button" class="btn btn-outline-light btn-block "> <strong><p>Are you A Student ?</p></strong> <br> <p style="text-align:left;">Well, we indeed are your saviours in disguise! Bringing you opportunities and varies ones at that to choose from, you can official forget what “settling for” means!With internships crafted just to your liking and need, you can say goodbye to scams and compromises. We wouldn’t go as far as to call ourselves superheroes, only if you insist.</p></button></a>
+              <a href="login.php" target="_blank"> <button type="button" class="btn btn-outline-light btn-block "> <strong><p>Are you a student ?</p></strong> <br> <p style="text-align:left;">Well, we indeed are your saviours in disguise! Bringing you opportunities and varied ones at that to choose from, you can officially forget what “settling for” means! with internships crafted just to your liking and need, you can say goodbye to scams and compromises. We wouldn’t go as far as to call ourselves superheroes, only if you insist.</p></button></a>
             </div>
           </div>
         </div>
@@ -301,7 +305,7 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subscribe to Internships Alerts!</h2>
+              <h2>Subscribe to Internship Alerts!</h2>
               <p>We knew you just couldn't get enough of us! Don't worry, we love the attention and appreciate your effort to stay connected. Subscribe to alerts to be on the top of your game and never miss an opportunity. You know what they say,<br>“You snooze, you lose!”</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
@@ -350,7 +354,7 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 

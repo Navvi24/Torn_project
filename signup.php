@@ -233,7 +233,7 @@ function textCounter(textField, showCountField) {
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit"  id="btnSubmit"  value="signup" name="signup" class="btn btn-primary  py-2 px-5" onclick="return Validate()">
+                  <input type="submit"  id="btnSubmit"  value="Signup" name="signup" class="btn btn-primary  py-2 px-5" onclick="return Validate()">
                   </div>
               </div>
             </form>
@@ -248,7 +248,7 @@ function textCounter(textField, showCountField) {
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subscribe to Internships Alerts!</h2>
+              <h2>Subscribe to Internship Alerts!</h2>
               <p>We knew you just couldn't get enough of us! Don't worry, we love the attention and appreciate your effort to stay connected. Subscribe to alerts to be on the top of your game and never miss an opportunity. You know what they say,<br>“You snooze, you lose!”</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
@@ -256,7 +256,7 @@ function textCounter(textField, showCountField) {
                     <div class="form-group d-flex">
                       <input type="email" class="form-control" name="email" placeholder="Enter email address">
                       <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
-                       
+
                     </div>
                   </form>
                 </div>
@@ -266,8 +266,8 @@ function textCounter(textField, showCountField) {
         </div>
       </div></form>
     </section>
-      
-      
+
+
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -298,7 +298,7 @@ function textCounter(textField, showCountField) {
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 

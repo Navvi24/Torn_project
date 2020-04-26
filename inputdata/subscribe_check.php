@@ -7,8 +7,8 @@ if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
 <script type="text/javascript">
 function JSalert(){
   swal({
-  title: "Thank you!",
-  text: "Your Mail Have Subscribe Successfully",
+  title: "Awesome!",
+  text: "You have successfully subscribed to Internship Alerts.",
   icon: "success",
   button: "CLOSE",
 });
