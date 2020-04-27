@@ -16,6 +16,21 @@ function JSalert(){
 </script>
 <?php
 }
+else if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 101000)
+{
+?>
+<script type="text/javascript">
+function JSalert(){
+  swal({
+  title: "Uh-oh!",
+  text: "File Must be pdf",
+  icon: "error",
+  button: "CLOSE",
+});
+}JSalert();
+</script>
+<?php
+}
 else
 {
 ?>

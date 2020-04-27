@@ -153,7 +153,7 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
             </div>
           <div class="col-md-8 order-md-last d-flex">
-            <form action="inputdata/contact_process.php" method="post" class="bg-white p-5 contact-form" enctype="multipart/form-data">
+            <form action="inputdata/contact_process.php" id="contactform" method="post" class="bg-white p-5 contact-form" enctype="multipart/form-data">
               <h1 class="font-weight-bold">Drop Your Query</h1>
               <br>
               <div class="need-validation form-group">
