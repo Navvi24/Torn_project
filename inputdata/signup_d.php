@@ -9,18 +9,16 @@ $password = "";
 $files = "";
 $tmp_name = "";
 $ext = "";
-
 $filename = $_FILES['file']['name'];
-        $tmp_name = $_FILES['file']['tmp_name'];
-        $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        if (in_array($ext, array("pdf", "docx", "doc")))
-             move_uploaded_file($tmp_name, "../contactus_files/$filename");
+$tmp_name = $_FILES['file']['tmp_name'];
+$ext = pathinfo($filename, PATHINFO_EXTENSION);
+
 
 if(isset($_POST['signup']))
 {
 if(!empty($_POST['signup']))
 {
-    print_r($_POST);
+    //print_r($_POST);
     $fname = $_POST['fname'];
        // echo $fname;
     $lname = $_POST['lname'];
@@ -38,28 +36,26 @@ if(!empty($_POST['signup']))
   //  $ext = pathinfo($filename, PATHINFO_EXTENSION);
     //print_r($filename);
     //print_r($ext);
-    //if (in_array($ext, array("pdf", "docx", "doc")))
-    //{
-      //$filename = rand().'.'.$ext;
-    //  move_uploaded_file($tmp_name, "../resume_files/$filename");
-    //}
-    //else
-    //{
-    //header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=101000");
-    //}
+    if (in_array($ext, array("pdf", "docx", "doc")))
+    {
+      $filename = rand().'.'.$ext;
+     move_uploaded_file($tmp_name, "../resume_files/$filename");
+     $sql="INSERT INTO logindetails (fname, lname, phn,  mail, password,resume_url)
+            VALUES('$fname','$lname','$phn','$email','$password','$filename')";
+
+    		if (!mysqli_query($con,$sql)) {
+    			$error = "Error: ".mysqli_error($con);
+          header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+            }else{
+                $msg = "signup successfully";
+                $description = "";
+                header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+            }
+    }
+    else
+    {
+    header("Location: ../signup.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=101000");
+    }
   }
 }
-
-
- $sql="INSERT INTO logindetails (fname, lname, phn,  mail, password)
-        VALUES('$fname','$lname','$phn','$email','$password')";
-
-		if (!mysqli_query($con,$sql)) {
-			$error = "Error: ".mysqli_error($con);
-      //header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
-        }else{
-            $msg = "signup successfully";
-            $description = "";
-          //  header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
-        }
 ?>

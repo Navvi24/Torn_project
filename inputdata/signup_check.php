@@ -13,7 +13,7 @@ if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 1010)
 else if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 101000)
 {
 ?>
-  <div class="alert alert-success" role="alert">
+  <div class="alert alert-danger" role="alert">
     <?php echo "Please Attached only pdf,docx and doc file for resume."; ?>
   </div>
 <?php
