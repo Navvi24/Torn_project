@@ -114,7 +114,7 @@
           </ul>
         </li>
           <li class="nav-item">
-            <a href="mainpage.php" class="nav-link">
+            <a href="m  ainpage.php" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
                 Interns/Students
@@ -145,6 +145,22 @@
               </p>
             </a>
           </li>
+            
+            
+            
+            
+            
+             <li class="nav-item">
+            <a href="chatting.php" class="nav-link">
+              <i class="nav-icon far fa-address-book"></i>
+              <p>
+                Online Chat
+              </p>
+            </a>
+          </li>
+            
+            
+            
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
