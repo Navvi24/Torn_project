@@ -11,6 +11,16 @@ $ext = "";
 $value = 0;
 if (isset($_POST['sendMail']))
 {
+  $filename = $_FILES['file']['name'];
+  $tmp_name = $_FILES['file']['tmp_name'];
+  $ext = pathinfo($filename, PATHINFO_EXTENSION);
+  if (!in_array($ext, array("pdf", "docx", "doc")))
+  {
+     $value=2;
+  }
+  else {
+
+
         require './master/PHPMailerAutoload.php';
 
           $mail = new PHPMailer;
@@ -48,15 +58,7 @@ if (isset($_POST['sendMail']))
             $email = $_POST['from'];
             $subject = $_POST['sub'];
             $message = $_POST['content'];
-            $filename = $_FILES['file']['name'];
-            $tmp_name = $_FILES['file']['tmp_name'];
-            $ext = pathinfo($filename, PATHINFO_EXTENSION);
-                  if (!in_array($ext, array("pdf", "docx", "doc")))
-                  {
-                     $value=2;
-                  }
-                  else
-                  {
+
                   move_uploaded_file($tmp_name, "../contactus_files/$filename");
                   $sql = "INSERT into c_query(name,email,sub,msg) VALUES ('$name','$email','$subject','$message')";
 
@@ -70,8 +72,9 @@ if (isset($_POST['sendMail']))
                        {
                           $value = 1;
                        }
-                  }
+
           }
+        }
 }
  ?>
  <?php
