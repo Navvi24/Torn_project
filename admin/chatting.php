@@ -1,12 +1,8 @@
 <?php
-
-//include("sidebar.php");
+   include('sidebar.php');
 ?>
 
-<!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .container {
   position: relative;
@@ -20,22 +16,39 @@
   top: 0;
   left: 0;
   bottom: 0;
-  right: 20;
+  right: 0;
   width: 100%;
   height: 100%;
   border: none;
 }
 </style>
-</head>
-<body>
 
-<h2>Responsive Iframe</h2>
-<h3>Maintain Aspect Ratio 16:9</h3>
-<p>Resize the window to see the effect.</p>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Chat windows</h1>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
 
-<div class="container"> 
-  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+  <!-- Main content -->
+  <section class="content">
+  <div class="container"> 
+  <iframe class="responsive-iframe" src="https://dashboard.tawk.to/login"></iframe>
 </div>
-
-</body>
+     
+      <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+  <?php
+  include('footer.php');
+   ?>
 </html>
