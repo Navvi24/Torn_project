@@ -10,9 +10,14 @@ $files = "";
 $tmp_name = "";
 $ext = "";
 
+$filename = $_FILES['file']['name'];
+        $tmp_name = $_FILES['file']['tmp_name'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        if (in_array($ext, array("pdf", "docx", "doc")))
+             move_uploaded_file($tmp_name, "../contactus_files/$filename");
+
 if(isset($_POST['signup']))
 {
-$files = $_FILES['cv'];
 if(!empty($_POST['signup']))
 {
     print_r($_POST);
@@ -28,15 +33,15 @@ if(!empty($_POST['signup']))
        // echo $password;
     $pass_retype = $_POST['pass_retype'];
        // echo $pass_retype;
-    $filename = $_FILES['cv']['name'];
+    //$filename = $_FILES['cv']['name'];
   //  $tmp_name = $_FILES['cv']['tmp_name'];
   //  $ext = pathinfo($filename, PATHINFO_EXTENSION);
-    print_r($filename);
+    //print_r($filename);
     //print_r($ext);
     //if (in_array($ext, array("pdf", "docx", "doc")))
     //{
       //$filename = rand().'.'.$ext;
-      //move_uploaded_file($tmp_name, "../resume_files/$filename");
+    //  move_uploaded_file($tmp_name, "../resume_files/$filename");
     //}
     //else
     //{

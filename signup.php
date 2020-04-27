@@ -147,7 +147,7 @@ s0.parentNode.insertBefore(s1,s0);
 
           <div class="col-md-12 col-lg-12 mb-5">
 
-			     <form action="./inputdata/signup_d.php"; class="p-5 bg-white"; method="post";>
+			     <form action="./inputdata/signup_d.php"; class="p-5 bg-white"; method="post"; enctype="multipart/form-data">
              <h1>Signup Here</h1>
              <div class="row form-group">
                <div class="col-md-12 mb-3 mb-md-0">
@@ -188,7 +188,7 @@ s0.parentNode.insertBefore(s1,s0);
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="firstname">Select Your Resume</label><span> (optional)</span>
-                  <input type="file" id="fullname" class="form-control"  name="cv" required>
+                  <input type="file" id="fullname" class="form-control"  name="file" required>
                 </div>
               </div>
               <div class="row form-group">
