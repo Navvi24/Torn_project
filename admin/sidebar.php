@@ -111,6 +111,12 @@
                 <p>Add Internship</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="recommends.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recommends Internship</p>
+              </a>
+            </li>
           </ul>
         </li>
           <li class="nav-item">
@@ -142,6 +148,14 @@
               <i class="nav-icon far fa-address-book"></i>
               <p>
                 Contacts Details
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="emailform.php" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Send Mail
               </p>
             </a>
           </li>
