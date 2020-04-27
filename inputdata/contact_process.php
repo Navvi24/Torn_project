@@ -42,7 +42,8 @@ if (isset($_POST['sendMail']))
             echo 'Message could not be sent.';
             echo 'Mailer Error: ' . $mail->ErrorInfo;
           }
-          else {
+          else
+          {
             $name = $_POST['Name'];
             $email = $_POST['from'];
             $subject = $_POST['sub'];
@@ -50,25 +51,26 @@ if (isset($_POST['sendMail']))
             $filename = $_FILES['file']['name'];
             $tmp_name = $_FILES['file']['tmp_name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
-            if (!in_array($ext, ['zip', 'pdf', 'docx']))
-            {
-                $value=2;
-            }
-            else {
-            move_uploaded_file($tmp_name, "../contactus_files/$filename");
-            $sql = "INSERT into c_query(name,email,sub,msg) VALUES ('$name','$email','$subject','$message')";
+                  if (!in_array($ext, array("pdf", "docx", "doc")))
+                  {
+                     $value=2;
+                  }
+                  else
+                  {
+                  move_uploaded_file($tmp_name, "../contactus_files/$filename");
+                  $sql = "INSERT into c_query(name,email,sub,msg) VALUES ('$name','$email','$subject','$message')";
 
-            if (!mysqli_query($con,$sql))
-            {
-               $error = "Error: ".mysqli_error($con);
-               echo $error;
-               $value = 0;
-             }
-           else
-           {
-              $value = 1;
-           }
-         }
+                      if (!mysqli_query($con,$sql))
+                      {
+                         $error = "Error: ".mysqli_error($con);
+                         echo $error;
+                         $value = 0;
+                       }
+                       else
+                       {
+                          $value = 1;
+                       }
+                  }
           }
 }
  ?>
@@ -78,7 +80,7 @@ if (isset($_POST['sendMail']))
    header("Location: ../contact-us.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
  }
  else if($value == 2)
- {
+  {
    header("Location: ../contact-us.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=101000");
  }
  else
