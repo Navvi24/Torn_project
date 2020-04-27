@@ -114,7 +114,7 @@
           </ul>
         </li>
           <li class="nav-item">
-            <a href="Mainpage.php" class="nav-link">
+            <a href="mainpage.php" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
                 Interns/Students
@@ -130,7 +130,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Mainpage.php" class="nav-link">
+            <a href="subscribemail.php" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Subscription of Internships
