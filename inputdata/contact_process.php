@@ -6,7 +6,6 @@ $subject = "";
 $message = "";
 $filename = "";
 $tmp_name = "";
-$destination = "";
 $ext = "";
 $value = 0;
 if (isset($_POST['sendMail']))

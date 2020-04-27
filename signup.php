@@ -161,20 +161,6 @@ s0.parentNode.insertBefore(s1,s0);
                  <input type="text" id="fullname" class="form-control" placeholder="Enter your Last Name" name="lname" required>
                </div>
              </div>
-
-                     <script>
-var maxAmount = 10;
-function textCounter(textField, showCountField) {
-    if (textField.value.length > maxAmount) {
-        textField.value = textField.value.substring(0, maxAmount);
-	} else {
-        showCountField.value = maxAmount - textField.value.length;
-	}
-}
-</script>
-
-
-
              <div class="row form-group">
                <div class="col-md-12 mb-3 mb-md-0">
              <label class="font-weight-bold" for="phone">Phone</label>
@@ -187,32 +173,6 @@ function textCounter(textField, showCountField) {
                   <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
                 </div>
               </div>
-
-                     <script>
-                        var check = function() {
-  if (document.getElementById('password').value ==
-    document.getElementById('confirm_password').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
-  }
-    }
-     </script>
-
-                     <script type="text/javascript">
-    function Validate() {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirm_password").value;
-        if (password != confirmPassword) {
-            alert("Passwords do not match.");
-            return false;
-        }
-        return true;
-    }
-</script>
-
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="password">Enter Your Password</label>
@@ -228,7 +188,7 @@ function textCounter(textField, showCountField) {
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="firstname">Select Your Resume</label><span> (optional)</span>
-                  <input type="file" id="fullname" class="form-control"  name="resume" accept=".pdf">
+                  <input type="file" id="fullname" class="form-control"  name="cv" required>
                 </div>
               </div>
               <div class="row form-group">
@@ -323,8 +283,39 @@ function textCounter(textField, showCountField) {
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
+  <script type="text/javascript">
+function Validate() {
+var password = document.getElementById("password").value;
+var confirmPassword = document.getElementById("confirm_password").value;
+if (password != confirmPassword) {
+alert("Passwords do not match.");
+return false;
+}
+return true;
+}
+</script>
+  <script>
+     var check = function() {
+ if (document.getElementById('password').value ==
+ document.getElementById('confirm_password').value) {
+ document.getElementById('message').style.color = 'green';
+ document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
+ } else {
+ document.getElementById('message').style.color = 'red';
+ document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
+ }
+ }
+ </script>
+  <script>
+  var maxAmount = 10;
+  function textCounter(textField, showCountField) {
+  if (textField.value.length > maxAmount) {
+  textField.value = textField.value.substring(0, maxAmount);
+  } else {
+  showCountField.value = maxAmount - textField.value.length;
+  }
+  }
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
