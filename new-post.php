@@ -328,14 +328,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="row form-group">
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_start_date">Internship Start Date</label>
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio" name="internship_start_date" value="Immediately" required checked>
-                          <label for=internship_start_date>Immediately (within next 30 days)</label>
-                        </div>
-                        <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio"  name="internship_start_date" value="Later">
-                          <label for="internship_start_date">Later</label>
-                      </div>
+                        <input class="form-control" id="date" name="internship_start_date" placeholder="MM/DD/YYYY" type="date"/>
                       </div>
                     </div>
                     <div class="row form-group">
@@ -508,6 +501,19 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </footer>
     <?php include('inputdata/post_check.php'); ?>
+    <script>
+	$(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+</script>
+
 <script>
   var maxAmount = 10;
   function textCounter(textField, showCountField) {

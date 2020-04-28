@@ -19,7 +19,7 @@ $error = "";
   $perks                    =array();
   $num = 0;
 
-    $sql = "SELECT sr, internship_post_time, comp_name, comp_web, internship_pos, total_opening, internship_start_date, stipend_amount, perks FROM posted_internship ORDER BY sr ASC";
+    $sql = "SELECT sr, internship_post_time, comp_name, comp_web, internship_pos, total_opening, internship_start_date, stipend_amount, perks FROM posted_internship ORDER BY sr DESC";
     $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
 
@@ -34,7 +34,7 @@ $error = "";
         $start_date[$num]    = $row["internship_start_date"];
         $stipend_amt[$num]   = $row["stipend_amount"];
         $perks[$num]         = $row["perks"];
-        
+
         $num = $num + 1;
 
       }
@@ -86,7 +86,7 @@ $error = "";
                 </tr>
                 </thead>
                 <tbody>
-                 
+
                     <?php
 								for($x = 0; $x < $num; $x++) {
                   echo ('
@@ -102,7 +102,8 @@ $error = "";
                     <td>'.$start_date[$x].'</td>
                     <td>'.$stipend_amt[$x].'</td>
                     <td>'.$perks[$x].'</td>
-                
+                    <td><a href="viewintern.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a></td>
+
                   </tr>
 
                 ');
