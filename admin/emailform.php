@@ -90,7 +90,7 @@ require 'master/PHPMailerAutoload.php';
               <div class="card-body">
                 <div class="form-group">
                   <label for="exampleInputfirst">To.</label>
-                <input type="email" id="to" class="form-control" placeholder="Recipients" name="to" value="<?php echo "$_GET[mail]"; ?>" required disabled>
+                <input type="email" id="to" class="form-control" placeholder="Recipients" name="to" value="<?php echo "$_GET[mail]"; ?>" required readonly>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputlast">Subject</label>
