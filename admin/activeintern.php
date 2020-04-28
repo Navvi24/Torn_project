@@ -1,7 +1,18 @@
 <?php
 include('sidebar.php');
 include("connect.php");
+$id = $_GET['id'];
 
+if(isset($_GET['id']) && !empty($_GET['id']) ){
+    $arg = mysqli_real_escape_string($con,$_GET["id"]);
+$sql = "INSERT INTO active_internship SELECT * FROM posted_internship WHERE id=$arg";
+
+    if (mysqli_query($con,$sql)) {
+        $msg= "Active successfully";
+    } else {
+        $error =  "error " . mysqli_error($con);
+    }
+}
 $error = "";
 $msg = "";
 $sql="";
@@ -19,7 +30,21 @@ $stipend_amt              =array();
 $perks                    =array();
 $num = 0;
 
- $sql = "SELECT sr, internship_post_time, comp_name, comp_web, internship_pos, total_opening, internship_start_date, stipend_amount, perks FROM posted_internship ORDER BY sr DESC";
+
+if(isset($_GET['id']) && !empty($_GET['id']) ){
+    $arg = mysqli_real_escape_string($con,$_GET["id"]);
+$sql = "INSERT INTO active_internship SELECT * FROM posted_internship WHERE SR=$arg";
+
+    if (mysqli_query($con,$sql)) {
+        $msg= "Active successfully";
+    } else {
+        $error =  "error " . mysqli_error($con);
+    }
+}
+
+
+
+ $sql = "SELECT sr, internship_post_time, comp_name, comp_web, internship_pos, total_opening, internship_start_date, stipend_amount, perks FROM active_internship ORDER BY sr DESC";
  $result = mysqli_query($con, $sql);
  if (mysqli_num_rows($result) > 0) {
 
@@ -47,6 +72,7 @@ $con->close();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+              <?php echo "$msg"."$error"; ?>
             <h1>Active Internships Details</h1>
           </div>
           <div class="col-sm-6">
@@ -87,7 +113,7 @@ $con->close();
                 <tbody>
 
                     <?php
-								/*for($x = 0; $x < $num; $x++) {
+								for($x = 0; $x < $num; $x++) {
                   echo ('
 
                   <tr>
@@ -106,7 +132,7 @@ $con->close();
                   </tr>
 
                 ');
-              }*/
+              }
 							?>
                 </tbody>
               </table>
