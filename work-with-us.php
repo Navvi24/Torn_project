@@ -113,7 +113,7 @@ s0.parentNode.insertBefore(s1,s0);
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/work_bg3.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/work-with-us.gif');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -307,7 +307,7 @@ x`
                     <div class="form-group d-flex">
                       <input type="email" class="form-control" name="email" placeholder="Enter email address">
                       <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
-                       
+
                     </div>
                   </form>
                 </div>
