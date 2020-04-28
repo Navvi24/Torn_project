@@ -123,7 +123,7 @@
             <a href="m  ainpage.php" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
-                Interns/Students
+                Interns/Students (END)
               </p>
             </a>
           </li>
@@ -147,15 +147,10 @@
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-address-book"></i>
               <p>
-                Contacts Details
+                Contacts-us Queries
               </p>
             </a>
           </li>
-
-
-
-
-
 
              <li class="nav-item">
             <a href="chatting.php" class="nav-link">
@@ -166,17 +161,6 @@
             </a>
           </li>
 
-
-
-
-          <li class="nav-item">
-            <a href="emailform.php" class="nav-link">
-              <i class="nav-icon fas fa-envelope"></i>
-              <p>
-                Send Mail
-              </p>
-            </a>
-          </li>
 
         </ul>
       </nav>
