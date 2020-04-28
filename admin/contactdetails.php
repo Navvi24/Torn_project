@@ -1,12 +1,6 @@
 <?php
    include('sidebar.php');
    include("connect.php");
-
-
-
-
-
-
 $error = "";
   $msg = "";
   $sql="";
@@ -26,10 +20,10 @@ $error = "";
         $name[$num]     = $row["name"];
         $email[$num]     = $row["email"];
         $attach_url[$num]     = $row["attach_url"];
-          
+
         $sub[$num]     = $row["sub"];
         $msg1[$num]     = $row["msg"];
-          
+
         $query_date[$num]     = $row["query_date"];
         $num = $num + 1;
 
@@ -67,41 +61,41 @@ $error = "";
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>SR</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Sub</th>
-                  <th>msg</th>
-                    <th>Attachment_url</th>
-                   <th>Reg. Time</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-				for($x = 0; $x < $num; $x++) {
-                  echo ('
-
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
                   <tr>
-
-                    <td>'.$sr[$x].'</td>
-                    <td>'.$name[$x].'</td>
-                   
-                    <td>'.$email[$x].'</td>
-                    <td>'.$sub[$x].'</td>
-                    <td>'.wordwrap($msg1[$x],15,"<br>\n").'</td>
-                    <td>'.$attach_url[$x].'</td>
-                    <td>'.$query_date[$x].'</td>
-                
+                    <th>SR</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Sub</th>
+                    <th>msg</th>
+                      <th>Attachment_url</th>
+                     <th>Reg. Time</th>
                   </tr>
+                  </thead>
+                  <tbody>
+                  <?php
+  				for($x = 0; $x < $num; $x++) {
+                    echo ('
 
-                ');
-								}
-							?>
-                </tbody>
-              </table>
+                    <tr>
+
+                      <td>'.$sr[$x].'</td>
+                      <td>'.$name[$x].'</td>
+
+                      <td>'.$email[$x].'</td>
+                      <td>'.$sub[$x].'</td>
+                      <td>'.wordwrap($msg1[$x],50,"<br />\n").'</td>
+                      <td>'.$attach_url[$x].'</td>
+                      <td>'.$query_date[$x].'</td>
+
+                    </tr>
+
+                  ');
+  								}
+  							?>
+                  </tbody>
+                </table>
             </div>
             <!-- /.card-body -->
           </div>
