@@ -155,11 +155,11 @@ s0.parentNode.insertBefore(s1,s0);
 		                </div>
                     <div class="row" style="width:325px;">
                       <a href="#" class="btn btn-primary py-2" style="margin-right: 8px;">Apply Job</a>
-                      <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
+                      <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#Navdeep25" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
                     </div>
 		              </div>
 		            </div>
-                <div class="collapse" id="collapseExample1">
+                <div class="collapse" id="Navdeep25">
                   <div class="card card-body">
                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                   </div>
