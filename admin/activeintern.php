@@ -2,13 +2,17 @@
 include('sidebar.php');
 include("connect.php");
 //$id = $_GET['id'];
-
+ob_start();
+include 'active_email_layout.php';
+$mailbody = ob_get_clean();
+include("master/PHPMailerAutoload.php");
+$value = 0;
 
 $error = "";
 $msg = "";
 $sql="";
 $arg="";
-
+$mail_send = "navdeepsharma530@gmail.com";
 $sr                       =array();
 $post_time                =array();
 $comp_name                =array();
@@ -25,13 +29,57 @@ $num = 0;
 if(isset($_GET['id']) && !empty($_GET['id']) ){
     $arg = mysqli_real_escape_string($con,$_GET["id"]);
 $sql = "INSERT INTO active_internship SELECT * FROM posted_internship WHERE SR=$arg";
-
+//$sql2 = "SELECT email from posted_internship  where SR=$arg";
+//$result2 = $con->query($sql2);
+//if($result2->num_rows>0)
+//{
+//  while($row = $result->fetch_assoc()) {
+//  $mail_send = $row['email'];
+//}
+}
     if (mysqli_query($con,$sql)) {
         $msg= "Active successfully";
+        $value = 1;
+        $mail = new PHPMailer();
+
+        //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+        //$mailcontent = '';
+
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'admin@internstorm.com';                 // SMTP username
+        $mail->Password = 'admininternstorm';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
+
+        $mail->setFrom('admin@internstorm.com', 'Internstorm');
+        $mail->addAddress($mail_send);     // Add a recipient
+        //   $mail->addAddress('admin@internstorm.com');               // Name is optional
+        $mail->addReplyTo('admin@internstorm.com');
+        //$mail->addCC('cc@example.com');
+        //$mail->addBCC('bcc@example.com');
+
+        //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+        //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+        $mail->isHTML(true);                                  // Set email format to HTML
+
+        $mail->Subject = 'Internship Active Successfully';
+        $mail->Body    = $mailbody;
+
+//        $mail->AltBody = file_get_contents('post_email_layout.php');
+
+        if(!$mail->send()) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        } else {
+            echo 'Message has been sent';
+        }
+
     } else {
-        $error =  "error " . mysqli_error($con)." "."Already Active";
+          $value = 2;
+          $error =  "Error " . mysqli_error($con)." "."Already Active";
     }
-}
 
 
 
@@ -63,7 +111,6 @@ $con->close();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-              <?php echo "$msg"."$error"; ?>
             <h1>Active Internships Details</h1>
           </div>
           <div class="col-sm-6">
@@ -81,6 +128,15 @@ $con->close();
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <?php if ($value == 1) {?>
+              <div class="alert alert-success" role="alert">
+                <?php echo "$msg"; ?>
+              </div>
+            <?php } else if($value == 2){?>
+              <div class="alert alert-danger" role="alert">
+                <?php echo "$error"; ?>
+              </div>
+            <?php } else{}?>
             <div class="card-header">
               <h3 class="card-title">ACTIVE DETAILS</h3>
             </div>

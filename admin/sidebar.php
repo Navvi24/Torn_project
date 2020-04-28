@@ -48,7 +48,7 @@
     </ul>
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a href="connectivity/logout.php" class="btn btn-block btn-primary">Sign Out</a>
+      <a href="connectivity/logout.php" class="btn btn-block btn-danger">Sign Out</a>
     </li>
   </ul>
   </nav>

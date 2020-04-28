@@ -3,7 +3,7 @@ include('sidebar.php');
 include("connect.php");
 //$id = $_GET['id'];
 
-
+$value = 0;
 $error = "";
 $msg = "";
 $sql="";
@@ -27,9 +27,11 @@ if(isset($_GET['id']) && !empty($_GET['id']) ){
 $sql = "INSERT INTO rec_internship SELECT * FROM active_internship WHERE SR=$arg";
 
     if (mysqli_query($con,$sql)) {
+      $value = 1;
         $msg= " Recommended successfully";
     } else {
-        $error =  "error " . mysqli_error($con)." "."Already Recommmended";
+        $value = 2;
+        $error =  "Error " . mysqli_error($con)." "."Already Recommmended";
     }
 }
 
@@ -63,7 +65,6 @@ $con->close();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-              <?php echo "$msg"."$error"; ?>
             <h1>Active Internships Details</h1>
           </div>
           <div class="col-sm-6">
@@ -81,6 +82,15 @@ $con->close();
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <?php if ($value == 1) {?>
+              <div class="alert alert-success" role="alert">
+                <?php echo "$msg"; ?>
+              </div>
+            <?php } else if($value == 2){?>
+              <div class="alert alert-danger" role="alert">
+                <?php echo "$error"; ?>
+              </div>
+            <?php } else{}?>
             <div class="card-header">
               <h3 class="card-title">ACTIVE DETAILS</h3>
             </div>
