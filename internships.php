@@ -132,38 +132,72 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
             <div class="row">
               <div class="col-md-12 ftco-animate">
-		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
-		              <div class="one-third mb-4 mb-md-0">
-		                <div class="job-post-item-header d-flex align-items-center">
-		                  <h2 class="mr-3 text-black"><a href="#">Frontend Development</a></h2>
-		                  <div class="badge-wrap">
-		                   <span class="bg-primary text-white badge py-2 px-3">Partime</span>
-		                  </div>
-		                </div>
-		                <div class="job-post-item-body d-block d-md-flex">
-		                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
-		                  <div class="mr-3"><span class="icon-my_location"></span> <span>Western City, UK</span></div>
-                      <div><span class="icon-inr"></span> <span>5000</span></div>
-		                </div>
-		              </div>
+  		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
+  		              <div class="one-third mb-4 mb-md-0">
+  		                <div class="job-post-item-header d-flex align-items-center">
+  		                  <h2 class="mr-3 text-black"><a href="#">Frontend Development</a></h2>
+  		                  <div class="badge-wrap">
+  		                   <span class="bg-primary text-white badge py-2 px-3">Partime</span>
+  		                  </div>
+  		                </div>
+  		                <div class="job-post-item-body d-block d-md-flex">
+  		                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
+  		                  <div class="mr-3"><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+                        <div><span class="icon-inr"></span> <span>5000</span></div>
+  		                </div>
+  		              </div>
 
-		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
-		              	<div class="row" style="width:95px;">
-			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2" style="margin-left: -30px;">
-			                	<span class="icon-share"></span>
-			                </a>
-		                </div>
-                    <div class="row" style="width:325px;">
-                      <a href="#" class="btn btn-primary py-2" style="margin-right: 8px;">Apply Job</a>
-                      <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#Navdeep25" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
+  		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
+  		              	<div class="row" style="width:95px;">
+  			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2" style="margin-left: -30px;">
+  			                	<span class="icon-share"></span>
+  			                </a>
+  		                </div>
+                      <div class="row" style="width:325px;">
+                        <a href="#" class="btn btn-primary py-2" style="margin-right: 8px;">Apply Job</a>
+                        <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#Navdeep25" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
+                      </div>
+  		              </div>
+  		            </div>
+                  <div class="collapse" id="Navdeep25">
+                    <div class="card card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                     </div>
-		              </div>
-		            </div>
-                <div class="collapse" id="Navdeep25">
-                  <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                   </div>
-                </div>
+		          </div><!-- end -->
+              <div class="col-md-12 ftco-animate">
+  		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
+  		              <div class="one-third mb-4 mb-md-0">
+  		                <div class="job-post-item-header d-flex align-items-center">
+  		                  <h2 class="mr-3 text-black"><a href="#">Backend Development</a></h2>
+  		                  <div class="badge-wrap">
+  		                   <span class="bg-primary text-white badge py-2 px-3">Partime</span>
+  		                  </div>
+  		                </div>
+  		                <div class="job-post-item-body d-block d-md-flex">
+  		                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Whatsapp, Inc.</a></div>
+  		                  <div class="mr-3"><span class="icon-my_location"></span> <span>Northern City, UK</span></div>
+                        <div><span class="icon-inr"></span> <span>6000</span></div>
+  		                </div>
+  		              </div>
+
+  		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
+  		              	<div class="row" style="width:95px;">
+  			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2" style="margin-left: -30px;">
+  			                	<span class="icon-share"></span>
+  			                </a>
+  		                </div>
+                      <div class="row" style="width:325px;">
+                        <a href="#" class="btn btn-primary py-2" style="margin-right: 8px;">Apply Job</a>
+                        <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#Navdeep26" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
+                      </div>
+  		              </div>
+  		            </div>
+                  <div class="collapse" id="Navdeep26">
+                    <div class="card card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                  </div>
 		          </div><!-- end -->
             </div>
           </div>
