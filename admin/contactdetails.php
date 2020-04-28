@@ -10,7 +10,7 @@ $error = "";
   $mail     =array();
   $num = 0;
 
-    $sql = "SELECT sr, name, email, sub, msg, attach_url, query_date FROM c_query ORDER BY sr ASC";
+    $sql = "SELECT sr, name, email, sub, msg, attach_url, query_date FROM c_query ORDER BY sr DESC";
     $result = mysqli_query($con, $sql);
     if(mysqli_num_rows($result) > 0) {
 

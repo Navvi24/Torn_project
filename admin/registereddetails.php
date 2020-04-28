@@ -16,7 +16,7 @@ $error = "";
   $mail     =array();
   $num = 0;
 
-    $sql = "SELECT sr, fname, lname, phn, mail, resume_url, regdate FROM logindetails ORDER BY sr ASC";
+    $sql = "SELECT sr, fname, lname, phn, mail, resume_url, regdate FROM logindetails ORDER BY sr DESC";
     $result = mysqli_query($con, $sql);
     if(mysqli_num_rows($result) > 0) {
 
