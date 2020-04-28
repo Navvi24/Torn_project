@@ -1,6 +1,65 @@
 <?php
 include('inputdata/session.php');
  ?>
+ <?php
+ include("inputdata/connect.php");
+ $error = "";
+   $msg = "";
+   $sql="";
+   $arg="";
+   $num = 0;
+   $serial                       =array();
+   $post_time                =array();
+   $fname                    =array();
+   $lname                    =array();
+   $email                    =array();
+   $phone                    =array();
+   $comp_name                =array();
+   $about_comp               =array();
+   $comp_web                =array();
+   $i_pos1                    =array();
+   $i_details                =array();
+   $city                    =array();
+   $state                    =array();
+   $total_opening            =array();
+   $start_date               =array();
+   $i_duration_type         =array();
+   //$i_duration               = "";
+   $i_description            =array();
+   $stipend_amt             =array();
+   $stipend_method           =array();
+   $perks                    =array();
+
+     $sql = "SELECT SR, internship_post_time, fname, lname, email, phn, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, state, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method, perks FROM active_internship";
+     $result = mysqli_query($con, $sql);
+    if (mysqli_num_rows($result) > 0) {
+
+      while ($row = mysqli_fetch_assoc($result)){
+           $serial[$num]        = $row["SR"];
+           $post_time[$num]     = $row["internship_post_time"];
+           $fname[$num]         = $row["fname"];
+           $lname[$num]         = $row["lname"];
+           $email[$num]         = $row["email"];
+           $phone[$num]         = $row["phn"];
+           $comp_name[$num]     = $row["comp_name"];
+           $about_comp[$num]    = $row["comp_about"];
+           $comp_web[$num]      = $row["comp_web"];
+           $i_pos1[$num]         = $row["internship_pos"];
+           $i_details[$num]     = $row["internship_detail"];
+           $city[$num]          = $row["internship_city"];
+           $state[$num]          = $row["state"];
+           $total_opening[$num] = $row["total_opening"];
+           $start_date[$num]    = $row["internship_start_date"];
+           $i_duration_type[$num] = $row["duration_type"];
+           $i_description[$num] = $row["about_internship"];
+           $stipend_amt[$num]   = $row["stipend_amount"];
+           $stipend_method[$num] = $row["stipend_method"];
+           $perks[$num]         = $row["perks"];
+           $num = $num + 1;
+         }
+     }
+   $con->close();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -119,8 +178,6 @@ s0.parentNode.insertBefore(s1,s0);
 	    </div>
 	  </nav>
     <!-- END nav -->
-
-
     <section class="ftco-section bg-light">
       <div class="container">
         <div class="row">
@@ -131,74 +188,45 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 ftco-animate">
-  		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
-  		              <div class="one-third mb-4 mb-md-0">
-  		                <div class="job-post-item-header d-flex align-items-center">
-  		                  <h2 class="mr-3 text-black"><a href="#">Frontend Development</a></h2>
-  		                  <div class="badge-wrap">
-  		                   <span class="bg-primary text-white badge py-2 px-3">Partime</span>
-  		                  </div>
-  		                </div>
-  		                <div class="job-post-item-body d-block d-md-flex">
-  		                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
-  		                  <div class="mr-3"><span class="icon-my_location"></span> <span>Western City, UK</span></div>
+              <?php
+                for($x = 0; $x < $num; $x++){
+              echo ('<div class="col-md-12 ftco-animate">
+                  <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
+                    <div class="one-third mb-4 mb-md-0">
+                      <div class="job-post-item-header d-flex align-items-center">
+                        <h2 class="mr-3 text-black"><a href="#">'.$i_pos1[$x].'</a></h2>
+                        <div class="badge-wrap">
+                         <span class="bg-primary text-white badge py-2 px-3">'.$email[$x].'</span>
+                        </div>
+                      </div>
+                      <div class="job-post-item-body d-block d-md-flex">
+                        <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
+                        <div class="mr-3"><span class="icon-my_location"></span> <span>Western City, UK</span></div>
                         <div><span class="icon-inr"></span> <span>5000</span></div>
-  		                </div>
-  		              </div>
+                      </div>
+                    </div>
 
-  		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
-  		              	<div class="row" style="width:95px;">
-  			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2" style="margin-left: -30px;">
-  			                	<span class="icon-share"></span>
-  			                </a>
-  		                </div>
+                    <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
+                      <div class="row" style="width:95px;">
+                        <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2" style="margin-left: -30px;">
+                          <span class="icon-share"></span>
+                        </a>
+                      </div>
                       <div class="row" style="width:325px;">
                         <a href="#" class="btn btn-primary py-2" style="margin-right: 8px;">Apply Job</a>
                         <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#Navdeep25" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
                       </div>
-  		              </div>
-  		            </div>
+                    </div>
+                  </div>
                   <div class="collapse" id="Navdeep25">
                     <div class="card card-body">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                     </div>
                   </div>
-		          </div><!-- end -->
-              <div class="col-md-12 ftco-animate">
-  		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
-  		              <div class="one-third mb-4 mb-md-0">
-  		                <div class="job-post-item-header d-flex align-items-center">
-  		                  <h2 class="mr-3 text-black"><a href="#">Backend Development</a></h2>
-  		                  <div class="badge-wrap">
-  		                   <span class="bg-primary text-white badge py-2 px-3">Partime</span>
-  		                  </div>
-  		                </div>
-  		                <div class="job-post-item-body d-block d-md-flex">
-  		                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Whatsapp, Inc.</a></div>
-  		                  <div class="mr-3"><span class="icon-my_location"></span> <span>Northern City, UK</span></div>
-                        <div><span class="icon-inr"></span> <span>6000</span></div>
-  		                </div>
-  		              </div>
+              </div><!-- end -->');
+              }
+              ?>
 
-  		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
-  		              	<div class="row" style="width:95px;">
-  			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2" style="margin-left: -30px;">
-  			                	<span class="icon-share"></span>
-  			                </a>
-  		                </div>
-                      <div class="row" style="width:325px;">
-                        <a href="#" class="btn btn-primary py-2" style="margin-right: 8px;">Apply Job</a>
-                        <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#Navdeep26" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
-                      </div>
-  		              </div>
-  		            </div>
-                  <div class="collapse" id="Navdeep26">
-                    <div class="card card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </div>
-                  </div>
-		          </div><!-- end -->
             </div>
           </div>
         </div>
