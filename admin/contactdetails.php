@@ -69,8 +69,9 @@ $error = "";
                     <th>Email</th>
                     <th>Sub</th>
                     <th>msg</th>
-                      <th>Attachment_url</th>
-                     <th>Reg. Time</th>
+                    <th>Attachment_url</th>
+                    <th>Reg. Time</th>
+                    <th>Options</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -88,7 +89,7 @@ $error = "";
                       <td>'.wordwrap($msg1[$x],50,"<br />\n").'</td>
                       <td>'.$attach_url[$x].'</td>
                       <td>'.$query_date[$x].'</td>
-
+                      <td><a href="emailform.php" class="btn btn-primary"><i class="far fa-envelope"></i></a></td>
                     </tr>
 
                   ');

@@ -50,7 +50,7 @@
                   <div class="invalid-feedback">Please Enter Email.</div>
                 </div>
                 <div class="form-group">
-                <button type="submit" class="btn btn-success">Send</button>
+                <button type="submit" class="btn btn-success"><i class="far fa-envelope"></i>  Send</button>
                 </div>
                 </div>
               </div>
