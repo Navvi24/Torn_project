@@ -1,4 +1,48 @@
 <?php
+$value = 0;
+if(isset($_POST['send']))
+{
+$msg = "";
+require 'master/PHPMailerAutoload.php';
+
+    $mail = new PHPMailer;
+
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'support@internstorm.com';                 // SMTP username
+    $mail->Password = 'internstormsupport';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = '587';    // TCP port to connect to
+
+    //$file_name = $_FILES["file"]["name"];
+    //move_uploaded_file($_FILES["file"]["tmp_name"], $file_name);
+  //  $mail->AddAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
+
+    $mail->setFrom('support@internstorm.com', 'Internstorm');
+    $mail->addAddress($_POST['to']);     // Add a recipient
+ //   $mail->addAddress('admin@internstorm.com');               // Name is optional
+    $mail->addReplyTo('support@internstorm.com');
+
+    $mail->isHTML(true);                                  // Set email format to HTML
+
+    $mail->Subject = "Reply : ".$_POST['subject'];
+    $mail->Body    = '<div><p></p>'.$_POST['message'].'</div>';
+    $mail->AltBody = $_POST['message'];
+
+    if(!$mail->send()) {
+      $value = 2;
+      echo 'Message could not be sent.';
+      echo 'Mailer Error: ' . $mail->ErrorInfo;
+    }
+    else
+    {
+      $value = 1;
+      $msg = "Mail Send Successfully.";
+    }
+}
+ ?>
+<?php
    include('sidebar.php');
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -27,6 +71,15 @@
         <!-- left column -->
         <div class="col-md-12">
           <!-- general form elements -->
+          <?php if ($value == 1) {?>
+            <div class="alert alert-primary" role="alert">
+              <?php echo "Mail Sent Successfully"; ?>
+            </div>
+          <?php } else if($value == 2){?>
+            <div class="alert alert-danger" role="alert">
+              <?php echo "Mail cannot send please try again"; ?>
+            </div>
+          <?php } else{}?>
           <div class="card card-success">
             <div class="card-header">
               <h3 class="card-title">Email Form</h3>
@@ -50,7 +103,7 @@
                   <div class="invalid-feedback">Please Enter Email.</div>
                 </div>
                 <div class="form-group">
-                <button type="submit" class="btn btn-success"><i class="far fa-envelope"></i>  Send</button>
+                <button type="submit" class="btn btn-success swalDefaultSuccess" name="send"><i class="far fa-envelope"></i>  Send</button>
                 </div>
                 </div>
               </div>
