@@ -1,18 +1,9 @@
 <?php
 include('sidebar.php');
 include("connect.php");
-$id = $_GET['id'];
+//$id = $_GET['id'];
 
-if(isset($_GET['id']) && !empty($_GET['id']) ){
-    $arg = mysqli_real_escape_string($con,$_GET["id"]);
-$sql = "INSERT INTO active_internship SELECT * FROM posted_internship WHERE id=$arg";
 
-    if (mysqli_query($con,$sql)) {
-        $msg= "Active successfully";
-    } else {
-        $error =  "error " . mysqli_error($con);
-    }
-}
 $error = "";
 $msg = "";
 $sql="";
@@ -38,7 +29,7 @@ $sql = "INSERT INTO active_internship SELECT * FROM posted_internship WHERE SR=$
     if (mysqli_query($con,$sql)) {
         $msg= "Active successfully";
     } else {
-        $error =  "error " . mysqli_error($con);
+        $error =  "error " . mysqli_error($con)." "."Already Active";
     }
 }
 
@@ -127,7 +118,7 @@ $con->close();
                     <td>'.$start_date[$x].'</td>
                     <td>'.$stipend_amt[$x].'</td>
                     <td>'.$perks[$x].'</td>
-                    <td><a href="viewintern.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a></td>
+                    <td><a href="viewintern_active.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a></td>
 
                   </tr>
 
