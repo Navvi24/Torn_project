@@ -49,7 +49,7 @@
       $perks = $_POST['perks'];
       foreach ($perks as $key => $perks_tmp_value)
       {
-        $perks_value .= $perks_tmp_value.",";
+        $perks_value = $perks_tmp_value.",";
       }
       $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, state, internship_city, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method,perks)
         VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$state', '$internship_city', '$total_opening', '$internship_start_date', '$duration_no', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method','$perks_value')";
@@ -58,7 +58,7 @@
          {
             $error = "Error: ".mysqli_error($con);
             echo $error;
-            header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+           // header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
           }
         else
         {
@@ -99,7 +99,7 @@
                             echo 'Message has been sent';
                         }
 
-                     header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+                 //    header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
 }
 ?>
