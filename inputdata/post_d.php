@@ -78,7 +78,7 @@
                         $mail->Password = 'admininternstorm';                           // SMTP password
                         $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
                         $mail->Port = 587;                                    // TCP port to connect to
-
+                        $mail->AddEmbeddedImage('logo_white.png', 'storm');
                         $mail->setFrom('admin@internstorm.com', 'Internstorm');
                         $mail->addAddress($email);     // Add a recipient
                         //   $mail->addAddress('admin@internstorm.com');               // Name is optional
