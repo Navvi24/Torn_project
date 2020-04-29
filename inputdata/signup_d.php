@@ -19,17 +19,17 @@ if(isset($_POST['signup']))
 if(!empty($_POST['signup']))
 {
     //print_r($_POST);
-    $fname = $_POST['fname'];
+    $fname = mysqli_real_escape_string($con, $_POST['fname']);
        // echo $fname;
-    $lname = $_POST['lname'];
+    $lname = mysqli_real_escape_string($con, $_POST['lname']);
       //  echo $lname;
-    $phn = $_POST['phn'];
+    $phn = mysqli_real_escape_string($con, $_POST['phn']);
        // echo $phn;
-    $email = $_POST['email'];
+    $email = mysqli_real_escape_string($con, $_POST['email']);
        // echo $email;
-    $password = $_POST['password'];
+    $password = mysqli_real_escape_string($con, $_POST['password']);
        // echo $password;
-    $pass_retype = $_POST['pass_retype'];
+    $pass_retype = mysqli_real_escape_string($con, $_POST['pass_retype']);
        // echo $pass_retype;
     //$filename = $_FILES['cv']['name'];
   //  $tmp_name = $_FILES['cv']['tmp_name'];

@@ -61,7 +61,7 @@
          {
             $error = "Error: ".mysqli_error($con);
             echo $error;
-           //header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+           header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
           }
         else
         {
@@ -102,7 +102,7 @@
                             echo 'Message has been sent';
                         }
 
-            //    header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+               header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
 }
 ?>
