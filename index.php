@@ -1,3 +1,38 @@
+<?php
+include("inputdata/connect.php");
+$error = "";
+  $msg = "";
+  $sql="";
+  $arg="";
+  $num = 0;
+  $default_web = "#";
+  $comp_name                =array();
+  $comp_web                =array();
+  $i_pos1                    =array();
+  $i_details                =array();
+  $city                    =array();
+  $state                    =array();
+  $stipend_amt             =array();
+  $stipend_method           =array();
+
+    $sql = "SELECT comp_name, comp_web, internship_pos, internship_detail, internship_city, state, stipend_amount, stipend_method FROM rec_internship";
+    $result = mysqli_query($con, $sql);
+   if (mysqli_num_rows($result) > 0) {
+
+     while ($row = mysqli_fetch_assoc($result)){
+          $comp_name[$num]     = $row["comp_name"];
+          $comp_web[$num]      = $row["comp_web"];
+          $i_pos1[$num]         = $row["internship_pos"];
+          $i_details[$num]     = $row["internship_detail"];
+          $city[$num]          = $row["internship_city"];
+          $state[$num]          = $row["state"];
+          $stipend_amt[$num]   = $row["stipend_amount"];
+          $stipend_method[$num] = $row["stipend_method"];
+          $num = $num + 1;
+        }
+    }
+  $con->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -166,19 +201,21 @@ s0.parentNode.insertBefore(s1,s0);
 		          </div>
 		        </div>
 						<div class="row">
-							<div class="col-md-12 ftco-animate">
+              <?php
+                for($x = 0; $x < $num; $x++){
+							echo('<div class="col-md-12 ftco-animate">
 		            <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
 		              <div class="one-third mb-4 mb-md-0">
 		                <div class="job-post-item-header d-flex align-items-center">
-		                  <h2 class="mr-3 text-black"><a href="#">Frontend Development</a></h2>
+		                  <h2 class="mr-3 text-black"><a href="#">'.$i_pos1[$x].'</a></h2>
 		                  <div class="badge-wrap">
-		                   <span class="bg-primary text-white badge py-2 px-3">Partime</span>
+		                   <span class="bg-primary text-white badge py-2 px-3">'.$i_details[$x].'</span>
 		                  </div>
 		                </div>
 		                <div class="job-post-item-body d-block d-md-flex">
-		                  <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
-		                  <div class="mr-3"><span class="icon-my_location"></span> <span>Western City, UK</span></div>
-                      <div><span class="icon-inr"></span> <span>5000</span></div>
+		                  <div class="mr-3"><span class="icon-layers"></span> <a href="'.$comp_web[$x].'" target="_blank">'.$comp_name[$x].'</a></div>
+		                  <div class="mr-3"><span class="icon-my_location"></span> <span>'.$city[$x].', '.$state[$x].'</span></div>
+                      <div><span class="icon-inr"></span> <span>'.$stipend_amt[$x].' '.$stipend_method[$x].'</span></div>
 		                </div>
 		              </div>
 
@@ -192,7 +229,10 @@ s0.parentNode.insertBefore(s1,s0);
 		              </div>
 		            </div>
 		          </div><!-- end -->
-		        </div>
+          ');
+        }
+              ?>
+            </div>
 		      </div>
 				</div>
 			</div>

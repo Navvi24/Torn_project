@@ -65,12 +65,12 @@ $con->close();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Active Internships Details</h1>
+            <h1>Recommended Internships Details</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Active Internships</li>
+              <li class="breadcrumb-item active">Recommended Internships</li>
             </ol>
           </div>
         </div>
@@ -92,7 +92,7 @@ $con->close();
               </div>
             <?php } else{}?>
             <div class="card-header">
-              <h3 class="card-title">ACTIVE DETAILS</h3>
+              <h3 class="card-title">RECOMMENDED DETAILS</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -128,7 +128,7 @@ $con->close();
                     <td>'.$start_date[$x].'</td>
                     <td>'.$stipend_amt[$x].'</td>
                     <td>'.$perks[$x].'</td>
-                    <td><a href="viewintern_active.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a></td>
+                    <td><a href="viewintern_recom.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a></td>
 
                   </tr>
 

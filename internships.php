@@ -25,13 +25,13 @@ include('inputdata/session.php');
    $total_opening            =array();
    $start_date               =array();
    $i_duration_type         =array();
-   //$i_duration               = "";
+   $i_duration               = array();
    $i_description            =array();
    $stipend_amt             =array();
    $stipend_method           =array();
    $perks                    =array();
 
-     $sql = "SELECT SR, internship_post_time, fname, lname, email, phn, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, state, total_opening, internship_start_date, duration_type, about_internship, stipend_amount, stipend_method, perks FROM active_internship";
+     $sql = "SELECT SR, internship_post_time, fname, lname, email, phn, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, state, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method, perks FROM active_internship";
      $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
 
@@ -51,6 +51,7 @@ include('inputdata/session.php');
            $state[$num]          = $row["state"];
            $total_opening[$num] = $row["total_opening"];
            $start_date[$num]    = $row["internship_start_date"];
+           $i_duration[$num]   = $row["duration_no"];
            $i_duration_type[$num] = $row["duration_type"];
            $i_description[$num] = $row["about_internship"];
            $stipend_amt[$num]   = $row["stipend_amount"];
@@ -236,7 +237,7 @@ s0.parentNode.insertBefore(s1,s0);
                       <p class="i_data">'.$start_date[$x].'</p>
                       <br>
                       <label class="font-weight-bold i_head">Duration : </label>
-                      <p class="i_data">5 '.$i_duration_type[$x].'</p>
+                      <p class="i_data">'.$i_duration[$x].' '.$i_duration_type[$x].'</p>
                       <br>
                       <label class="font-weight-bold i_head">Posted on : </label>
                       <p class="i_data">'.$post_time[$x].'</p>

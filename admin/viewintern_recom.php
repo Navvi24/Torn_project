@@ -29,7 +29,7 @@ $error = "";
   $stipend_method           = "";
   $perks                    ="";
 
-    $sql = "SELECT * FROM posted_internship where sr=$id";
+    $sql = "SELECT * FROM rec_internship where sr=$id";
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
         // output data of each row
@@ -49,8 +49,8 @@ $error = "";
           $state          = $row["state"];
           $total_opening = $row["total_opening"];
           $start_date    = $row["internship_start_date"];
+          $i_duration    = $row["duration_no"];
           $i_duration_type = $row["duration_type"];
-          $i_duration     =$row["duration_no"];
           $i_description = $row["about_internship"];
           $stipend_amt   = $row["stipend_amount"];
           $stipend_method = $row["stipend_method"];
@@ -67,7 +67,7 @@ $error = "";
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>View Internships Details</h1>
+          <h1>View Recommended Internships Details</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -85,7 +85,7 @@ $error = "";
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">VIEW DETAILS</h3>
+            <h3 class="card-title">VIEW RECOMMENDED INTERNSHIP DETAILS</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
@@ -163,7 +163,6 @@ $error = "";
             </thead>
             </table>
             <br>
-            <a href="activeintern.php?id=<?php echo "$serial"; ?>" class="btn btn-primary btn-block btn-flat">Click here to mark as Active</a>
           </div>
           <!-- /.card-body -->
         </div>

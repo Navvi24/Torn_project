@@ -1,7 +1,7 @@
 <?php
    include('sidebar.php');
    include("connect.php");
-   $id = $_GET['id']; 
+   $id = $_GET['id'];
 $error = "";
   $msg = "";
   $sql="";
@@ -23,7 +23,7 @@ $error = "";
   $total_opening            ="";
   $start_date               ="";
   $i_duration_type         ="";
-  //$i_duration               = "";
+  $i_duration               = "";
   $i_description            ="";
   $stipend_amt              ="";
   $stipend_method           = "";
@@ -49,6 +49,7 @@ $error = "";
           $state          = $row["state"];
           $total_opening = $row["total_opening"];
           $start_date    = $row["internship_start_date"];
+          $i_duration    = $row["duration_no"];
           $i_duration_type = $row["duration_type"];
           $i_description = $row["about_internship"];
           $stipend_amt   = $row["stipend_amount"];
@@ -144,7 +145,7 @@ $error = "";
               </tr>
               <tr>
                 <th style="width:30%">Internship Duration</th>
-                <td style="width:50%"><?php echo " "." $i_duration_type"; ?></td>
+                <td style="width:50%"><?php echo "$i_duration "." $i_duration_type"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">About Internship</th>

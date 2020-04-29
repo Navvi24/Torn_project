@@ -252,7 +252,7 @@ s0.parentNode.insertBefore(s1,s0);
                       <div class="col-md-12 mb-3 mb-md-0">
                         <label class="font-weight-bold" for="internship_detail">Internship Details</label>
                         <div class="col-md-12 mb-3 mb-md-0">
-                          <input type="radio" name="internship_detail" value="Regular" required checked>
+                          <input type="radio" name="internship_detail" value="In-office" required checked>
                           <label for=internship_detail>Regular (In-office/On-field)</label>
                         </div>
                         <div class="col-md-12 mb-3 mb-md-0">
