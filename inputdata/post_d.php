@@ -1,6 +1,6 @@
 <?php
-   include("connect.php");
-   ob_start();
+     include("connect.php");
+     ob_start();
     include 'post_email_layout.php';
     $mailbody = ob_get_clean();
  include("./master/PHPMailerAutoload.php");
@@ -49,9 +49,9 @@
       $perks = $_POST['perks'];
       foreach ($perks as $key => $perks_tmp_value)
       {
-        $perks_value = $perks_tmp_value.",";
+        $perks_value .= $perks_tmp_value.",";
       }
-
+      print_r($_POST);
 
 
       $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, state, internship_city, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method,perks)
@@ -61,7 +61,7 @@
          {
             $error = "Error: ".mysqli_error($con);
             echo $error;
-           // header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+           //header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
           }
         else
         {
@@ -102,7 +102,7 @@
                             echo 'Message has been sent';
                         }
 
-                 //    header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+            //    header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
 }
 ?>
