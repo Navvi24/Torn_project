@@ -38,24 +38,25 @@ if(!empty($_POST['signup']))
     //print_r($ext);
     if (in_array($ext, array("pdf", "docx", "doc")))
     {
-      $filename = rand().'.'.$ext;
+     $filename = rand().'.'.$ext;
      move_uploaded_file($tmp_name, "../resume_files/$filename");
-     $sql="INSERT INTO logindetails (fname, lname, phn,  mail, password,resume_url)
-            VALUES('$fname','$lname','$phn','$email','$password','$filename')";
-
-    		if (!mysqli_query($con,$sql)) {
-    			$error = "Error: ".mysqli_error($con);
-          header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
-            }else{
-                $msg = "signup successfully";
-                $description = "";
-                header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
-            }
     }
     else
     {
     header("Location: ../signup.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=101000");
+    exit;
     }
+    $sql="INSERT INTO logindetails (fname, lname, phn,  mail, password,resume_url)
+           VALUES('$fname','$lname','$phn','$email','$password','$filename')";
+
+       if (!mysqli_query($con,$sql)) {
+         $error = "Error: ".mysqli_error($con);
+         header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+           }else{
+               $msg = "signup successfully";
+               $description = "";
+               header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+           }
   }
 }
 ?>

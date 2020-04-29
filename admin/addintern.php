@@ -140,17 +140,7 @@
                 </div>
                 <div class="form-group">
                   <label for="internship_start_date">Internship Start Date</label>
-                  <div class="form-check">
-                        <input class="form-check-input" type="radio" nname="internship_start_date" value="Immediately" required checked>
-                        <label class="form-check-label">Immediately (within next 30 days)</label>
-                  </div>
-                  <div class="form-check">
-                        <input class="form-check-input" type="radio" name="internship_start_date" value="Later"
-
-
-                        >
-                        <label class="form-check-label">Later</label>
-                  </div>
+                    <input class="form-control" id="date" name="internship_start_date" placeholder="MM/DD/YYYY" type="date"/>
                 </div>
                 <div class="form-group">
                   <label for="internship_duration">Internship Duration</label>
