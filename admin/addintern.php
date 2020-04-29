@@ -1,5 +1,16 @@
 <?php
    include('sidebar.php');
+
+$id = $_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'];
+
+
+if($id == 1010){
+    echo "internship posted";
+}
+else
+{
+    echo "Internship posted error";
+}
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -17,7 +28,17 @@
           </ol>
         </div>
       </div>
-    </div><!-- /.container-fluid -->
+    </div><!-- /.container-fluid --> 
+                <?php
+                    if($id == 1010)
+                    {
+                        echo "internship posted";
+                    }
+                    else
+                    {
+                        echo "Internship posted error";
+                    }
+                ?>
   </section>
 
   <!-- Main content -->
@@ -30,10 +51,19 @@
           <div class="card card-primary">
             <div class="card-header">
               <h3 class="card-title">Active Internship Form</h3>
+                <?php
+                if($id == 1010){
+    echo "internship posted";
+}
+else
+{
+    echo "Internship posted error";
+}
+                ?>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="post">
+            <form role="form" method="post" action="post_d.php">
               <div class="card-body">
                 <div class="form-group">
                   <label for="exampleInputfirst">First Name</label>
@@ -225,7 +255,7 @@
               <!-- /.card-body -->
 
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" name="post_sub">Submit</button>
               </div>
             </form>
           </div>
