@@ -12,7 +12,7 @@ $error = "";
 $msg = "";
 $sql="";
 $arg="";
-$mail_send = "navdeepsharma530@gmail.com";
+$mail_send = "";
 $sr                       =array();
 $post_time                =array();
 $comp_name                =array();
@@ -29,14 +29,15 @@ $num = 0;
 if(isset($_GET['id']) && !empty($_GET['id']) ){
     $arg = mysqli_real_escape_string($con,$_GET["id"]);
 $sql = "INSERT INTO active_internship SELECT * FROM posted_internship WHERE SR=$arg";
-//$sql2 = "SELECT email from posted_internship  where SR=$arg";
-//$result2 = $con->query($sql2);
-//if($result2->num_rows>0)
-//{
-//  while($row = $result->fetch_assoc()) {
-//  $mail_send = $row['email'];
-//}
+$sql2 = "SELECT * from posted_internship  where SR=$arg";
+$result2 = $con->query($sql2);
+if($result2->num_rows>0)
+{
+  while($row = $result2->fetch_assoc()) {
+  $mail_send = $row['email'];
 }
+}
+
     if (mysqli_query($con,$sql)) {
         $msg= "Active successfully";
         $value = 1;
@@ -80,7 +81,7 @@ $sql = "INSERT INTO active_internship SELECT * FROM posted_internship WHERE SR=$
           $value = 2;
           $error =  "Error " . mysqli_error($con)." "."Already Active";
     }
-
+}
 
 
  $sql = "SELECT sr, internship_post_time, comp_name, comp_web, internship_pos, total_opening, internship_start_date, stipend_amount, perks FROM active_internship ORDER BY sr DESC";
