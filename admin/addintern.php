@@ -1,15 +1,19 @@
 <?php
    include('sidebar.php');
-
+$msg="";
+$err="";
+$id="";
+if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
+{
 $id = $_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'];
-
-
-if($id == 1010){
-    echo "internship posted";
+if($id == 1010)
+{
+  $msg = "Internship added sucessfully.";
 }
 else
 {
-    echo "Internship posted error";
+    $err = "Internship cannot added sucessfully.";
+}
 }
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -28,17 +32,7 @@ else
           </ol>
         </div>
       </div>
-    </div><!-- /.container-fluid --> 
-                <?php
-                    if($id == 1010)
-                    {
-                        echo "internship posted";
-                    }
-                    else
-                    {
-                        echo "Internship posted error";
-                    }
-                ?>
+    </div><!-- /.container-fluid -->
   </section>
 
   <!-- Main content -->
@@ -48,18 +42,18 @@ else
         <!-- left column -->
         <div class="col-md-12">
           <!-- general form elements -->
+          <?php if ($id == 1010) {?>
+            <div class="alert alert-success" role="alert">
+              <?php echo "Internship sucessfully added in posted internship."; ?>
+            </div>
+          <?php } else if($id == 10100){?>
+            <div class="alert alert-danger" role="alert">
+              <?php echo "Internship cannot added sucessfully"; ?>
+            </div>
+          <?php } else{}?>
           <div class="card card-primary">
             <div class="card-header">
               <h3 class="card-title">Active Internship Form</h3>
-                <?php
-                if($id == 1010){
-    echo "internship posted";
-}
-else
-{
-    echo "Internship posted error";
-}
-                ?>
             </div>
             <!-- /.card-header -->
             <!-- form start -->

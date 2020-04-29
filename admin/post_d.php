@@ -65,8 +65,8 @@ print_r($_POST);
            header("Location: addintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
           }
         else
-        {                        
-                echo "scuess:";
+        {
+                echo "sucess:";
                header("Location: addintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
         }
 }

@@ -128,7 +128,10 @@ $con->close();
                     <td>'.$start_date[$x].'</td>
                     <td>'.$stipend_amt[$x].'</td>
                     <td>'.$perks[$x].'</td>
-                    <td><a href="viewintern_recom.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a></td>
+                    <td>
+                    <a href="viewintern_recom.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a>
+                      <center><a href="#" class="btn btn-danger" style="margin-top:20px;"><i class="fas fa-trash"></i></a></center>
+                    </td>
 
                   </tr>
 
