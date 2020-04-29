@@ -336,7 +336,7 @@ s0.parentNode.insertBefore(s1,s0);
                           <label class="font-weight-bold" for="internship_duration">Internship Duration</label>
                           <div class="form-group row">
                             <div class="col-md-8 mb-3 mb-md-0">
-                              <select name="duration_number" class="form-control" required>
+                              <select name="duration_no" class="form-control" required>
                                 <option label="Choose Duration" selected>Choose Duration</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
