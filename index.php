@@ -225,7 +225,7 @@ s0.parentNode.insertBefore(s1,s0);
 			                	<span class="icon-share"></span>
 			                </a>
 		                </div>
-		                <a href="job-single.php" class="btn btn-primary py-2">Apply Job</a>
+		                <a href="login.php" class="btn btn-primary py-2">Apply Job</a>
 		              </div>
 		            </div>
 		          </div><!-- end -->
