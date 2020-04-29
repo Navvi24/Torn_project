@@ -25,32 +25,35 @@
       $perks="";
       $perks_value="";
       $perks_tmp_value="";
-
+//mysqli_real_escape_string($con, $_POST['inputDescription']);
     if(isset($_POST['post_sub']))
     {
-      $fname = $_POST['fname'];
-      $lname = $_POST['lname'];
-      $phn = $_POST['phn'];
-      $email = $_POST['email'];
-      $comp_name = $_POST['comp_name'];
-      $comp_about = $_POST['comp_about'];
-      $comp_web = $_POST['comp_web'];
-      $internship_pos = $_POST['internship_pos'];
-      $internship_detail = $_POST['internship_detail'];
-      $state = $_POST['state'];
-      $internship_city = $_POST['internship_city'];
-      $total_opening  = $_POST['total_opening'];
-      $internship_start_date = $_POST['internship_start_date'];
-      $duration_no = $_POST['duration_number'];
-      $duration_type = $_POST['duration_type'];
-      $about_internship = $_POST['about_internship'];
-      $stipend_amount = $_POST['stipend_amount'];
-      $stipend_method = $_POST['stipend_method'];
+      $fname = mysqli_real_escape_string($con, $_POST['fname']);
+      $lname = mysqli_real_escape_string($con, $_POST['lname']);
+      $phn = mysqli_real_escape_string($con, $_POST['phn']);
+      $email = mysqli_real_escape_string($con, $_POST['email']);
+      $comp_name = mysqli_real_escape_string($con, $_POST['comp_name']);
+      $comp_about = mysqli_real_escape_string($con, $_POST['comp_about']);
+      $comp_web = mysqli_real_escape_string($con, $_POST['comp_web']);
+      $internship_pos = mysqli_real_escape_string($con, $_POST['internship_pos']);
+      $internship_detail = mysqli_real_escape_string($con, $_POST['internship_detail']);
+      $state = mysqli_real_escape_string($con, $_POST['state']);
+      $internship_city = mysqli_real_escape_string($con, $_POST['internship_city']);
+      $total_opening  = mysqli_real_escape_string($con, $_POST['total_opening']);
+      $internship_start_date = mysqli_real_escape_string($con, $_POST['internship_start_date']);
+      $duration_no = mysqli_real_escape_string($con, $_POST['duration_no']);
+      $duration_type = mysqli_real_escape_string($con, $_POST['duration_type']);
+      $about_internship = mysqli_real_escape_string($con, $_POST['about_internship']);
+      $stipend_amount = mysqli_real_escape_string($con, $_POST['stipend_amount']);
+      $stipend_method = mysqli_real_escape_string($con, $_POST['stipend_method']);
       $perks = $_POST['perks'];
       foreach ($perks as $key => $perks_tmp_value)
       {
         $perks_value = $perks_tmp_value.",";
       }
+    
+        
+        
       $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, state, internship_city, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method,perks)
         VALUES('$fname','$lname','$phn','$email', '$comp_name', '$comp_about', '$comp_web', '$internship_pos', '$internship_detail', '$state', '$internship_city', '$total_opening', '$internship_start_date', '$duration_no', '$duration_type', '$about_internship', '$stipend_amount', '$stipend_method','$perks_value')";
 
