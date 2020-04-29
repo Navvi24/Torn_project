@@ -108,15 +108,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="addintern.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Internship</p>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="recommends.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Recommends Internship</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="addintern.php" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add Internship</p>
               </a>
             </li>
           </ul>

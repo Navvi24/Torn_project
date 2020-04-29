@@ -39,12 +39,12 @@ $error = "";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Registered Users</h1>
+            <h1>Contact-us Queries</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Registered Users</li>
+              <li class="breadcrumb-item active">Contact-us Queries</li>
             </ol>
           </div>
         </div>
@@ -57,7 +57,7 @@ $error = "";
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Registered Users</h3>
+              <h3 class="card-title">Contact-us Queries</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
