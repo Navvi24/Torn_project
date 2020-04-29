@@ -8,6 +8,7 @@ include('inputdata/session.php');
    $sql="";
    $arg="";
    $num = 0;
+   $default_web = "#";
    $serial                       =array();
    $post_time                =array();
    $fname                    =array();
@@ -124,6 +125,8 @@ include('inputdata/session.php');
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 .job-post-item .one-forth {width: 222px;}
+.i_head{color: #17a2b8;}
+.i_data{color: black;}
 #namelink
 {
   color: black;
@@ -196,13 +199,13 @@ s0.parentNode.insertBefore(s1,s0);
                       <div class="job-post-item-header d-flex align-items-center">
                         <h2 class="mr-3 text-black"><a href="#">'.$i_pos1[$x].'</a></h2>
                         <div class="badge-wrap">
-                         <span class="bg-primary text-white badge py-2 px-3">'.$email[$x].'</span>
+                         <span class="bg-primary text-white badge py-2 px-3">'.$i_details[$x].'</span>
                         </div>
                       </div>
                       <div class="job-post-item-body d-block d-md-flex">
-                        <div class="mr-3"><span class="icon-layers"></span> <a href="#">Facebook, Inc.</a></div>
-                        <div class="mr-3"><span class="icon-my_location"></span> <span>Western City, UK</span></div>
-                        <div><span class="icon-inr"></span> <span>5000</span></div>
+                        <div class="mr-3"><span class="icon-layers"></span> <a href="'.$comp_web[$x].'" target="_blank">'.$comp_name[$x].'</a></div>
+                        <div class="mr-3"><span class="icon-my_location"></span> <span>'.$city[$x].', '.$state[$x].'</span></div>
+                        <div><span class="icon-inr"></span> <span>'.$stipend_amt[$x].' '.$stipend_method[$x].'</span></div>
                       </div>
                     </div>
 
@@ -214,14 +217,33 @@ s0.parentNode.insertBefore(s1,s0);
                       </div>
                       <div class="row" style="width:325px;">
                         <a href="#" class="btn btn-primary py-2" style="margin-right: 8px;">Apply Job</a>
-                        <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#Navdeep25" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
+                        <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#collapse'.$serial[$x].'" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
                       </div>
                     </div>
                   </div>
-                  <div class="collapse" id="Navdeep25">
+                  <div class="collapse" id="collapse'.$serial[$x].'">
                     <div class="card card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </div>
+                      <label class="font-weight-bold i_head">About Company</label>
+                      <p class="i_data">'.$about_comp[$x].'</p>
+                      <br>
+                      <label class="font-weight-bold i_head">About Internship</label>
+                      <p class="i_data">'.$i_description[$x].'</p>
+                      <br>
+                      <label class="font-weight-bold i_head">No. of openings : </label>
+                      <p class="i_data">'.$total_opening[$x].'</p>
+                      <br>
+                      <label class="font-weight-bold i_head">Start Date : </label>
+                      <p class="i_data">'.$start_date[$x].'</p>
+                      <br>
+                      <label class="font-weight-bold i_head">Duration : </label>
+                      <p class="i_data">5 '.$i_duration_type[$x].'</p>
+                      <br>
+                      <label class="font-weight-bold i_head">Posted on : </label>
+                      <p class="i_data">'.$post_time[$x].'</p>
+                      <br>
+                      <label class="font-weight-bold i_head">Perks : </label>
+                      <p class="i_data">'.$perks[$x].' </p>
+                      </div>
                   </div>
               </div><!-- end -->');
               }

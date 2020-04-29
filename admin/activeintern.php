@@ -7,7 +7,7 @@ include 'active_email_layout.php';
 $mailbody = ob_get_clean();
 include("master/PHPMailerAutoload.php");
 $value = 0;
-
+$mail_check = 0;
 $error = "";
 $msg = "";
 $sql="";
@@ -74,7 +74,9 @@ if($result2->num_rows>0)
             echo 'Message could not be sent.';
             echo 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
+              $mail_check = 1;
             echo 'Message has been sent';
+
         }
 
     } else {
