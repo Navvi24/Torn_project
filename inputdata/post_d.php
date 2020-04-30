@@ -3,7 +3,7 @@
      ob_start();
     include 'post_email_layout.php';
     $mailbody = ob_get_clean();
- include("./master/PHPMailerAutoload.php");
+   include("./master/PHPMailerAutoload.php");
       $fname    = "";
       $lname    = "";
       $phn      = "";
@@ -51,7 +51,6 @@
       {
         $perks_value .= $perks_tmp_value.",";
       }
-      print_r($_POST);
 
 
       $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, state, internship_city, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method,perks)
@@ -66,41 +65,41 @@
         else
         {
 
-                        $mail = new PHPMailer();
-                        
-                        //$mail->SMTPDebug = 3;                               // Enable verbose debug output
-                        //$mailcontent = '';
-                        
-                        $mail->isSMTP();                                      // Set mailer to use SMTP
-                        $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
-                        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-                        $mail->Username = 'admin@internstorm.com';                 // SMTP username
-                        $mail->Password = 'admininternstorm';                           // SMTP password
-                        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-                        $mail->Port = 587;                                    // TCP port to connect to
-                        
-                        $mail->setFrom('admin@internstorm.com', 'Internstorm');
-                        $mail->addAddress($email);     // Add a recipient
-                        //   $mail->addAddress('admin@internstorm.com');               // Name is optional
-                        $mail->addReplyTo('admin@internstorm.com');
-                        //$mail->addCC('cc@example.com');
-                        //$mail->addBCC('bcc@example.com');
-                        
-                        //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-                        //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-                        $mail->isHTML(true);                                  // Set email format to HTML
-                        
-                        $mail->Subject = 'Internship Posted Successfully';
-                        $mail->Body    = $mailbody;
-            
-                //        $mail->AltBody = file_get_contents('post_email_layout.php');
-                        
-                        if(!$mail->send()) {
-                            echo 'Message could not be sent.';
-                            echo 'Mailer Error: ' . $mail->ErrorInfo;
-                        } else {
-                            echo 'Message has been sent';
-                        }
+          $mail = new PHPMailer();
+
+            //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+            //$mailcontent = '';
+
+            $mail->isSMTP();                                      // Set mailer to use SMTP
+            $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->Username = 'admin@internstorm.com';                 // SMTP username
+            $mail->Password = 'admininternstorm';                           // SMTP password
+            $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = 587;                                    // TCP port to connect to
+
+            $mail->setFrom('admin@internstorm.com', 'Internstorm');
+            $mail->addAddress($email);     // Add a recipient
+            //   $mail->addAddress('admin@internstorm.com');               // Name is optional
+            $mail->addReplyTo('admin@internstorm.com');
+            //$mail->addCC('cc@example.com');
+            //$mail->addBCC('bcc@example.com');
+
+            //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+            //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+            $mail->isHTML(true);                                  // Set email format to HTML
+
+            $mail->Subject = 'Internship Posted Successfully';
+            $mail->Body    = $mailbody;
+
+    //        $mail->AltBody = file_get_contents('post_email_layout.php');
+
+            if(!$mail->send()) {
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $mail->ErrorInfo;
+            } else {
+                echo 'Message has been sent';
+            }
 
                header("Location: ../new-post.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
      }
