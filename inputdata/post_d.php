@@ -71,20 +71,20 @@
             //$mailcontent = '';
 
             $mail->isSMTP();                                      // Set mailer to use SMTP
-            $mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
+            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'admin@internstorm.com';                 // SMTP username
-            $mail->Password = 'admininternstorm';                           // SMTP password
+            $mail->Username = 'internstormed@gmail.com';                 // SMTP username
+            $mail->Password = '12chastity@cl';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
 
-            $mail->setFrom('admin@internstorm.com', 'Internstorm');
+            $mail->setFrom('internstormed@gmail.com', 'Internstorm');
             $mail->addAddress($email);     // Add a recipient
             //   $mail->addAddress('admin@internstorm.com');               // Name is optional
             $mail->addReplyTo('admin@internstorm.com');
             //$mail->addCC('cc@example.com');
             //$mail->addBCC('bcc@example.com');
-
+            $mail->AddEmbeddedImage('../images/Logo_white.png','logo');
             //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
             //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
             $mail->isHTML(true);                                  // Set email format to HTML
