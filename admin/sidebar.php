@@ -122,7 +122,7 @@
           </ul>
         </li>
           <li class="nav-item">
-            <a href="m  ainpage.php" class="nav-link">
+            <a href="appliedinterns.php" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
                 Interns/Students (END)

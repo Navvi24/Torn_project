@@ -3,7 +3,7 @@
  include("connect.php");
 
  if(isset($_SESSION['login_user'])){
-   header("location: internships.php");
+   header("location: internship_test.php");
    die();
  }
 
@@ -18,7 +18,7 @@
    // If result matched $myusername and $mypassword, table row must be 1 row
    if(mysqli_num_rows($result) > 0) {
      $_SESSION['login_user'] = $myusername;
-     header("location: ../internships.php");
+     header("location: ../internship_test.php");
    }else {
     header("location: ../login.php?kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ=10100");
    }

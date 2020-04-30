@@ -128,6 +128,7 @@ include('inputdata/session.php');
 .job-post-item .one-forth {width: 222px;}
 .i_head{color: #17a2b8;}
 .i_data{color: black;}
+.disable-links { pointer-events: none;}
 #namelink
 {
   color: black;
@@ -218,8 +219,7 @@ s0.parentNode.insertBefore(s1,s0);
                         </a>
                       </div>
                       <div class="row" style="width:325px;">
-                        <button type="button" class="btn btn-primary py-2" style="margin-right: 8px;" name="button">Apply Job</button>
-                        <button type="button" class="btn btn-primary py-2" style="margin-right: 8px;" name="button" disabled>Applied</button>
+                          <a href="appliedprocess.php" class="disable-links btn btn-primary py-2" style="margin-right: 8px; color:white;">Apply Job</a>
                         <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#collapse'.$serial[$x].'" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
                       </div>
                     </div>
