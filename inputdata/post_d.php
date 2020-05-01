@@ -84,7 +84,7 @@
             $mail->addReplyTo('admin@internstorm.com');
             //$mail->addCC('cc@example.com');
             //$mail->addBCC('bcc@example.com');
-            $mail->AddEmbeddedImage('../images/Logo_white.png','logo');
+          //  $mail->AddEmbeddedImage('../images/Logo_white.png','logo');
             //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
             //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
             $mail->isHTML(true);                                  // Set email format to HTML

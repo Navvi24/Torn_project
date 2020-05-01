@@ -8,6 +8,7 @@
   $totalusers = countusers( $con );
   $totalsub = countsub( $con );
   $totalquery = countquery( $con );
+  $totalapplied = countapplied( $con );
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -120,13 +121,13 @@
           <!-- small box -->
           <div class="small-box bg-light">
             <div class="inner">
-              <h3>0</h3>
+              <h3><?php echo $totalapplied; ?></h3>
               <p>Total Interns Applied</p>
             </div>
             <div class="icon">
               <i class="ion ion-ios-bookmarks"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="appliedinterns.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
       </div>

@@ -42,4 +42,11 @@ function countquery( $con )
   $num = mysqli_num_rows($result);
   return $num;
 }
+function countapplied( $con )
+{
+  $sql = "SELECT * from applied";
+  $result = mysqli_query($con, $sql);
+  $num = mysqli_num_rows($result);
+  return $num;
+}
  ?>
