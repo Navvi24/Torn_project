@@ -238,7 +238,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                           <li class="ftco-animate"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.internstorm.com#share" style="color:white;"><span class="icon-facebook" target="_blank"></span></a></li>
                           <li class="ftco-animate"><a href="https://web.whatsapp.com/send?text=https://www.internstorm.com#share" data-action="share/whatsapp/share" style="color:white;" target="_blank"><span class="icon-whatsapp"></span></a></li>
-                          <li class="ftco-animate"><a style="color:white;" onclick="myFunction()"><span class="icon-content_copy"></span></a></li>
+                          <li class="ftco-animate"><a href="#" style="color:white;" target="_blank"><span class="icon-instagram"></span></a></li>
                         </ul>
                     </div>
                     </div>
@@ -249,15 +249,6 @@ s0.parentNode.insertBefore(s1,s0);
 				</div>
 			</div>
 		</section>
-    <script>
-    function myFunction() {
-    var copyText = document.getElementById("p1");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    alert("Copied the text: " + copyText.value);
-  }
-    </script>
 
     <section class="ftco-section testimony-section">
       <div class="container">
