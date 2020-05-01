@@ -34,7 +34,7 @@ include('inputdata/appliedmail.php');
    $stipend_amt              =array();
    $stipend_method           =array();
    $perks                    =array();
-    
+
      $sql = "SELECT SR, internship_post_time, fname, lname, email, phn, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, state, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method, perks FROM active_internship";
      $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
@@ -70,15 +70,15 @@ include('inputdata/appliedmail.php');
 $sql2 = "SELECT applied FROM logindetails WHERE mail='$login_session'";
 $result = $con->query($sql2);
 
-if ($result->num_rows > 0) 
+if ($result->num_rows > 0)
 {
-    while($row = $result->fetch_assoc()) 
+    while($row = $result->fetch_assoc())
     {
         $app = $row["applied"];
         $allapp = explode(";", $app);
     }
-} 
-else 
+}
+else
 {
     echo "0 results";
 }
@@ -221,9 +221,9 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
             <div class="row">
               <?php
-                
+
                 for($x = 0; $x < $num; $x++){
-                    
+
               echo ('<div class="col-md-12 ftco-animate">
                   <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
                     <div class="one-third mb-4 mb-md-0">
@@ -247,24 +247,24 @@ s0.parentNode.insertBefore(s1,s0);
                         </a>
                       </div>
                       <div class="row" style="width:325px;">');
-                  
+
                     for ($y = 0; $y < sizeof($allapp); $y++) {
                      if($allapp[$y] == $serial[$x]){
                             echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-primary py-2" style="margin-right: 8px; color:white;">Applied</a>');
                          $temp="1";
                       break;
-                         
+
                      }
                         else {
                             $temp = "2";
                         }
                     }
                             if($temp == 0 || $temp == 2){
-                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; color:white;">Apply Job</a>'); 
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; color:white;">Apply Job</a>');
                             }
-                        
-                    
-                    
+
+
+
                        echo('<a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#collapse'.$serial[$x].'" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
                       </div>
                     </div>
