@@ -65,7 +65,7 @@ if($result2->num_rows>0)
         //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
         $mail->isHTML(true);                                  // Set email format to HTML
 
-        $mail->Subject = 'Internship Active Successfully';
+        $mail->Subject = 'Internship Listing Active Successfully';
         $mail->Body    = $mailbody;
 
 //        $mail->AltBody = file_get_contents('post_email_layout.php');

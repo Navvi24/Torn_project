@@ -2,6 +2,7 @@
    include('sidebar.php');
    include("connect.php");
 
+
 $error = "";
   $msg = "";
   $sql="";
@@ -64,6 +65,20 @@ $error = "";
     <section class="content">
       <div class="row">
         <div class="col-12">
+          <?php
+            if(isset($_GET['kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ']))
+            {
+                if ($_GET['kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ'] == 010) {?>
+                  <div class="alert alert-success" role="alert">
+                    <?php echo "Record deleted successfully"; ?>
+                  </div>
+                <?php } else if($_GET['kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ'] == 01000){?>
+                  <div class="alert alert-danger" role="alert">
+                    <?php echo "Record cannot deleted successfully"; ?>
+                  </div>
+                <?php } else{}
+            }
+                  ?>
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">POSTED DETAILS</h3>
@@ -104,7 +119,7 @@ $error = "";
                     <td>'.$perks[$x].'</td>
                     <td>
                     <a href="viewintern.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a>
-                  <center><a href="#" class="btn btn-danger" style="margin-top:20px;"><i class="fas fa-trash"></i></a></center>
+                  <center><a href="deleteposted.php?id='.$sr[$x].'" class="btn btn-danger" style="margin-top:20px;"><i class="fas fa-trash"></i></a></center>
                     </td>
 
                   </tr>
