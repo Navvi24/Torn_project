@@ -41,6 +41,7 @@ if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
                         echo 'Message could not be sent.';
                         echo 'Mailer Error: ' . $mail->ErrorInfo;
                     } else {
+                      //header("Location : ../internships.php");
                     }
         }
         else{}

@@ -250,7 +250,7 @@ s0.parentNode.insertBefore(s1,s0);
 
                     for ($y = 0; $y < sizeof($allapp); $y++) {
                      if($allapp[$y] == $serial[$x]){
-                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-primary py-2" style="margin-right: 8px; color:white;">Applied</a>');
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-success py-2" style="margin-right: 8px; color:white;">Applied</a>');
                          $temp="1";
                       break;
 
