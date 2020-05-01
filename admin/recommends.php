@@ -82,6 +82,20 @@ $con->close();
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <?php
+              if(isset($_GET['kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ']))
+              {
+                  if ($_GET['kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ'] != 01000) {?>
+                    <div class="alert alert-success" role="alert">
+                      <?php echo "Record deleted successfully"; ?>
+                    </div>
+                  <?php } else{?>
+                    <div class="alert alert-danger" role="alert">
+                      <?php echo "Record cannot deleted successfully"; ?>
+                    </div>
+                  <?php }
+              }
+                    ?>
             <?php if ($value == 1) {?>
               <div class="alert alert-success" role="alert">
                 <?php echo "$msg"; ?>
@@ -130,7 +144,7 @@ $con->close();
                     <td>'.$perks[$x].'</td>
                     <td>
                     <a href="viewintern_recom.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a>
-                      <center><a href="#" class="btn btn-danger" style="margin-top:20px;"><i class="fas fa-trash"></i></a></center>
+                      <center><a href="deleterecom.php?id='.$sr[$x].'" class="btn btn-danger" style="margin-top:20px;"><i class="fas fa-trash"></i></a></center>
                     </td>
 
                   </tr>
