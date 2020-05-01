@@ -332,9 +332,9 @@ s0.parentNode.insertBefore(s1,s0);
               <h2 class="ftco-heading-2">Our Motto</h2>
               <p>STOP RUNNING, WE'VE GOT YOU</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/internstorm" target="_blank"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/Internstorm-107473414180831" target="_blank"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/internstorm/" target="_blank"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -347,7 +347,6 @@ s0.parentNode.insertBefore(s1,s0);
                <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
                <li><a href="work-with-us.php" class="py-2 d-block">Work with us</a></li>
                <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
-                <li><a href="#" class="py-2 d-block">FAQ</a></li>
 
               </ul>
             </div>

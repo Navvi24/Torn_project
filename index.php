@@ -14,7 +14,6 @@ $error = "";
   $state                    =array();
   $stipend_amt             =array();
   $stipend_method           =array();
-
     $sql = "SELECT comp_name, comp_web, internship_pos, internship_detail, internship_city, state, stipend_amount, stipend_method FROM rec_internship";
     $result = mysqli_query($con, $sql);
    if (mysqli_num_rows($result) > 0) {
@@ -190,7 +189,7 @@ s0.parentNode.insertBefore(s1,s0);
     	</div>
     </section>
 
-		<section class="ftco-section bg-light">
+		<section class="ftco-section bg-light" id="share">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 pr-lg-5">
@@ -221,23 +220,44 @@ s0.parentNode.insertBefore(s1,s0);
 
 		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
 		              	<div>
-			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2">
+			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2"  data-toggle="modal" data-target=".bd-example-modal-sm">
 			                	<span class="icon-share"></span>
 			                </a>
 		                </div>
 		                <a href="login.php" class="btn btn-primary py-2">Apply Job</a>
 		              </div>
 		            </div>
-		          </div><!-- end -->
+		          </div>
           ');
         }
               ?>
+              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                    <div class="modal-body" style="background:black;">
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                          <li class="ftco-animate"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.internstorm.com#share" style="color:white;"><span class="icon-facebook" target="_blank"></span></a></li>
+                          <li class="ftco-animate"><a href="https://web.whatsapp.com/send?text=https://www.internstorm.com#share" data-action="share/whatsapp/share" style="color:white;" target="_blank"><span class="icon-whatsapp"></span></a></li>
+                          <li class="ftco-animate"><a style="color:white;" onclick="myFunction()"><span class="icon-content_copy"></span></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+              </div>
             </div>
 		      </div>
 				</div>
 			</div>
 		</section>
-
+    <script>
+    function myFunction() {
+    var copyText = document.getElementById("p1");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
+    </script>
 
     <section class="ftco-section testimony-section">
       <div class="container">
@@ -402,9 +422,9 @@ s0.parentNode.insertBefore(s1,s0);
               <h2 class="ftco-heading-2">Our Motto</h2>
               <p>STOP RUNNING, WE'VE GOT YOU</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/internstorm" target="_blank"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/Internstorm-107473414180831" target="_blank"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/internstorm/" target="_blank"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -417,8 +437,6 @@ s0.parentNode.insertBefore(s1,s0);
                <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
                <li><a href="work-with-us.php" class="py-2 d-block">Work with us</a></li>
                <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
-                <li><a href="#" class="py-2 d-block">FAQ</a></li>
-
               </ul>
             </div>
           </div>
