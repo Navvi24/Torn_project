@@ -3,7 +3,7 @@
  include("connect.php");
 
  if(isset($_SESSION['login_user'])){
-   header("location: internship_test.php");
+   header("location: internships.php");
    die();
  }
 

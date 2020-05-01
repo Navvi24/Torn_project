@@ -1,65 +1,61 @@
 <?php
    include('sidebar.php');
    include("connect.php");
-  /* $id = $_GET['id'];
+  $id = $_GET['id'];
 $error = "";
   $msg = "";
   $sql="";
   $arg="";
 
   $serial                       ="";
-  $post_time                ="";
-  $fname                    = "";
-  $lname                    = "";
-  $email                    = "";
-  $phone                    = "";
-  $comp_name                ="";
-  $about_comp               ="";
-  $comp_web                 ="";
-  $i_pos                    ="";
-  $i_details                ="";
-  $city                     ="";
-  $state                    ="";
-  $total_opening            ="";
-  $start_date               ="";
-  $i_duration_type         ="";
-  $i_duration               = "";
-  $i_description            ="";
-  $stipend_amt              ="";
-  $stipend_method           = "";
-  $perks                    ="";
+  $intern_fname                    = "";
+  $intern_lname                    = "";
+  $intern_email                    = "";
+  $intern_phone                    = "";
+  $intern_resume                    = "";
+  $comp_name                    = "";
+  $comp_pos                    = "";
+  $comp_web                    = "";
+  $comp_city                    = "";
+  $comp_state                    = "";
+  $comp_open                    = "";
+  $comp_start                    = "";
+  $comp_dur                    = "";
+  $comp_dur_type                    = "";
+  $comp_stipend_amt                    = "";
+  $comp_stipend_type                    = "";
+  $comp_perks                    = "";
+  $comp_about                    = "";
 
-    $sql = "SELECT * FROM posted_internship where sr=$id";
+    $sql = "SELECT * FROM applied where sr=$id";
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-          $serial        = $row["SR"];
-          $post_time     = $row["internship_post_time"];
-          $fname         = $row["fname"];
-          $lname         = $row["lname"];
-          $email         = $row["email"];
-          $phone         = $row["phn"];
-          $comp_name     = $row["comp_name"];
-          $about_comp    = $row["comp_about"];
-          $comp_web      = $row["comp_web"];
-          $i_pos         = $row["internship_pos"];
-          $i_details     = $row["internship_detail"];
-          $city          = $row["internship_city"];
-          $state          = $row["state"];
-          $total_opening = $row["total_opening"];
-          $start_date    = $row["internship_start_date"];
-          $i_duration_type = $row["duration_type"];
-          $i_duration     =$row["duration_no"];
-          $i_description = $row["about_internship"];
-          $stipend_amt   = $row["stipend_amount"];
-          $stipend_method = $row["stipend_method"];
-          $perks         = $row["perks"];
+          $serial        = $row["sr"];
+          $intern_fname   = $row["internfname"];
+          $intern_lname    = $row["internlname"];
+          $intern_email     = $row["internmail"];
+          $intern_phone     = $row["internphn"];
+          $intern_resume   = $row["internres"];
+          $comp_name      = $row["cname"];
+          $comp_pos      = $row["cpos"];
+          $comp_web   = $row["cweb"];
+          $comp_city  = $row["ccity"];
+          $comp_state  = $row["cstate"];
+          $comp_open  = $row["copen"];
+          $comp_start = $row["cstart"];
+          $comp_dur  = $row["cdur"];
+          $comp_dur_type   = $row["cdurtype"];
+          $comp_stipend_amt  = $row["cstipendamt"];
+          $comp_stipend_type  = $row["cstipendtype"];
+          $comp_perks   = $row["cperks"];
+          $comp_about  = $row["cabout"];
         }
     } else {
         echo "0 results";
     }
-  $con->close();*/
+  $con->close();
 ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -92,68 +88,64 @@ $error = "";
             <table id="example1" class="table table-bordered table-striped">
               <thead>
               <tr>
-                <th style="width:30%">Intern sr no.</th>
-                <td style="width:50%"></td>
-              </tr>
-              <tr>
-                <th style="width:30%">Company sr no.</th>
-                <td style="width:50%"></td>
+                <th style="width:30%">Serial No.</th>
+                <td style="width:50%"><?php echo "$serial"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Intern Name</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$intern_fname"." "."$intern_lname"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Intern Phone</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$intern_phone"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Intern Email</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$intern_email"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Intern Resume</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$intern_resume"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Internship Position</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_pos"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Company Name</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_name"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Company Website</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_web"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Internship City</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_city".", "."$comp_state"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Total Openings</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_open"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Internship Start Date</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_start"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Internship Duration</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_dur"." "."$comp_dur_type"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Stipend</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_stipend_amt"." "."$comp_stipend_type"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Perks</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_perks"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">About Internship</th>
-                <td style="width:50%"></td>
+                <td style="width:50%"><?php echo "$comp_about"; ?></td>
               </tr>
             </thead>
             </table>
