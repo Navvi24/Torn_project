@@ -1,5 +1,6 @@
 <?php
 include('inputdata/session.php');
+include('inputdata/appliedmail.php');
  ?>
  <?php
  include("inputdata/connect.php");
@@ -7,9 +8,12 @@ include('inputdata/session.php');
    $msg = "";
    $sql="";
    $arg="";
+   $app="";
+   $temp ="0";
    $num = 0;
    $default_web = "#";
-   $serial                       =array();
+   $allapp                   =array();
+   $serial                   =array();
    $post_time                =array();
    $fname                    =array();
    $lname                    =array();
@@ -17,20 +21,20 @@ include('inputdata/session.php');
    $phone                    =array();
    $comp_name                =array();
    $about_comp               =array();
-   $comp_web                =array();
-   $i_pos1                    =array();
+   $comp_web                 =array();
+   $i_pos1                   =array();
    $i_details                =array();
-   $city                    =array();
+   $city                     =array();
    $state                    =array();
    $total_opening            =array();
    $start_date               =array();
-   $i_duration_type         =array();
-   $i_duration               = array();
+   $i_duration_type          =array();
+   $i_duration               =array();
    $i_description            =array();
-   $stipend_amt             =array();
+   $stipend_amt              =array();
    $stipend_method           =array();
    $perks                    =array();
-
+    
      $sql = "SELECT SR, internship_post_time, fname, lname, email, phn, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, state, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method, perks FROM active_internship";
      $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
@@ -60,6 +64,28 @@ include('inputdata/session.php');
            $num = $num + 1;
          }
      }
+
+
+
+$sql2 = "SELECT applied FROM logindetails WHERE mail='$login_session'";
+$result = $con->query($sql2);
+
+if ($result->num_rows > 0) 
+{
+    while($row = $result->fetch_assoc()) 
+    {
+        $app = $row["applied"];
+        $allapp = explode(";", $app);
+    }
+} 
+else 
+{
+    echo "0 results";
+}
+
+
+
+
    $con->close();
  ?>
 <!DOCTYPE html>
@@ -128,6 +154,7 @@ include('inputdata/session.php');
 .job-post-item .one-forth {width: 222px;}
 .i_head{color: #17a2b8;}
 .i_data{color: black;}
+.disable-links { pointer-events: none;}
 #namelink
 {
   color: black;
@@ -194,7 +221,9 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
             <div class="row">
               <?php
+                
                 for($x = 0; $x < $num; $x++){
+                    
               echo ('<div class="col-md-12 ftco-animate">
                   <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
                     <div class="one-third mb-4 mb-md-0">
@@ -217,10 +246,26 @@ s0.parentNode.insertBefore(s1,s0);
                           <span class="icon-share"></span>
                         </a>
                       </div>
-                      <div class="row" style="width:325px;">
-                        <button type="button" class="btn btn-primary py-2" style="margin-right: 8px;" name="button">Apply Job</button>
-                        <button type="button" class="btn btn-primary py-2" style="margin-right: 8px;" name="button" disabled>Applied</button>
-                        <a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#collapse'.$serial[$x].'" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
+                      <div class="row" style="width:325px;">');
+                  
+                    for ($y = 0; $y < sizeof($allapp); $y++) {
+                     if($allapp[$y] == $serial[$x]){
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-primary py-2" style="margin-right: 8px; color:white;">Applied</a>');
+                         $temp="1";
+                      break;
+                         
+                     }
+                        else {
+                            $temp = "2";
+                        }
+                    }
+                            if($temp == 0 || $temp == 2){
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; color:white;">Apply Job</a>'); 
+                            }
+                        
+                    
+                    
+                       echo('<a class="btn btn-info py-2" style="margin-right: 8px; color:white;" data-toggle="collapse" href="#collapse'.$serial[$x].'" role="button" aria-expanded="false" aria-controls="collapseExample">Read More</a>
                       </div>
                     </div>
                   </div>
@@ -250,7 +295,7 @@ s0.parentNode.insertBefore(s1,s0);
                   </div>
               </div><!-- end -->');
               }
-              ?>
+                ?>
 
             </div>
           </div>

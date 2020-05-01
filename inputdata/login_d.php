@@ -18,7 +18,7 @@
    // If result matched $myusername and $mypassword, table row must be 1 row
    if(mysqli_num_rows($result) > 0) {
      $_SESSION['login_user'] = $myusername;
-     header("location: ../internship_test.php");
+     header("location: ../internships.php");
    }else {
     header("location: ../login.php?kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ=10100");
    }
