@@ -25,7 +25,7 @@
       $perks="";
       $perks_value="";
       $perks_tmp_value="";
-print_r($_POST);
+//print_r($_POST);
 //mysqli_real_escape_string($con, $_POST['inputDescription']);
     if(isset($_POST['post_sub']))
     {
@@ -42,7 +42,7 @@ print_r($_POST);
       $internship_city = mysqli_real_escape_string($con, $_POST['internship_city']);
       $total_opening  = mysqli_real_escape_string($con, $_POST['total_opening']);
       $internship_start_date = mysqli_real_escape_string($con, $_POST['internship_start_date']);
-      $duration_no = mysqli_real_escape_string($con, $_POST['duration_no']);
+      $duration_no = mysqli_real_escape_string($con, $_POST['duration_number']);
       $duration_type = mysqli_real_escape_string($con, $_POST['duration_type']);
       $about_internship = mysqli_real_escape_string($con, $_POST['about_internship']);
       $stipend_amount = mysqli_real_escape_string($con, $_POST['stipend_amount']);
@@ -52,7 +52,7 @@ print_r($_POST);
       {
         $perks_value .= $perks_tmp_value.",";
       }
-      print_r($_POST);
+    //  print_r($_POST);
 
 
       $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, state, internship_city, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method,perks)
@@ -61,13 +61,13 @@ print_r($_POST);
          if (!mysqli_query($con,$sql))
          {
             $error = "Error: ".mysqli_error($con);
-            echo $error;
+          //  echo $error;
            header("Location: addintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
           }
         else
         {
-                echo "sucess:";
-               header("Location: addintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+            //    echo "sucess:";
+            header("Location: addintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
         }
 }
 ?>

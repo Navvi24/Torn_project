@@ -87,7 +87,7 @@ $error = "";
                       <td>'.$email[$x].'</td>
                       <td>'.$sub[$x].'</td>
                       <td>'.wordwrap($msg1[$x],50,"<br />\n").'</td>
-                      <td>'.$attach_url[$x].'</td>
+                      <td><a href="http://localhost/Torn_project/contactus_files/'.$attach_url[$x].'">'.$attach_url[$x].'</a></td>
                       <td>'.$query_date[$x].'</td>
                       <td><a href="emailform.php?mail='.$email[$x].'" class="btn btn-primary"><i class="far fa-envelope"></i></a></td>
                     </tr>

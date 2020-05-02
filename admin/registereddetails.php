@@ -85,17 +85,18 @@ $error = "";
 
                     <td>'.$sr[$x].'</td>
                     <td>'.$fname[$x].'</td>
-                   
+
                     <td>'.$phn[$x].'</td>
                     <td>'.$mail[$x].'</td>
-                    <td>'.$resume_url[$x].'</td>
+                    <td><a href="http://localhost/Torn_project/contactus_files/'.$resume_url[$x].'">'.$resume_url[$x].'</a></td>
                     <td>'.$regdate[$x].'</td>
-                
+
                   </tr>
 
                 ');
 								}
 							?>
+              <a href="#"></a>
                 </tbody>
               </table>
             </div>

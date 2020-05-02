@@ -105,7 +105,7 @@ $error = "";
               </tr>
               <tr>
                 <th style="width:30%">Intern Resume</th>
-                <td style="width:50%"><?php echo "$intern_resume"; ?></td>
+                <td style="width:50%"><a href="http://localhost/Torn_project/contactus_files/'.$resume_url[$x].'"><?php echo "$intern_resume"; ?></a></td>
               </tr>
               <tr>
                 <th style="width:30%">Internship Position</th>
