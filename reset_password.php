@@ -41,123 +41,99 @@
 
     <?php
     include('inputdata/connect.php');
-    error_reporting(E_ERROR | E_PARSE);
     $error = "";
     $enter = "";
     if (isset($_GET["key"]) && isset($_GET["email"])
     && isset($_GET["action"]) && ($_GET["action"]=="reset")
-    && !isset($_POST["action"])){
-    //  print_r($_GET);
-    //  print_r($_POST);
-    $key = $_GET["key"];
-    $email = $_GET["email"];
-    $curDate = date("Y-m-d H:i:s");
-    $query = mysqli_query($con,"
-    SELECT * FROM `password_reset_temp` WHERE `key`='".$key."' and `email`='".$email."';");
-    $row = mysqli_num_rows($query);
-    if ($row==""){
-    $error .= '<strong>Invalid Link</strong>
-    <p>The link is invalid/expired. Either you did not copy the correct link from the email,
-    or you have already used the key in which case it is deactivated.</p>';
-    	}else{
-    	$row = mysqli_fetch_assoc($query);
-    	$expDate = $row['expDate'];
-    	if ($expDate >= $curDate){
-        ?>
-        <div class="ftco-section bg-light">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-lg-12 mb-5">
-                <form method="post" action="" name="update" class="p-5 bg-white">
-                  <div class="row form-group">
-                    <div class="col-md-12 mb-3 mb-md-0">
-                      <input type="hidden" name="action" value="update" />
-                      <label class="font-weight-bold">Enter New Password:</label>
-                      <input type="password" name="pass1" id="pass1" maxlength="15" class="form-control" onkeyup='check();' / required />
-                    </div>
-                  </div>
-                  <div class="row form-group">
-                      <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold">Re-Enter New Password:</label>
-                        <input type="password" name="pass2" id="pass2" maxlength="15" class="form-control" onkeyup='check();' / required/><span id="message"></span>
-                        <input type="hidden" name="email" value="<?php echo $email;?>"/>
+    && !isset($_POST["action"]))
+    {
+          $key = $_GET["key"];
+          $email = $_GET["email"];
+          $curDate = date("Y-m-d H:i:s");
+          $query = mysqli_query($con,"
+          SELECT * FROM `password_reset_temp` WHERE `key`='".$key."' and `email`='".$email."';");
+          $row = mysqli_num_rows($query);
+          if ($row=="")
+          {
+              $error .= '<strong>Invalid Link : </strong>The link is invalid/expired. Either you did not copy the correct link from the email,
+              or you have already used the key in which case it is deactivated.';
+          }
+          else
+          {
+            	$row = mysqli_fetch_assoc($query);
+            	$expDate = $row['expDate'];
+            	if ($expDate >= $curDate)
+              {
+                  ?>
+                  <div class="ftco-section bg-light">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12 col-lg-12 mb-5">
+                          <form method="post" action="" name="update" class="p-5 bg-white">
+                            <div class="row form-group">
+                              <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="hidden" name="action" value="update" />
+                                <label class="font-weight-bold">Enter New Password:</label>
+                                <input type="password" name="pass1" id="pass1" maxlength="15" class="form-control" required />
+                              </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-12 mb-3 mb-md-0">
+                                  <label class="font-weight-bold">Re-Enter New Password:</label>
+                                  <input type="password" name="pass2" id="pass2" maxlength="15" class="form-control" required/>
+                                  <input type="hidden" name="email" value="<?php echo $email;?>"/>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <input type="submit" id="reset" value="Reset Password" class="btn btn-primary  py-2 px-5"/>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
                       </div>
-                  </div>
-                  <div class="row form-group">
-                    <div class="col-md-12">
-                      <input type="submit" id="reset" value="Reset Password" class="btn btn-primary  py-2 px-5" onclick="return Validate()" >
                     </div>
                   </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      <script>
-var check = function() {
- if (document.getElementById('pass1').value ==
- document.getElementById('pass2').value) {
- document.getElementById('message').style.color = 'green';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
- } else {
- document.getElementById('message').style.color = 'red';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
- }
- }
- </script>
-<script type="text/javascript">
-function Validate() {
-var password = document.getElementById("pass").value;
-var confirmPassword = document.getElementById("pass2").value;
-if (password != confirmPassword) {
-alert("Passwords do not match.");
-return false;
-}
-return true;
-}
-</script>
-        <?php
-      }else{
-      $error .= "<h2>Link Expired</h2>
-      <p>The link is expired. You are trying to use the expired link which as valid only 24 hours (1 days after request).<br /><br /></p>";
+                  <?php
+              }
+              else
+              {
+                  $error .= "<strong>Link Expired : </strong>The link is expired. You are trying to use the expired link which as valid only 24 hours (1 days after request).";
               }
           }
-      if($error!=""){
-        //echo "<div class='error'>".$error."</div><br />";
-        }
       } // isset email key validate end
 
 
-      if(isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"]=="update")){
-        $enter = "1";
-      $error="";
-      $pass1 = mysqli_real_escape_string($con,$_POST["pass1"]);
-      $pass2 = mysqli_real_escape_string($con,$_POST["pass2"]);
-      $email = $_POST["email"];
-      $curDate = date("Y-m-d H:i:s");
-      if ($pass1!=$pass2){
-          $error .= "<p>Password do not match, both password should be same.<br /><br /></p>";
-          }
-        if($error!=""){
-        //  echo "<div class='error'>".$error."</div><br />";
-          }else{
-
-      //$pass1 = md5($pass1);
-      if(mysqli_query($con,"UPDATE `logindetails` SET `password`='".$pass1."' WHERE `mail`='".$email."';"))
+      if(isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"]=="update"))
       {
-      mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
-        $enter == 1;
-      }
-      else
-      {
-          $error = "Your Password is failed to changed please retry again.";
-      }
-          }
+            $enter = "1";
+            $error="";
+            $pass1 = mysqli_real_escape_string($con,$_POST["pass1"]);
+            $pass2 = mysqli_real_escape_string($con,$_POST["pass2"]);
+            $email = $_POST["email"];
+            $curDate = date("Y-m-d H:i:s");
+            if ($pass1!=$pass2)
+            {
+                $error .= "Password do not match, both password should be same.";
+            }
+            else
+            {
+                    //$pass1 = md5($pass1);
+                    if(mysqli_query($con,"UPDATE `logindetails` SET `password`='".$pass1."' WHERE `mail`='".$email."';"))
+                    {
+                        mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
+                        $enter == 1;
+                    }
+                    else
+                    {
+                        $error = "Your Password is failed to changed please retry again.";
+                    }
+            }
       }
     	?>
 
 
-      <?php if($enter == 1) {?>
+      <?php if($enter == 1 && $error == "") {?>
         <div class="ftco-section bg-light">
           <div class="container">
             <div class="row">
@@ -172,7 +148,7 @@ return true;
             </div>
           </div>
         </div>>
-<?php } if($error != ""){ echo ('<div class="ftco-section bg-light">
+<?php } else{ echo ('<div class="ftco-section bg-light">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-12 mb-5">
