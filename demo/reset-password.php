@@ -12,7 +12,7 @@ Website: https://www.allphptricks.com
 <body>
 <div style="width:700px; margin:50 auto;">
 
-<h2>Demo Reset Password</h2>   
+<h2>Demo Reset Password</h2>
 
 <?php
 include('db.php');
@@ -27,7 +27,7 @@ SELECT * FROM `password_reset_temp` WHERE `key`='".$key."' and `email`='".$email
 $row = mysqli_num_rows($query);
 if ($row==""){
 $error .= '<h2>Invalid Link</h2>
-<p>The link is invalid/expired. Either you did not copy the correct link from the email, 
+<p>The link is invalid/expired. Either you did not copy the correct link from the email,
 or you have already used the key in which case it is deactivated.</p>
 <p><a href="https://www.allphptricks.com/forgot-password/index.php">Click here</a> to reset password.</p>';
 	}else{
@@ -35,6 +35,11 @@ or you have already used the key in which case it is deactivated.</p>
 	$expDate = $row['expDate'];
 	if ($expDate >= $curDate){
 	?>
+
+
+
+
+	
     <br />
 	<form method="post" action="" name="update">
 	<input type="hidden" name="action" value="update" />
@@ -56,7 +61,7 @@ $error .= "<h2>Link Expired</h2>
 		}
 if($error!=""){
 	echo "<div class='error'>".$error."</div><br />";
-	}			
+	}
 } // isset email key validate end
 
 
@@ -75,12 +80,12 @@ if ($pass1!=$pass2){
 
 //$pass1 = md5($pass1);
 mysqli_query($con,
-"UPDATE `logindetails` SET `password`='".$pass1."' WHERE `mail`='".$email."';");	
+"UPDATE `logindetails` SET `password`='".$pass1."' WHERE `mail`='".$email."';");
 
-mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");		
-	
+mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
 
-		}		
+
+		}
 }
 ?>
 

@@ -1,5 +1,94 @@
 <?php
-include("inputdata/login_d.php");
+error_reporting(E_ERROR | E_PARSE);
+        include('inputdata/connect.php');
+        $error ="";
+        $success = "";
+        $enter = "0";
+if(isset($_POST['email']))
+{
+        if(isset($_POST["mail"]) && (!empty($_POST["mail"])))
+        {
+        $email = $_POST["mail"];
+      //  print_r($email);
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+        if (!$email) {
+          	$error .="<p>Invalid email address please type a valid email address!</p>";
+        	}else{
+        	$sel_query = "SELECT * FROM `logindetails` WHERE mail='".$email."'";
+        	$results = mysqli_query($con,$sel_query);
+        	$row = mysqli_num_rows($results);
+        	if ($row==""){
+        		$error .= "<p>No user is registered with this email address!</p>";
+        		}
+        	}
+        	if($error!=""){
+            //echo "<div class='error'>".$error."</div>
+        	//<br /><a href='javascript:history.go(-1)'>Go Back</a>";
+        		}else{
+        	$expFormat = mktime(date("H"), date("i"), date("s"), date("m")  , date("d")+1, date("Y"));
+        	$expDate = date("Y-m-d H:i:s",$expFormat);
+        	$key = md5(2418*2+$email);
+        	$addKey = substr(md5(uniqid(rand(),1)),3,10);
+        	$key = $key . $addKey;
+        // Insert Temp Table
+        mysqli_query($con,
+        "INSERT INTO `password_reset_temp` (`email`, `key`, `expDate`)
+        VALUES ('".$email."', '".$key."', '".$expDate."');");
+
+        $output='<p>Dear user,</p>';
+        $output.='<p>Please click on the following link to reset your password.</p>';
+        $output.='<p>-------------------------------------------------------------</p>';
+        $output.='<p><a href="http://localhost/Torn_project/reset_password.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">http://localhost/Torn_project/reset_password.php?key='.$key.'&email='.$email.'&action=reset</a></p>';
+        $output.='<p>-------------------------------------------------------------</p>';
+        $output.='<p>Please be sure to copy the entire link into your browser.
+        The link will expire after 1 day for security reason.</p>';
+        $output.='<p>If you did not request this forgotten password email, no action
+        is needed, your password will not be reset. However, you may want to log into
+        your account and change your security password as someone may have guessed it.</p>';
+        $output.='<p>Thanks,</p>';
+        $output.='<p>EASY RESOURCE</p>';
+        $body = $output;
+        $subject = "Password Recovery";
+
+        $email_to = $email;
+        //$fromserver = "smtp.gmail.com";
+        include("inputdata/master/PHPMailerAutoload.php");
+        $mail = new PHPMailer();
+
+                    //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+                    //$mailcontent = '';
+                    $mail->isSMTP();                                      // Set mailer to use SMTP
+                    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+                    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                    $mail->Username = 'internstormed@gmail.com';                 // SMTP username
+                    $mail->Password = '12chastity@cl';                           // SMTP password
+                    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+                    $mail->Port = 587;                                    // TCP port to connect to
+                    $mail->setFrom('internstormed@gmail.com', 'Internstorm');
+                    $mail->AddAddress($email_to);   // Add a recipient
+                    //   $mail->addAddress('admin@internstorm.com');               // Name is optional
+                    $mail->addReplyTo('admin@internstorm.com');
+                    //$mail->addCC('cc@example.com');
+                    //$mail->addBCC('bcc@example.com');
+                    //$mail->AddEmbeddedImage('../images/Logo_white.png','logo');
+                    //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+                    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+                    $mail->isHTML(true);                                  // Set email format to HTML
+                    //$mail->Sender = $fromserver; // indicates ReturnPath header
+                    $mail->Subject = $subject;
+                    $mail->Body = $body;
+                    if(!$mail->Send()){
+                    echo "Mailer Error: " . $mail->ErrorInfo;
+                    }else{
+                        $enter = 1;
+                        $success = "Verification mail is successfully send to registered mail id";
+                    	}
+        		}
+
+        }
+        else{ echo "ERROR";}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -123,9 +212,8 @@ s0.parentNode.insertBefore(s1,s0);
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
           <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
-          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Login</span></p>
-            <h1 class="mb-3 bread">Login</h1>
-            <p class="breadcrumbs mb-0"><span>Students/Intern Login Only</span></p>
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="login.php">Login <i class="ion-ios-arrow-forward"></i></a></span> <span>Forget Password</span></p>
+            <h1 class="mb-3 bread">Forget Password</h1>
           </div>
         </div>
       </div>
@@ -135,36 +223,26 @@ s0.parentNode.insertBefore(s1,s0);
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-12 mb-5">
-			     <form action="./inputdata/login_d.php" method="post" class="p-5 bg-white">
-          <?php
-          include("inputdata/signup_check.php");
-          include("inputdata/login_check.php");
-          ?>
-             <h1>Login Here</h1>
+			     <form action="" method="post" class="p-5 bg-white">
+             <?php
+                  if($enter == 1)
+                  {
+                    echo('<div class="alert alert-success" role="alert">'.$success.'</div>');
+                  }
+                  if($error != "")
+                  {
+                  echo('<div class="alert alert-danger" role="alert">'.$error.'</div>');
+                  }
+              ?>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="username">Email</label>
-                  <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
-                </div>
-              </div>
-              <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="password">Password</label>
-                  <input type="password" id="fullname" class="form-control" placeholder="Enter your password" name="password" required>
+                  <label class="font-weight-bold" for="username">Enter your Email</label>
+                <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="mail" required>
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Login" class="btn btn-primary  py-2 px-5">
-                </div>
-              </div>
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <a href="forgetpass.php">Forget Password</a>
-                </div>
-              </div><div class="row form-group">
-                <div class="col-md-12">
-                  <a href="signup.php">Signup</a>
+                  <button type="submit" class="btn btn-primary" name="email">Send Link</button>
                 </div>
               </div>
             </form>
@@ -172,84 +250,6 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
       </div>
     </div>
-
-		<section class="ftco-section-parallax">
-            <form action="./inputdata/subscribe_d.php" method="post">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subscribe to Internship Alerts!</h2>
-              <p>We knew you just couldn't get enough of us! Don't worry, we love the attention and appreciate your effort to stay connected. Subscribe to alerts to be on the top of your game and never miss an opportunity. You know what they say,<br>“You snooze, you lose!”</p>
-              <div class="row d-flex justify-content-center mt-4 mb-4">
-                <div class="col-md-12">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="email" class="form-control" name="email" placeholder="Enter email address">
-                      <input type="submit" name="subscribe" value="Subscribe" class="btn btn-danger  py-2 px-5">
-
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div></form>
-    </section>
-
-     <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-        	<div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Our Motto</h2>
-              <p>STOP RUNNING, WE'VE GOT YOU</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="https://twitter.com/internstorm" target="_blank"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/Internstorm-107473414180831" target="_blank"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/internstorm/" target="_blank"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Navigate</h2>
-              <ul class="list-unstyled">
-                <li><a href="index.php" class="py-2 d-block">Home</a></li>
-               <li><a href="our-story.php" class="py-2 d-block">Our Story</a></li>
-               <li><a href="our-clients.php" class="py-2 d-block">Our Clients</a></li>
-               <li><a href="work-with-us.php" class="py-2 d-block">Work with us</a></li>
-               <li><a href="contact-us.php" class="py-2 d-block">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
