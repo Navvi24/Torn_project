@@ -46,10 +46,10 @@ if(isset($_POST['email']))
         $output.='<p>If you did not request this forgotten password email, no action
         is needed, your password will not be reset. However, you may want to log into
         your account and change your security password as someone may have guessed it.</p>';
-        $output.='<p>Thanks,</p>';
-        $output.='<p>EASY RESOURCE</p>';
+        $output.='<p>Regards,</p>';
+        $output.='<p>Team Internstorm.</p>';
         $body = $output;
-        $subject = "Password Recovery";
+        $subject = "Internstorm Password Recovery";
 
         $email_to = $email;
         //$fromserver = "smtp.gmail.com";
