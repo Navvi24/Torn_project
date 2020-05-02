@@ -25,7 +25,9 @@
       $perks="";
       $perks_value="";
       $perks_tmp_value="";
+
 //print_r($_POST);
+///print_r($_POST);
 //mysqli_real_escape_string($con, $_POST['inputDescription']);
     if(isset($_POST['post_sub']))
     {
@@ -52,7 +54,9 @@
       {
         $perks_value .= $perks_tmp_value.",";
       }
+
     //  print_r($_POST);
+   //   print_r($_POST);
 
 
       $sql="INSERT INTO posted_internship (fname, lname, phn,  email, comp_name, comp_about, comp_web, internship_pos, internship_detail, state, internship_city, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method,perks)
