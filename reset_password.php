@@ -74,19 +74,21 @@
                               <div class="col-md-12 mb-3 mb-md-0">
                                 <input type="hidden" name="action" value="update" />
                                 <label class="font-weight-bold">Enter New Password:</label>
-                                <input type="password" name="pass1" id="pass1" maxlength="15" class="form-control" required />
+                                <input type="password" name="pass1" id="pass1" maxlength="15" class="form-control" onkeyup='check();'  required />
                               </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col-md-12 mb-3 mb-md-0">
                                   <label class="font-weight-bold">Re-Enter New Password:</label>
-                                  <input type="password" name="pass2" id="pass2" maxlength="15" class="form-control" required/>
+                                    
+                                  <input type="password" name="pass2" id="pass2" maxlength="15" class="form-control" onkeyup='check();'required/>
+                                    <br><span id="message"></span>
                                   <input type="hidden" name="email" value="<?php echo $email;?>"/>
                                 </div>
                             </div>
                             <div class="row form-group">
                               <div class="col-md-12">
-                                <input type="submit" id="reset" value="Reset Password" class="btn btn-primary  py-2 px-5"/>
+                                <input type="submit" id="reset" value="Reset Password" onclick="return Validate()" class="btn btn-primary  py-2 px-5"/>
                               </div>
                             </div>
                           </form>
@@ -94,6 +96,29 @@
                       </div>
                     </div>
                   </div>
+        <script type="text/javascript">
+function Validate() {
+var password = document.getElementById("pass1").value;
+var confirmPassword = document.getElementById("pass2").value;
+if (password != confirmPassword) {
+alert("Passwords do not match.");
+return false;
+}
+return true;
+}
+</script>
+  <script>
+     var check = function() {
+ if (document.getElementById('pass1').value ==
+ document.getElementById('pass2').value) {
+ document.getElementById('message').style.color = 'green';
+ document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
+ } else {
+ document.getElementById('message').style.color = 'red';
+ document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
+ }
+ }
+ </script>
                   <?php
               }
               else
