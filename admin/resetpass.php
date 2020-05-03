@@ -1,6 +1,26 @@
 <?php
    include('sidebar.php');
+   include('connect.php');
    $id = "";
+   $pass1 ="";
+   $pass2 = "";
+   if(isset($_POST['reset']))
+   {
+     $pass1 = mysqli_real_escape_string($con,$_POST['pass1']);
+     $pass2 = mysqli_real_escape_string($con,$_POST['pass2']);
+
+
+        $sql="UPDATE admin SET password = '$pass1' where username = '$user_check' ";
+        if(mysqli_query($con,$sql))
+        {
+          $id = 1010;
+        }
+        else
+        {
+          $id = 10100;
+        }
+
+   }
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -41,7 +61,7 @@
               <div class="card-header">
                 <h3 class="card-title">Admin Password Reset Form</h3>
               </div>
-              <form class="form-horizontal" method="post">
+              <form class="form-horizontal" method="post" action="">
                 <div class="card-body">
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
@@ -58,7 +78,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Reset</button>
+                  <button type="submit" class="btn btn-info" name="reset">Reset</button>
                 </div>
                 <!-- /.card-footer -->
               </form>
