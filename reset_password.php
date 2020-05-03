@@ -80,7 +80,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12 mb-3 mb-md-0">
                                   <label class="font-weight-bold">Re-Enter New Password:</label>
-                                    
+
                                   <input type="password" name="pass2" id="pass2" maxlength="15" class="form-control" onkeyup='check();'required/>
                                     <br><span id="message"></span>
                                   <input type="hidden" name="email" value="<?php echo $email;?>"/>
@@ -173,7 +173,7 @@ return true;
             </div>
           </div>
         </div>>
-<?php } else{ echo ('<div class="ftco-section bg-light">
+<?php } else if($enter != 1 && $error != ""){ echo ('<div class="ftco-section bg-light">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-12 mb-5">
@@ -186,7 +186,7 @@ return true;
       </div>
     </div>
   </div>
-</div>>');} ?>
+</div>>');} else{}?>
 
 
   <!-- loader -->
