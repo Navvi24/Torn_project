@@ -69,7 +69,7 @@
           <img src="images/Logo.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo($_SESSION['login_user']); ?></a>
+          <a href="resetpass.php" class="d-block"><?php echo($_SESSION['login_user']); ?></a>
         </div>
       </div>
 
