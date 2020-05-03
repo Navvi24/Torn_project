@@ -130,9 +130,6 @@ s0.parentNode.insertBefore(s1,s0);
     		<div class="row justify-content-center">
     			<div class="col-md-10">
     				<div class="intro row text-center justify-content-center">
-    					<div class="col-md-12">
-    						<img class="img-fluid" src="images/work.jpg" style="width: 1600px;height: 500px;margin: 20px;"alt="">
-    					</div>
     					<p>Are you someone who is constantly sleep deprived, in constant need of food, and swears by memes? Then you’re almost halfway there. So you’ve got that spark, love meeting deadlines with outstanding results and believing that the sky is your only limit? Perfect, then you’re the deal for us! Internstorm is out here looking for the best in their game but also people we can sit down and pass the j (jalapeno fries) with occasionally. Well, if you fit in and are game, wait no more,<br>Hit us up with your resume on,
               </p>
 

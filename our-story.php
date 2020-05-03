@@ -129,9 +129,6 @@ s0.parentNode.insertBefore(s1,s0);
     		<div class="row justify-content-center">
     			<div class="col-md-10">
     				<div class="intro row text-center justify-content-center">
-    					<div class="col-md-12">
-    						<img class="img-fluid" src="images/who.jpg" style="width: 1600px;height: 500px;margin: 20px;"alt="">
-    					</div>
               <div class="col-md-12">
                 	<h2 class="mb-4"><b>Who we are</b></h2>
                   <p>We’re students who sparked the idea over chai and charcha! Who better to understand a student’s internship needs better than one of them, eh? Who are we but people who have excessive validation needs, amazing ideas, and never ending recommendations to series, movies, books, clubs, and more!</p>

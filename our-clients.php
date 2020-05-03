@@ -139,7 +139,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="col-md-6">
           <div class="team d-md-flex">
-            <div class="img" style="background-image: url(images/client2.jpg);"></div>
+            <div class="img" style="background-image: url(images/client3.jpg);"></div>
             <div class="text pl-md-4">
               <h2>ProUp</h2>
               <p>Pro Up is an outcome of passion for the founders who left their corporate careers and started this company. Pro Up offers a whole range of services in the domain of Digital Marketing. The company, all though young, has witnessed rapid growth since inception. Its work has been appreciated by both its clients and the audience. At Pro Up, we donÂ’t just look at the Marketing aspect of a business, but also at solving business problems via Digital Marketing.</p>
@@ -148,7 +148,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="col-md-6">
           <div class="team d-md-flex">
-            <div class="img" style="background-image: url(images/client3.jpg);"></div>
+            <div class="img" style="background-image: url(images/client2.jpg);"></div>
             <div class="text pl-md-4">
               <h2>Brandgrapher</h2>
               <p>Brandgrapher provides futuristic product development, marketing, and business automation consultancy and training. It’s an initiative taken by Young Entrepreneurs and is meant for the aspiring ones. Brandgrapher aims at impacting a million teenage, student and side-hustle entrepreneurs, micro-influencers, and bloggers by providing the best tools and strategies to set up a Personal Brand.</p>
