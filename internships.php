@@ -35,6 +35,44 @@ include('inputdata/appliedmail.php');
    $stipend_method           =array();
    $perks                    =array();
 
+
+if(isset($_GET['query']) && !empty($_GET['query']) ){
+
+    $arg = mysqli_real_escape_string($con,$_GET["query"]);
+
+    switch ($_GET['filter']) {
+      case "Position":
+          $sql = "SELECT * FROM active_internship WHERE internship_pos LIKE '%$arg%'";
+          break;
+      case "Location":
+          $sql = "SELECT * FROM active_internship WHERE internship_city LIKE '%$arg%'";
+          break;
+      case "Company Name":
+          $sql = "SELECT * FROM active_internship WHERE comp_name LIKE '%$arg%'";
+          break;
+      default:
+          $sql = "SELECT * FROM active_internship";
+    }
+
+    // $msg = $sql;
+    $result = mysqli_query($con, $sql);
+    if (mysqli_num_rows($result) > 0) {
+
+      while ($row = mysqli_fetch_assoc($result)){
+
+        $id[$num]     = $row["id"];
+        $name[$num]     = $row["name"];
+        $mobile[$num]     = $row["mobile"];
+        $email[$num]  = $row["email"];
+        $payment[$num]    = $row["payment_status"];
+        //$cert_id[$num]  = $row["cert_id"];
+        $num = $num + 1;
+
+      }
+    }
+  }
+
+else{
      $sql = "SELECT SR, internship_post_time, fname, lname, email, phn, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, state, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method, perks FROM active_internship";
      $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
@@ -66,7 +104,7 @@ include('inputdata/appliedmail.php');
      }
 
 
-
+}
 $sql2 = "SELECT applied FROM logindetails WHERE mail='$login_session'";
 $result = $con->query($sql2);
 
@@ -219,6 +257,28 @@ s0.parentNode.insertBefore(s1,s0);
                 <center><h2 class="mb-4">Internships to Opportunities</h2></center>
               </div>
             </div>
+              
+                  <form class="pt-3 pb-2 mb-3" method="get">
+          <div class="form-row">
+            <div class="form-group col-md-9">
+              <input value="<?php echo($arg);?>" name="query" type="text" class="form-control" id="inputAddress"
+                placeholder="Search Internships " required>
+            </div>
+            <div class="form-group col-md-2">
+              <select name="filter" id="inputState" class="form-control">
+                <option selected>Position</option>
+                <option>Loaction</option>
+                <option>Company Name</option>
+
+              </select>
+            </div>
+            <div class="form-group col-md-1">
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </div>
+        </form>
+              
+              
             <div class="row">
               <?php
 
