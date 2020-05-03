@@ -66,22 +66,49 @@
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="exampleInputPassword1" name="pass1" placeholder="Enter password" required>
+                      <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter password" onkeyup='check();' required>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="exampleInputPassword1" name="pass2" placeholder="Re-type password" required>
+                      <input type="password" class="form-control" id="pass2" name="pass2" onclick="return Validate()" placeholder="Re-type password" onkeyup='check();' required>
+                        <br><span id="message" class="invaild-feedback"></span>
                     </div>
                   </div>
-                </div>
+                </div>            
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info" name="reset">Reset</button>
+                  <button type="submit" class="btn btn-info" onclick="return Validate()" name="reset">Reset</button>
                 </div>
                 <!-- /.card-footer -->
               </form>
+              
+                              
+ <script type="text/javascript">
+                    function Validate() {
+                    var password = document.getElementById("pass1").value;
+                    var confirmPassword = document.getElementById("pass2").value;
+                    if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                    }
+                    return true;
+                    }
+        </script>
+        <script>
+                         var check = function() {
+                     if (document.getElementById('pass1').value ==
+                     document.getElementById('pass2').value) {
+                     document.getElementById('message').style.color = 'green';
+                     document.getElementById('message').innerHTML = 'Passwords Match';
+                     } else {
+                     document.getElementById('message').style.color = 'red';
+                     document.getElementById('message').innerHTML = 'Passwords Don’t Match';
+                     }
+                     }
+        </script>    
+              
             </div>
           <!-- /.card -->
         </div>

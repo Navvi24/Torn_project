@@ -97,28 +97,28 @@
                     </div>
                   </div>
         <script type="text/javascript">
-function Validate() {
-var password = document.getElementById("pass1").value;
-var confirmPassword = document.getElementById("pass2").value;
-if (password != confirmPassword) {
-alert("Passwords do not match.");
-return false;
-}
-return true;
-}
-</script>
-  <script>
-     var check = function() {
- if (document.getElementById('pass1').value ==
- document.getElementById('pass2').value) {
- document.getElementById('message').style.color = 'green';
- document.getElementById('message').innerHTML = 'Passwords Match';
- } else {
- document.getElementById('message').style.color = 'red';
- document.getElementById('message').innerHTML = 'Passwords Don’t Match';
- }
- }
- </script>
+                    function Validate() {
+                    var password = document.getElementById("pass1").value;
+                    var confirmPassword = document.getElementById("pass2").value;
+                    if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                    }
+                    return true;
+                    }
+        </script>
+        <script>
+                         var check = function() {
+                     if (document.getElementById('pass1').value ==
+                     document.getElementById('pass2').value) {
+                     document.getElementById('message').style.color = 'green';
+                     document.getElementById('message').innerHTML = 'Passwords Match';
+                     } else {
+                     document.getElementById('message').style.color = 'red';
+                     document.getElementById('message').innerHTML = 'Passwords Don’t Match';
+                     }
+                     }
+        </script>
                   <?php
               }
               else
