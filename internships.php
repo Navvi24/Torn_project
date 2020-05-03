@@ -60,13 +60,28 @@ if(isset($_GET['query']) && !empty($_GET['query']) ){
 
       while ($row = mysqli_fetch_assoc($result)){
 
-        $id[$num]     = $row["id"];
-        $name[$num]     = $row["name"];
-        $mobile[$num]     = $row["mobile"];
-        $email[$num]  = $row["email"];
-        $payment[$num]    = $row["payment_status"];
-        //$cert_id[$num]  = $row["cert_id"];
-        $num = $num + 1;
+        $serial[$num]        = $row["SR"];
+           $post_time[$num]     = $row["internship_post_time"];
+           $fname[$num]         = $row["fname"];
+           $lname[$num]         = $row["lname"];
+           $email[$num]         = $row["email"];
+           $phone[$num]         = $row["phn"];
+           $comp_name[$num]     = $row["comp_name"];
+           $about_comp[$num]    = $row["comp_about"];
+           $comp_web[$num]      = $row["comp_web"];
+           $i_pos1[$num]         = $row["internship_pos"];
+           $i_details[$num]     = $row["internship_detail"];
+           $city[$num]          = $row["internship_city"];
+           $state[$num]          = $row["state"];
+           $total_opening[$num] = $row["total_opening"];
+           $start_date[$num]    = $row["internship_start_date"];
+           $i_duration[$num]   = $row["duration_no"];
+           $i_duration_type[$num] = $row["duration_type"];
+           $i_description[$num] = $row["about_internship"];
+           $stipend_amt[$num]   = $row["stipend_amount"];
+           $stipend_method[$num] = $row["stipend_method"];
+           $perks[$num]         = $row["perks"];
+           $num = $num + 1;
 
       }
     }
@@ -262,7 +277,7 @@ s0.parentNode.insertBefore(s1,s0);
           <div class="form-row">
             <div class="form-group col-md-9">
               <input value="<?php echo($arg);?>" name="query" type="text" class="form-control" id="inputAddress"
-                placeholder="Search Internships " required>
+                placeholder="Search Internships" >
             </div>
             <div class="form-group col-md-2">
               <select name="filter" id="inputState" class="form-control">
