@@ -142,7 +142,7 @@ s0.parentNode.insertBefore(s1,s0);
             <div class="img" style="background-image: url(images/client3.jpg);"></div>
             <div class="text pl-md-4">
               <h2>ProUp</h2>
-              <p>Pro Up is an outcome of passion for the founders who left their corporate careers and started this company. Pro Up offers a whole range of services in the domain of Digital Marketing. The company, all though young, has witnessed rapid growth since inception. Its work has been appreciated by both its clients and the audience. At Pro Up, we donÂ’t just look at the Marketing aspect of a business, but also at solving business problems via Digital Marketing.</p>
+              <p>Pro Up is an outcome of passion for the founders who left their corporate careers and started this company. Pro Up offers a whole range of services in the domain of Digital Marketing. The company, although young, has witnessed rapid growth since inception. Its work has been appreciated by both its clients and the audience. At Pro Up, we don't just look at the Marketing aspect of a business, but also at solving business problems via Digital Marketing.</p>
             </div>
           </div>
         </div>
@@ -161,6 +161,33 @@ s0.parentNode.insertBefore(s1,s0);
             <div class="text pl-md-4">
               <h2>Orbiting</h2>
               <p>Orbiting.in the new big thing in the field of Social Networking and aims to change the user experience by changing how we use social media. It allows you to interact with people with similar interests by engaging in the same orbits as them. These orbits are both content and location sensitive, so it makes sure that you use social media as per your preferences.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="team d-md-flex">
+            <div class="img" style="background-image: url(images/client5new.jpg);"></div>
+            <div class="text pl-md-4">
+              <h2>Testbook</h2>
+              <p>Testbook is the fastest rising startup in the EdTech space, focused on Engineering and Government Job Exams and with an eye to capture JEE, Medical, UPSC and international exams. The IIT pedigree of the co-founders has helped attract some of the brightest minds as educators in the country and Internstorm has partnered with them to bring the brightest student minds to help them expand and operate on an All-india basis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="team d-md-flex">
+            <div class="img" style="background-image: url(images/client6new.png);"></div>
+            <div class="text pl-md-4">
+              <h2>Happy Games</h2>
+              <p>Happy Games are 20-somethings who are passionate about making games that turn events (Read: parties) into experiences (Read: fun). Their love for crafting games comes from their sole motive to have fun (Read: Making money). They love dark humour, memes, and cats. Basically all of the internet. They will respond to fan-mail with glitter bombs, cause, well, everyone could do with a little excitement in their lives.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="team d-md-flex">
+            <div class="img" style="background-image: url(images/client7.png);"></div>
+            <div class="text pl-md-4">
+              <h2>Finance Dealing</h2>
+              <p>Finance Dealing is a revolution in the Financial Education Space. We aim to make everyone financially educate by providing them the right knowledge online at zero cost. We try to eliminate all the noise and acts as a safeguard for individuals and retailers in the financial space. We aim to provide them the right means so that no one losses money. We provide a variety of articles, courses, and news to make them aware of financial space and we aim to make everyone rich via the right means.</p>
             </div>
           </div>
         </div>
@@ -235,10 +262,10 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>

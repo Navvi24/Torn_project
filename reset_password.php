@@ -112,10 +112,10 @@ return true;
  if (document.getElementById('pass1').value ==
  document.getElementById('pass2').value) {
  document.getElementById('message').style.color = 'green';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
+ document.getElementById('message').innerHTML = 'Passwords Match';
  } else {
  document.getElementById('message').style.color = 'red';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
+ document.getElementById('message').innerHTML = 'Passwords Don’t Match';
  }
  }
  </script>

@@ -23,7 +23,7 @@ else if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 101000)
 function JSalert(){
   swal({
   title: "Uh-oh!",
-  text: "File Must be pdf",
+  text: "File must be PDF or Word Document.",
   icon: "error",
   button: "CLOSE",
 });

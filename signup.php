@@ -273,10 +273,10 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>
@@ -301,10 +301,10 @@ return true;
  if (document.getElementById('password').value ==
  document.getElementById('confirm_password').value) {
  document.getElementById('message').style.color = 'green';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
+ document.getElementById('message').innerHTML = 'Passwords Match';
  } else {
  document.getElementById('message').style.color = 'red';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
+ document.getElementById('message').innerHTML = 'Passwords Don’t Match';
  }
  }
  </script>

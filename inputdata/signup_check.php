@@ -14,7 +14,7 @@ else if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 101000)
 {
 ?>
   <div class="alert alert-danger" role="alert">
-    <?php echo "Please Attached only pdf,docx and doc file for resume."; ?>
+    <?php echo "Please Attached only PDF or Word Document. for resume."; ?>
   </div>
 <?php
 }

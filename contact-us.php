@@ -135,14 +135,11 @@ s0.parentNode.insertBefore(s1,s0);
             <h2 class="h3">Contact Information</h2>
           </div>
           <div class="w-100"></div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <p><span>Phone:</span> <a href="tel://+918078646927">+918078646927</a>, <a href="tel://+917972360161">+917972360161</a></p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <p><span>Email:</span> <a href="mailto:support@internstorm.com">support@internstorm.com</a></p>
-          </div>
-          <div class="col-md-4">
-            <p><span>Website</span> <a href="http://www.internstorm.com/" target="_blank">www.internstorm.com</a></p>
           </div>
         </div>
         <div class="row block-9">
@@ -251,12 +248,11 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
-        </div>
       </div>
     </footer>
 

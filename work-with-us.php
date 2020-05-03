@@ -113,7 +113,7 @@ s0.parentNode.insertBefore(s1,s0);
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/work-with-us.gif');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/work-with-us2.gif');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -242,7 +242,7 @@ s0.parentNode.insertBefore(s1,s0);
                   </div>
                 </div>
               </div>
-                 <div class="item">
+              <div class="item">
                 <div class="testimony-wrap py-4 pb-5">
                   <div class="user-img mb-4" style="background-image: url(images/person_6.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
@@ -256,7 +256,7 @@ s0.parentNode.insertBefore(s1,s0);
                   </div>
                 </div>
               </div>
-                 <div class="item">
+              <div class="item">
                 <div class="testimony-wrap py-4 pb-5">
                   <div class="user-img mb-4" style="background-image: url(images/person_7.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
@@ -270,7 +270,7 @@ s0.parentNode.insertBefore(s1,s0);
                   </div>
                 </div>
               </div>
-                 <div class="item">
+              <div class="item">
                 <div class="testimony-wrap py-4 pb-5">
                   <div class="user-img mb-4" style="background-image: url(images/person_8.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
@@ -357,10 +357,10 @@ x`
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>

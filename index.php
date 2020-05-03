@@ -235,11 +235,11 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                     <div class="modal-body" style="background:black;">
-                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                          <li class="ftco-animate"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.internstorm.com#share" style="color:white;"><span class="icon-facebook" target="_blank"></span></a></li>
-                          <li class="ftco-animate"><a href="https://web.whatsapp.com/send?text=https://www.internstorm.com#share" data-action="share/whatsapp/share" style="color:white;" target="_blank"><span class="icon-whatsapp"></span></a></li>
-                          <li class="ftco-animate"><a href="#" style="color:white;" target="_blank"><span class="icon-instagram"></span></a></li>
-                        </ul>
+                      <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                        <li class="ftco-animate"><a href="https://www.facebook.com/sharer/sharer.php?quote=Hey! I found this amazing internship opportunity here. Click the link to know more.&u=https://www.internstorm.com#share" style="color:white;"><span class="icon-facebook" target="_blank"></span></a></li>
+                        <li class="ftco-animate"><a href="https://api.whatsapp.com/send?text=Hey%21%20I%20found%20this%20amazing%20internship%20opportunity%20here.%20Click%20the%20link%20to%20know%20more.%0A%0Ahttps%3A%2F%2Fwww.internstorm.com%23share" data-action="share/whatsapp/share" style="color:white;" target="_blank"><span class="icon-whatsapp"></span></a></li>
+                        <li class="ftco-animate"><a href="https://twitter.com/share?text=Hey! I found this amazing internship opportunity here. Click the link to know more.&url=https://www.internstorm.com#share" style="color:white;" target="_blank"><span class="icon-twitter"></span></a></li>
+                      </ul>
                     </div>
                     </div>
                 </div>
@@ -254,7 +254,7 @@ s0.parentNode.insertBefore(s1,s0);
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
+          	<span class="subheading">Testimonials</span>
             <h2 class="mb-4">Truer Stories Weren’t Told!</h2>
           </div>
         </div>
@@ -446,10 +446,10 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>
