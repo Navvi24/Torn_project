@@ -148,7 +148,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="col-md-6">
           <div class="team d-md-flex">
-            <div class="img" style="background-image: url(images/client2.jpg);"></div>
+            <div class="img" style="background-image: url(images/client2new.jpg);"></div>
             <div class="text pl-md-4">
               <h2>Brandgrapher</h2>
               <p>Brandgrapher provides futuristic product development, marketing, and business automation consultancy and training. It’s an initiative taken by Young Entrepreneurs and is meant for the aspiring ones. Brandgrapher aims at impacting a million teenage, student and side-hustle entrepreneurs, micro-influencers, and bloggers by providing the best tools and strategies to set up a Personal Brand.</p>
