@@ -254,7 +254,7 @@ s0.parentNode.insertBefore(s1,s0);
           <div class="col-lg-12 pr-lg-5">
             <div class="row justify-content-center pb-3">
               <div class="col-md-12 heading-section ftco-animate">
-                <center><h2 class="mb-4">Internships to Opportunities</h2></center>
+                <center><h2 class="mb-4">Opportunities</h2></center>
               </div>
             </div>
               
@@ -305,7 +305,7 @@ s0.parentNode.insertBefore(s1,s0);
 
                     for ($y = 0; $y < sizeof($allapp); $y++) {
                      if($allapp[$y] == $serial[$x]){
-                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-success py-2" style="margin-right: 8px; color:white;">Applied</a>');
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-success py-2" style="margin-right: 8px; color:white;">Scheduled</a>');
                          $temp="1";
                       break;
 
@@ -315,7 +315,7 @@ s0.parentNode.insertBefore(s1,s0);
                         }
                     }
                             if($temp == 0 || $temp == 2){
-                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; color:white;">Apply Job</a>');
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; color:white;">Schedule Interview</a>');
                             }
 
 

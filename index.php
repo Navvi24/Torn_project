@@ -218,13 +218,13 @@ s0.parentNode.insertBefore(s1,s0);
 		                </div>
 		              </div>
 
-		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
+		              <div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0" style="width: 240px;">
 		              	<div>
 			                <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2"  data-toggle="modal" data-target=".bd-example-modal-sm">
 			                	<span class="icon-share"></span>
 			                </a>
 		                </div>
-		                <a href="login.php" class="btn btn-primary py-2">Apply Job</a>
+		                <a href="login.php" class="btn btn-primary py-2">Schedule Interview</a>
 		              </div>
 		            </div>
 		          </div>
