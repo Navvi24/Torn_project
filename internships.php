@@ -44,8 +44,11 @@ if(isset($_GET['query']) && !empty($_GET['query']) ){
       case "Position":
           $sql = "SELECT * FROM active_internship WHERE internship_pos LIKE '%$arg%'";
           break;
-      case "Location":
+      case "City":
           $sql = "SELECT * FROM active_internship WHERE internship_city LIKE '%$arg%'";
+          break;
+      case "State":
+          $sql = "SELECT * FROM active_internship WHERE state LIKE '%$arg%'";
           break;
       case "Company Name":
           $sql = "SELECT * FROM active_internship WHERE comp_name LIKE '%$arg%'";
@@ -272,7 +275,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <center><h2 class="mb-4">Opportunities</h2></center>
               </div>
             </div>
-              
+
                   <form class="pt-3 pb-2 mb-3" method="get">
           <div class="form-row">
             <div class="form-group col-md-9">
@@ -281,19 +284,19 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
             <div class="form-group col-md-2">
               <select name="filter" id="inputState" class="form-control">
-                <option selected>Position</option>
-                <option>Loaction</option>
+                <option>Position</option>
+                <option>City</option>
+                <option>State</option>
                 <option>Company Name</option>
-
               </select>
             </div>
             <div class="form-group col-md-1">
-              <button type="submit" class="btn btn-primary">Search</button>
+              <button type="submit" class="btn btn-primary btn-lg py-2">Search</button>
             </div>
           </div>
         </form>
-              
-              
+
+
             <div class="row">
               <?php
 
@@ -330,7 +333,7 @@ s0.parentNode.insertBefore(s1,s0);
                         }
                     }
                             if($temp == 0 || $temp == 2){
-                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; color:white;">Schedule Interview</a>');
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; margin-left: -35px; color:white;">Schedule Interview</a>');
                             }
 
 
