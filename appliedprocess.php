@@ -62,12 +62,12 @@ if ($result3->num_rows > 0)
 {
     while($row = $result3->fetch_assoc()) 
     {
-        $internsr = $row['sr'];
-        $internfname = $row['fname'];
-        $internlname = $row['lname'];
-        $internphn = $row['phn'];
-        $internmail = $row['mail'];
-        $internres = $row['resume_url'];
+        $internsr = mysqli_real_escape_string($con,$row['sr']);
+        $internfname = mysqli_real_escape_string($con,$row['fname']);
+        $internlname = mysqli_real_escape_string($con,$row['lname']);
+        $internphn = mysqli_real_escape_string($con,$row['phn']);
+        $internmail = mysqli_real_escape_string($con,$row['mail']);
+        $internres = mysqli_real_escape_string($con,$row['resume_url']);
     }
 }
 else{
@@ -81,20 +81,20 @@ if ($result4->num_rows > 0)
 {
     while($row = $result4->fetch_assoc()) 
     {
-        $csr = $row['SR'];
-        $cname= $row['comp_name'];
-        $cpos =$row['internship_pos'];
-        $cweb=$row['comp_web'];
-        $ccity =$row['internship_city'];
-        $cstate=$row['state'];
-        $copen=$row['total_opening'];
-        $cstart=$row['internship_start_date'];
-        $cdur =$row['duration_no'];
-        $cdurtype= $row['duration_type'];
-        $cstipendamt =$row['stipend_amount'];
-        $cstipendtype = $row['stipend_method'];
-        $cperks =$row['perks'];
-        $cabout=$row['about_internship'];
+        $csr = mysqli_real_escape_string($con,$row['SR']);
+        $cname=mysqli_real_escape_string($con, $row['comp_name']);
+        $cpos =mysqli_real_escape_string($con,$row['internship_pos']);
+        $cweb=mysqli_real_escape_string($con,$row['comp_web']);
+        $ccity =mysqli_real_escape_string($con,$row['internship_city']);
+        $cstate=mysqli_real_escape_string($con,$row['state']);
+        $copen=mysqli_real_escape_string($con,$row['total_opening']);
+        $cstart=mysqli_real_escape_string($con,$row['internship_start_date']);
+        $cdur =mysqli_real_escape_string($con,$row['duration_no']);
+        $cdurtype= mysqli_real_escape_string($con,$row['duration_type']);
+        $cstipendamt =mysqli_real_escape_string($con,$row['stipend_amount']);
+        $cstipendtype = mysqli_real_escape_string($con,$row['stipend_method']);
+        $cperks =mysqli_real_escape_string($con,$row['perks']);
+        $cabout=mysqli_real_escape_string($con,$row['about_internship']);
         
    }
 }

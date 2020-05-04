@@ -1,6 +1,10 @@
 <?php
 include('inputdata/session.php');
 include('inputdata/appliedmail.php');
+if($url == 1000)
+{
+ header("Refresh:0; url=internships.php");
+}
  ?>
  <?php
  include("inputdata/connect.php");

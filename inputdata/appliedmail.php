@@ -1,4 +1,5 @@
 <?php
+$url="";
   ob_start();
     include 'applied_email_layout.php';
     $mailbody = ob_get_clean();
@@ -41,7 +42,7 @@ if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
                         echo 'Message could not be sent.';
                         echo 'Mailer Error: ' . $mail->ErrorInfo;
                     } else {
-                      //header("Location : ../internships.php");
+                      $url = 1000;
                     }
         }
         else{}
