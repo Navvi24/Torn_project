@@ -160,7 +160,7 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <a href="#"  data-toggle="modal" data-target="#exampleModal">Forget Password</a>
+                  <a href="forgetpass.php">Forgot Password?</a>
                 </div>
               </div><div class="row form-group">
                 <div class="col-md-12">
@@ -169,29 +169,6 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
 
             </form>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Forget Password</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="p-5 bg-white">
-                          <label class="font-weight-bold" for="username">Enter your Email</label>
-                          <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
-                          <br>
-                          <center>  <button type="button" class="btn btn-primary">Send Link</button> </center>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -263,10 +240,10 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>

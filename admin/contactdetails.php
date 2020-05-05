@@ -43,7 +43,7 @@ $error = "";
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="mainpage.php">Home</a></li>
               <li class="breadcrumb-item active">Contact-us Queries</li>
             </ol>
           </div>
@@ -87,7 +87,7 @@ $error = "";
                       <td>'.$email[$x].'</td>
                       <td>'.$sub[$x].'</td>
                       <td>'.wordwrap($msg1[$x],50,"<br />\n").'</td>
-                      <td>'.$attach_url[$x].'</td>
+                      <td><a href="https://www.internstorm.com/contactus_files/'.$attach_url[$x].'" target="_blank">'.$attach_url[$x].'</a></td>
                       <td>'.$query_date[$x].'</td>
                       <td><a href="emailform.php?mail='.$email[$x].'" class="btn btn-primary"><i class="far fa-envelope"></i></a></td>
                     </tr>
