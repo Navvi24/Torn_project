@@ -6,9 +6,9 @@ $database="adhoc_management"; //Enter database name here
 $servername="localhost"; //Server address
 */
 
-$username="internst_root"; //DB User Name
-$password="de4$#sdf0JU"; //DB User password
-$database="internst_new_web_data"; //Enter database name here
+$username="root"; //DB User Name
+$password=""; //DB User password
+$database="internstorm"; //Enter database name here
 $servername="localhost"; //Server address
 
 // Create connection
