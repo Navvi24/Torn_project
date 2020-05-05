@@ -242,7 +242,7 @@ s0.parentNode.insertBefore(s1,s0);
                   </div>
                 </div>
               </div>
-                 <div class="item">
+              <div class="item">
                 <div class="testimony-wrap py-4 pb-5">
                   <div class="user-img mb-4" style="background-image: url(images/person_6.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
@@ -256,7 +256,7 @@ s0.parentNode.insertBefore(s1,s0);
                   </div>
                 </div>
               </div>
-                 <div class="item">
+              <div class="item">
                 <div class="testimony-wrap py-4 pb-5">
                   <div class="user-img mb-4" style="background-image: url(images/person_7.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
@@ -270,7 +270,7 @@ s0.parentNode.insertBefore(s1,s0);
                   </div>
                 </div>
               </div>
-                 <div class="item">
+              <div class="item">
                 <div class="testimony-wrap py-4 pb-5">
                   <div class="user-img mb-4" style="background-image: url(images/person_8.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">

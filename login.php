@@ -167,7 +167,6 @@ s0.parentNode.insertBefore(s1,s0);
                   <a href="signup.php">Signup</a>
                 </div>
               </div>
-
             </form>
           </div>
         </div>
@@ -227,14 +226,14 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
+              <h2 class="ftco-heading-2">Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
 
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
-	              </ul>
-	            </div>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
