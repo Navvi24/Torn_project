@@ -16,6 +16,51 @@ $error = "";
   $comp_open =array();
   $num = 0;
 
+    if(isset($_GET['query']) && !empty($_GET['query']) ){
+
+    $arg = mysqli_real_escape_string($con,$_GET["query"]);
+
+    switch ($_GET['filter']) {
+      case "First Name":
+          $sql = "SELECT * FROM applied WHERE internfname LIKE '%$arg%'";
+          break;
+      case "Intern Mail":
+          $sql = "SELECT * FROM applied WHERE internmail LIKE '%$arg%'";
+          break;
+      case "Intern Phone":
+          $sql = "SELECT * FROM applied WHERE internphn LIKE '%$arg%'";
+          break;
+      case "InternShip Profile":
+          $sql = "SELECT * FROM applied WHERE cpos LIKE '%$arg%'";
+          break;
+      case "Company Name":
+          $sql = "SELECT * FROM applied WHERE cname LIKE '%$arg%'";
+          break;
+      default:
+          $sql = "SELECT * FROM applied";
+    }
+
+    // $msg = $sql;
+    $result = mysqli_query($con, $sql);
+    if (mysqli_num_rows($result) > 0) {
+
+      while ($row = mysqli_fetch_assoc($result)){
+
+        $sr[$num]     = $row["sr"];
+        $intern_fname[$num] = $row["internfname"];
+        $intern_lname[$num] = $row["internlname"];
+        $intern_email[$num] = $row["internmail"];
+        $intern_phone[$num] = $row["internphn"];
+        $internship_pos[$num] = $row["cpos"];
+        $comp_name[$num] = $row["cname"];
+        $comp_open[$num] = $row["copen"];
+        $num = $num + 1;
+
+      }
+    }
+  }
+
+else{
     $sql = "SELECT sr, internfname, internlname, internphn, internmail, cpos, cname, copen FROM applied ORDER BY sr DESC";
     $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
@@ -34,6 +79,7 @@ $error = "";
 
       }
     }
+}
   $con->close();
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -57,6 +103,26 @@ $error = "";
 
     <!-- Main content -->
     <section class="content">
+        <form class="pt-3 pb-2 mb-3" method="get">
+          <div class="form-row">
+            <div class="form-group col-md-9">
+              <input value="<?php echo($arg);?>" name="query" type="text" class="form-control" id="inputAddress"
+                placeholder="Search Internships" >
+            </div>
+            <div class="form-group col-md-2">
+              <select name="filter" id="inputState" class="form-control">
+                <option>First Name</option>
+                <option>Intern Mail</option>
+                <option>Intern Phone</option>
+                <option>InternShip Profile</option>
+                <option>Company Name</option>
+              </select>
+            </div>
+            <div class="form-group col-md-1">
+              <button type="submit" class="btn btn-primary btn-lg py-2">Search</button>
+            </div>
+          </div>
+        </form>
       <div class="row">
         <div class="col-12">
           <div class="card">
