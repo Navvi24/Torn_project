@@ -125,7 +125,7 @@
             <a href="appliedinterns.php" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
-                Interns/Students (END)
+                Interns/Students (Applied)
               </p>
             </a>
           </li>
