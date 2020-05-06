@@ -239,7 +239,7 @@ $perks                    ="";
                 <h3 class="font-weight-bold">Stipend And Perks</h3>
                 <br>
                 <div class="form-group">
-                  <label for="stipend_amount">Stipend(₹)</label> <span>(if internship is unpaid mention 0 in stipend)</span>
+                  <label for="stipend_amount">Stipend(₹)</label> <span>(if internship is unpaid or performance based so do not input any data in field)</span>
                   <div class="col-sm-12 row">
                     <div class="col-sm-6">
                       <input type="number" id="total_opening" class="form-control" placeholder="Example : ₹5000 " name="stipend_amount" value="<?php echo $stipend_amt; ?>">
@@ -252,6 +252,8 @@ $perks                    ="";
                         <option value="/Month" <?php echo ($stipend_method == '/Month') ? "selected" : "";?>>Month</option>
                         <option value="/week" <?php echo ($stipend_method == '/week') ? "selected" : "";?>>week</option>
                         <option value="lump-sum" <?php echo ($stipend_method == 'lump-sum') ? "selected" : "";?>>lump-sum</option>
+                        <option value="No-Stipend" <?php echo ($stipend_method == 'No-Stipend') ? "selected" : "";?>>No-Stipend</option>
+                        <option value="Performance Based" <?php echo ($stipend_method == 'Performance Based') ? "selected" : "";?>>Performance Based</option>
                      </select>
                      <div class="invalid-feedback">Please choose duration.</div>
                     </div>
