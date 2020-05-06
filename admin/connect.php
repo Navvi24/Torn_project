@@ -1,16 +1,9 @@
 <?php
-/*
-$username="root"; //DB User Name
-$password=""; //DB User password
-$database="adhoc_management"; //Enter database name here
-$servername="localhost"; //Server address
-*/
 
 $username="root"; //DB User Name
 $password=""; //DB User password
 $database="internstorm"; //Enter database name here
 $servername="localhost"; //Server address
-
 // Create connection
 $con = mysqli_connect($servername, $username, $password, $database);
 // Check connection
