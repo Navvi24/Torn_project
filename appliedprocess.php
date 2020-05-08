@@ -27,6 +27,11 @@ $cstipendtype = "";
 $cperks =array();
 $cabout="";
 
+$check_internsr=array();
+$check_csr=array();
+$enter_val = 0;
+$num = 0;
+
 
 $userapp = $_GET['applied'];
 $log1 = $_GET['login'];
@@ -36,15 +41,15 @@ $log1 = $_GET['login'];
 $sql = "SELECT applied,fname FROM logindetails WHERE mail='$log1'";
 $result = $con->query($sql);
 
-if ($result->num_rows > 0) 
+if ($result->num_rows > 0)
 {
-    while($row = $result->fetch_assoc()) 
+    while($row = $result->fetch_assoc())
     {
         $app = $row["applied"];
         $allapp = explode(";",$app);
     }
-} 
-else 
+}
+else
 {
     echo "0 results";
 }
@@ -59,9 +64,9 @@ if(mysqli_query($con, $sql2)){
 
 $sql3 = "SELECT sr, fname, lname, phn, mail, resume_url FROM logindetails WHERE mail='$log1'";
 $result3 = $con->query($sql3);
-if ($result3->num_rows > 0) 
+if ($result3->num_rows > 0)
 {
-    while($row = $result3->fetch_assoc()) 
+    while($row = $result3->fetch_assoc())
     {
         $internsr = mysqli_real_escape_string($con,$row['sr']);
         $internfname = mysqli_real_escape_string($con,$row['fname']);
@@ -78,9 +83,9 @@ else{
 
 $sql4 = "SELECT * from active_internship WHERE SR='$userapp'";
 $result4 = $con->query($sql4);
-if ($result4->num_rows > 0) 
+if ($result4->num_rows > 0)
 {
-    while($row = $result4->fetch_assoc()) 
+    while($row = $result4->fetch_assoc())
     {
         $csr = mysqli_real_escape_string($con,$row['SR']);
         $cname=mysqli_real_escape_string($con, $row['comp_name']);
@@ -96,20 +101,46 @@ if ($result4->num_rows > 0)
         $cstipendtype = mysqli_real_escape_string($con,$row['stipend_method']);
         $cperks =mysqli_real_escape_string($con,$row['perks']);
         $cabout=mysqli_real_escape_string($con,$row['about_internship']);
-        
+
    }
 }
 else{
     echo " compnay not fetch";
 }
 
+$sql6 = "SELECT internsr, csr from applied";
+$res = mysqli_query($con,$sql6);
+if (mysqli_num_rows($res) > 0)
+{
+    while ($row = mysqli_fetch_assoc($res))
+    {
+      $check_internsr = $row["internsr"];
+      $check_csr =  $row["csr"];
+      $num = $num + 1;
+    }
+}
+for($y=0;$y<$num;$y++)
+{
+    if($check_internsr[$y] != $internsr && $check_csr[$y] != $csr)
+    {
+      //$enter_val = 1;
+    }
+    else
+    {
 
+        $enter_val = 2;
+        header("Location: internships.php");
+    }
+}
+
+if($enter_val == 1)
+{
 $sql5 = "INSERT INTO applied (internsr, internfname, internlname, internphn, internmail, internres, csr, cname, cpos, cweb, ccity, cstate, copen, cstart, cdur, cdurtype, cstipendamt, cstipendtype, cperks, cabout) VALUES ('$internsr','$internfname','$internlname','$internphn','$internmail','$internres','$csr','$cname','$cpos','$cweb','$ccity','$cstate','$copen','$cstart','$cdur','$cdurtype','$cstipendamt','$cstipendtype','$cperks','$cabout')";
 if (!mysqli_query($con,$sql5))
          {
             $error = "Error: ".mysqli_error($con);
             echo $error;
-          header("Location: internships.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+          header("Location: internships.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5yvoowo7Po=10100");
           }
         else
         {
@@ -122,12 +153,12 @@ if (!mysqli_query($con,$sql5))
             include("inputdata/master/PHPMailerAutoload.php");
             if($url == 101010)
             {
-        
-                            $mail = new PHPMailer(); 
-        
+
+                            $mail = new PHPMailer();
+
                             //$mail->SMTPDebug = 3;                               // Enable verbose debug output
                             //$mailcontent = '';
-        
+
                             $mail->isSMTP();                                      // Set mailer to use SMTP
                             $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
                             $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -135,7 +166,7 @@ if (!mysqli_query($con,$sql5))
                             $mail->Password = '12chastity@cl';                           // SMTP password
                             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
                             $mail->Port = 587;                                    // TCP port to connect to
-        
+
                             $mail->setFrom('internstormed@gmail.com', 'Internstorm');
                             $mail->addAddress($login_session);     // Add a recipient
                             //   $mail->addAddress('admin@internstorm.com');               // Name is optional
@@ -146,22 +177,22 @@ if (!mysqli_query($con,$sql5))
                             //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
                             //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
                             $mail->isHTML(true);                                  // Set email format to HTML
-        
+
                             $mail->Subject = 'Internship Applied Successfully';
                             $mail->Body    = $mailbody;
-        
+
                     //        $mail->AltBody = file_get_contents('post_email_layout.php');
-        
+
                             if(!$mail->send()) {
                                 echo 'Message could not be sent.';
                                 echo 'Mailer Error: ' . $mail->ErrorInfo;
                             } else {
-                              header("Location: internships.php");
+                          header("Location: internships.php");
                             }
             }
                 else{}
 
     }
-
-$con->close();    
+}
+$con->close();
 ?>
