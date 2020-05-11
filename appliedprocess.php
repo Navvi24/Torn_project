@@ -11,6 +11,7 @@ $internfname="";
 $internlname="";
 $internphn ="";
 $internmail="";
+$internclg = "";
 $internres = "";
 $csr = "";
 $cname= "";
@@ -62,7 +63,7 @@ if(mysqli_query($con, $sql2)){
 }
 
 
-$sql3 = "SELECT sr, fname, lname, phn, mail, resume_url FROM logindetails WHERE mail='$log1'";
+$sql3 = "SELECT sr, fname, lname, phn, mail, college, resume_url FROM logindetails WHERE mail='$log1'";
 $result3 = $con->query($sql3);
 if ($result3->num_rows > 0)
 {
@@ -74,6 +75,7 @@ if ($result3->num_rows > 0)
         $internphn = mysqli_real_escape_string($con,$row['phn']);
         $internmail = mysqli_real_escape_string($con,$row['mail']);
         $internres = mysqli_real_escape_string($con,$row['resume_url']);
+        $internclg = mysqli_real_escape_string($con,$row['college']);
     }
 }
 else{
@@ -108,7 +110,7 @@ else{
     echo " compnay not fetch";
 }
 
-$sql6 = "SELECT internsr, csr from applied";
+/*$sql6 = "SELECT internsr, csr from applied";
 $res = mysqli_query($con,$sql6);
 if (mysqli_num_rows($res) > 0)
 {
@@ -123,19 +125,17 @@ for($y=0;$y<$num;$y++)
 {
     if($check_internsr[$y] != $internsr && $check_csr[$y] != $csr)
     {
-      //$enter_val = 1;
+      //$enter_val = 0;
     }
     else
     {
-
         $enter_val = 2;
         header("Location: internships.php");
     }
 }
-
-if($enter_val == 1)
-{
-$sql5 = "INSERT INTO applied (internsr, internfname, internlname, internphn, internmail, internres, csr, cname, cpos, cweb, ccity, cstate, copen, cstart, cdur, cdurtype, cstipendamt, cstipendtype, cperks, cabout) VALUES ('$internsr','$internfname','$internlname','$internphn','$internmail','$internres','$csr','$cname','$cpos','$cweb','$ccity','$cstate','$copen','$cstart','$cdur','$cdurtype','$cstipendamt','$cstipendtype','$cperks','$cabout')";
+if($enter_val == 0)
+{*/
+$sql5 = "INSERT INTO applied (internsr, internfname, internlname, internphn, internmail, internclg, internres, csr, cname, cpos, cweb, ccity, cstate, copen, cstart, cdur, cdurtype, cstipendamt, cstipendtype, cperks, cabout) VALUES ('$internsr','$internfname','$internlname','$internphn','$internmail','$internclg','$internres','$csr','$cname','$cpos','$cweb','$ccity','$cstate','$copen','$cstart','$cdur','$cdurtype','$cstipendamt','$cstipendtype','$cperks','$cabout')";
 if (!mysqli_query($con,$sql5))
          {
             $error = "Error: ".mysqli_error($con);
@@ -145,7 +145,7 @@ if (!mysqli_query($con,$sql5))
         else
         {
             // echo "sucess:";
-            // header("Location: internships.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+             header("Location: internships.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
              $url = 101010;
             ob_start();
             include 'inputdata/applied_email_layout.php';
@@ -187,12 +187,17 @@ if (!mysqli_query($con,$sql5))
                                 echo 'Message could not be sent.';
                                 echo 'Mailer Error: ' . $mail->ErrorInfo;
                             } else {
-                          header("Location: internships.php");
+                              header("Location: internships.php");
                             }
             }
                 else{}
 
     }
-}
+/*}
+else
+{
+$enter_val = 0;
+header("Location: internships.php");
+}*/
 $con->close();
 ?>

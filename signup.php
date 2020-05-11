@@ -178,6 +178,12 @@ s0.parentNode.insertBefore(s1,s0);
               </div>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="firstname">College/Institution</label>
+                  <input type="text" id="college" class="form-control" placeholder="Enter your College/Institution" name="college" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="password">Enter Your Password</label>
                   <input type="password" id="password" class="form-control" onkeyup='check();' / placeholder="Enter your password" name="password" required>
                 </div>

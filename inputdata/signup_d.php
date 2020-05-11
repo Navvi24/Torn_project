@@ -27,6 +27,8 @@ if(!empty($_POST['signup']))
        // echo $phn;
     $email = mysqli_real_escape_string($con, $_POST['email']);
        // echo $email;
+    $clg =  mysqli_real_escape_string($con, $_POST['college']);
+      //echo $clg;
     $password = mysqli_real_escape_string($con, $_POST['password']);
        // echo $password;
     $pass_retype = mysqli_real_escape_string($con, $_POST['pass_retype']);
@@ -54,8 +56,8 @@ if(!empty($_POST['signup']))
     }
     else if($filename == "")
     {
-      $sql="INSERT INTO logindetails (fname, lname, phn,  mail, password,resume_url)
-             VALUES('$fname','$lname','$phn','$email','$password','$filename')";
+      $sql="INSERT INTO logindetails (fname, lname, phn,  mail, college, password,resume_url)
+             VALUES('$fname','$lname','$phn','$email','$clg','$password','$filename')";
 
          if (!mysqli_query($con,$sql)) {
            $error = "Error: ".mysqli_error($con);

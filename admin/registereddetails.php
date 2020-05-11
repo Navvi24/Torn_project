@@ -11,7 +11,7 @@ $error = "";
   $mail     =array();
   $num = 0;
 
-    $sql = "SELECT sr, fname, lname, phn, mail, resume_url, regdate FROM logindetails ORDER BY sr DESC";
+    $sql = "SELECT sr, fname, lname, phn, mail, college, resume_url, regdate FROM logindetails ORDER BY sr DESC";
     $result = mysqli_query($con, $sql);
     if(mysqli_num_rows($result) > 0) {
 
@@ -24,6 +24,7 @@ $error = "";
         $mail[$num]     = $row["mail"];
         $resume_url[$num]     = $row["resume_url"];
         $regdate[$num]     = $row["regdate"];
+        $clg[$num]       =$row["college"];
         $num = $num + 1;
 
       }
@@ -67,7 +68,8 @@ $error = "";
                   <th>Name</th>
                   <th>Phone</th>
                   <th>Email</th>
-                    <th>resume_url</th>
+                  <th>Institution</th>
+                  <th>resume_url</th>
                    <th>Reg. Time</th>
                 </tr>
                 </thead>
@@ -80,12 +82,13 @@ $error = "";
 
                     <td>'.$sr[$x].'</td>
                     <td>'.$fname[$x].'</td>
-                   
+
                     <td>'.$phn[$x].'</td>
                     <td>'.$mail[$x].'</td>
+                    <td>'.$clg[$x].'</td>
                     <td><a href="http://www.internstorm.com/resume_files/'.$resume_url[$x].'" target="_blank">'.$resume_url[$x].'</a></td>
                     <td>'.$regdate[$x].'</td>
-                
+
                   </tr>
 
                 ');

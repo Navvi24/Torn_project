@@ -13,6 +13,7 @@ $error = "";
   $intern_email                    = "";
   $intern_phone                    = "";
   $intern_resume                    = "";
+  $intern_clg                        = "";
   $comp_name                    = "";
   $comp_pos                    = "";
   $comp_web                    = "";
@@ -36,6 +37,7 @@ $error = "";
           $intern_fname   = $row["internfname"];
           $intern_lname    = $row["internlname"];
           $intern_email     = $row["internmail"];
+          $intern_clg     = $row["internclg"];
           $intern_phone     = $row["internphn"];
           $intern_resume   = $row["internres"];
           $comp_name      = $row["cname"];
@@ -102,6 +104,10 @@ $error = "";
               <tr>
                 <th style="width:30%">Intern Email</th>
                 <td style="width:50%"><?php echo "$intern_email"; ?></td>
+              </tr>
+              <tr>
+                <th style="width:30%">Intern Institution</th>
+                <td style="width:50%"><?php echo "$intern_clg"; ?></td>
               </tr>
               <tr>
                 <th style="width:30%">Intern Resume</th>
