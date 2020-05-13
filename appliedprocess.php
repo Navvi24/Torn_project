@@ -110,31 +110,10 @@ else{
     echo " compnay not fetch";
 }
 
-/*$sql6 = "SELECT internsr, csr from applied";
-$res = mysqli_query($con,$sql6);
-if (mysqli_num_rows($res) > 0)
+$resultset_1 = mysqli_query($con,"select * from applied where internsr='".$internsr."' AND csr='".$csr."'") or die(mysql_error());
+$count = mysqli_num_rows($resultset_1);
+if($count == 0)
 {
-    while ($row = mysqli_fetch_assoc($res))
-    {
-      $check_internsr = $row["internsr"];
-      $check_csr =  $row["csr"];
-      $num = $num + 1;
-    }
-}
-for($y=0;$y<$num;$y++)
-{
-    if($check_internsr[$y] != $internsr && $check_csr[$y] != $csr)
-    {
-      //$enter_val = 0;
-    }
-    else
-    {
-        $enter_val = 2;
-        header("Location: internships.php");
-    }
-}
-if($enter_val == 0)
-{*/
 $sql5 = "INSERT INTO applied (internsr, internfname, internlname, internphn, internmail, internclg, internres, csr, cname, cpos, cweb, ccity, cstate, copen, cstart, cdur, cdurtype, cstipendamt, cstipendtype, cperks, cabout) VALUES ('$internsr','$internfname','$internlname','$internphn','$internmail','$internclg','$internres','$csr','$cname','$cpos','$cweb','$ccity','$cstate','$copen','$cstart','$cdur','$cdurtype','$cstipendamt','$cstipendtype','$cperks','$cabout')";
 if (!mysqli_query($con,$sql5))
          {
@@ -145,7 +124,7 @@ if (!mysqli_query($con,$sql5))
         else
         {
             // echo "sucess:";
-             header("Location: internships.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+            header("Location: internships.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
              $url = 101010;
             ob_start();
             include 'inputdata/applied_email_layout.php';
@@ -193,11 +172,10 @@ if (!mysqli_query($con,$sql5))
                 else{}
 
     }
-/*}
+}
 else
 {
-$enter_val = 0;
 header("Location: internships.php");
-}*/
+}
 $con->close();
 ?>
