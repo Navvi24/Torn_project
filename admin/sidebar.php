@@ -153,7 +153,14 @@
               </p>
             </a>
           </li>
-
+          <li class="nav-item">
+            <a href="details_comp.php" class="nav-link">
+              <i class="nav-icon far fa-address-book"></i>
+              <p>
+                Company Details
+              </p>
+            </a>
+          </li>
              <li class="nav-item">
             <a href="chatting.php" class="nav-link">
               <i class="nav-icon far fa-address-book"></i>

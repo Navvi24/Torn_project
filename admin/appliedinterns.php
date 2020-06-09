@@ -9,7 +9,8 @@ $error = "";
   $sr  =array();
   $intern_fname  =array();
   $intern_lname  =array();
-  $intern_email =array();
+  $intern_clg                        = "";
+  $intern_clg =array();
   $intern_phone =array();
   $internship_pos =array();
   $comp_name =array();
@@ -24,8 +25,8 @@ $error = "";
       case "First Name":
           $sql = "SELECT * FROM applied WHERE internfname LIKE '%$arg%'";
           break;
-      case "Intern Mail":
-          $sql = "SELECT * FROM applied WHERE internmail LIKE '%$arg%'";
+      case "Intern College":
+          $sql = "SELECT * FROM applied WHERE internclg LIKE '%$arg%'";
           break;
       case "Intern Phone":
           $sql = "SELECT * FROM applied WHERE internphn LIKE '%$arg%'";
@@ -49,7 +50,7 @@ $error = "";
         $sr[$num]     = $row["sr"];
         $intern_fname[$num] = $row["internfname"];
         $intern_lname[$num] = $row["internlname"];
-        $intern_email[$num] = $row["internmail"];
+        $intern_clg[$num] = $row["internclg"];
         $intern_phone[$num] = $row["internphn"];
         $internship_pos[$num] = $row["cpos"];
         $comp_name[$num] = $row["cname"];
@@ -61,7 +62,7 @@ $error = "";
   }
 
 else{
-    $sql = "SELECT sr, internfname, internlname, internphn, internmail, cpos, cname, copen FROM applied ORDER BY sr DESC";
+    $sql = "SELECT sr, internfname, internlname, internphn, internclg, cpos, cname, copen FROM applied ORDER BY sr DESC";
     $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
 
@@ -70,7 +71,7 @@ else{
         $sr[$num]     = $row["sr"];
         $intern_fname[$num] = $row["internfname"];
         $intern_lname[$num] = $row["internlname"];
-        $intern_email[$num] = $row["internmail"];
+        $intern_clg[$num] = $row["internclg"];
         $intern_phone[$num] = $row["internphn"];
         $internship_pos[$num] = $row["cpos"];
         $comp_name[$num] = $row["cname"];
@@ -112,7 +113,7 @@ else{
             <div class="form-group col-md-2">
               <select name="filter" id="inputState" class="form-control">
                 <option>First Name</option>
-                <option>Intern Mail</option>
+                <option>Intern College</option>
                 <option>Intern Phone</option>
                 <option>InternShip Profile</option>
                 <option>Company Name</option>
@@ -134,9 +135,9 @@ else{
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Sr</th>
+                  <th>SR</th>
                   <th>Intern Name</th>
-                  <th>Intern Email</th>
+                  <th>Intern Institute</th>
                   <th>Intern Phone</th>
                   <th>Internship Profile</th>
                   <th>Company Name</th>
@@ -153,7 +154,7 @@ else{
                   <tr>
                     <td>'.$sr[$x].'</td>
                     <td>'.$intern_fname[$x].' '.$intern_lname[$x].'</td>
-                    <td>'.$intern_email[$x].'</td>
+                    <td>'.$intern_clg[$x].'</td>
                     <td>'.$intern_phone[$x].'</td>
                     <td>'.$internship_pos[$x].'</td>
                     <td>'.$comp_name[$x].'</td>
