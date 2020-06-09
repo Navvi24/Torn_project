@@ -21,6 +21,13 @@ $error = "";
   $stipend_amt              ="";
   $stipend_method           = "";
 
+  $intern_sr = array();
+  $intern_fname = array();
+  $intern_lname = array();
+  $intern_institute = array();
+  $intern_resume = array();
+  $intern_mail = array();
+  $num = 0;
     $sql = "SELECT * FROM active_internship where sr=$id";
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
@@ -43,6 +50,26 @@ $error = "";
     } else {
         echo "0 results";
     }
+
+$sql2 = "SELECT * from applied where csr = $id";
+$result2 = mysqli_query($con, $sql2);
+if (mysqli_num_rows($result2) > 0)
+{
+  while ($row = mysqli_fetch_assoc($result2))
+  {
+    $intern_sr[$num]     = $row["sr"];
+    $intern_fname[$num] = $row["internfname"];
+    $intern_lname[$num] = $row["internlname"];
+    $intern_institute[$num] = $row["internclg"];
+    $intern_resume[$num] = $row["internres"];
+    $intern_mail[$num] = $row["internmail"];
+    $num = $num + 1;
+  }
+}
+else {
+  echo "0";
+}
+
   $con->close();
 ?>
 <div class="content-wrapper">
@@ -135,27 +162,29 @@ $error = "";
                 <th>Email</th>
                 <th>Options</th>
               </tr>
-              </thead>
+            </thead>
               <tbody>
-
-                  <?php /*
+                  <?php
               for($x = 0; $x < $num; $x++) {
                 echo ('
-
                 <tr>
-
-                  <td>'.$sr[$x].'</td>
-                  <td>'.$comp_name[$x].'</td>
-                  <td>'.$i_pos[$x].'</td>
+                  <td>'.$intern_sr[$x].'</td>
+                  <td>'.$intern_fname[$x].' '.$intern_lname[$x].'</td>
+                  <td>'.$intern_institute[$x].'</td>
+                  <td><a href="https://www.internstorm.com/resume_files/'.$intern_resume[$x].'" target="_blank">'.$intern_resume[$x].'</a></td>
+                  <td>'.$intern_mail[$x].'</td>
                   <td>
-                    <a href="viewdetails_comp.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">Interns Details</a>
+                  <div class="btn-group" role="group" aria-label="...">
+                      <a href="#" class="btn btn-info">Shorlist</a>
+                      <a href="#" class="btn btn-success">Selected</a>
+                      <a href="#" class="btn btn-danger">Rejected</a>
+                </div>
                   </td>
-
                 </tr>
 
               ');
               }
-          */  ?>
+           ?>
               </tbody>
             </table>
           </div>
