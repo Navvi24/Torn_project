@@ -155,7 +155,7 @@
           </li>
           <li class="nav-item">
             <a href="details_comp.php" class="nav-link">
-              <i class="nav-icon far fa-address-book"></i>
+              <i class="nav-icon far fa-building"></i>
               <p>
                 Company Details
               </p>
