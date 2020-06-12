@@ -172,7 +172,7 @@ s0.parentNode.insertBefore(s1,s0);
              </div>
              <div class="row form-group">
                <div class="col-md-12 mb-3 mb-md-0">
-                 <label class="font-weight-bold" for="lastname">Have Referral Code?</label><small>&nbsp;(Optional)</small>
+                 <label class="font-weight-bold" for="lastname">Have a referral code?</label><small>&nbsp;(Optional)</small>
                  <input type="text" id="fullname" class="form-control" placeholder="Enter your referral code" name="refer">
                </div>
              </div>
