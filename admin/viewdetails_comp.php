@@ -27,6 +27,7 @@ $error = "";
   $intern_institute = array();
   $intern_resume = array();
   $intern_mail = array();
+  $intern_status = array();
   $num = 0;
     $sql = "SELECT * FROM active_internship where sr=$id";
     $result = mysqli_query($con, $sql);
@@ -63,6 +64,7 @@ if (mysqli_num_rows($result2) > 0)
     $intern_institute[$num] = $row["internclg"];
     $intern_resume[$num] = $row["internres"];
     $intern_mail[$num] = $row["internmail"];
+    $intern_status[$num] = $row["status"];
     $num = $num + 1;
   }
 }
@@ -160,6 +162,7 @@ else {
                 <th>Institute</th>
                 <th>Resume</th>
                 <th>Email</th>
+                <th>Status</th>
                 <th>Options</th>
               </tr>
             </thead>
@@ -173,11 +176,12 @@ else {
                   <td>'.$intern_institute[$x].'</td>
                   <td><a href="https://www.internstorm.com/resume_files/'.$intern_resume[$x].'" target="_blank">'.$intern_resume[$x].'</a></td>
                   <td>'.$intern_mail[$x].'</td>
+                  <td>'.$intern_status[$x].'</td>
                   <td>
                   <div class="btn-group" role="group" aria-label="...">
-                      <a href="#" class="btn btn-info">Shorlist</a>
-                      <a href="#" class="btn btn-success">Selected</a>
-                      <a href="#" class="btn btn-danger">Rejected</a>
+                      <a href="shortlist.php?asr='.$intern_sr[$x].'&csr='.$id.'" class="btn btn-info">Shortlist</a>
+                      <a href="selected.php?asr='.$intern_sr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
+                      <a href="rejected.php?asr='.$intern_sr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
                 </div>
                   </td>
                 </tr>

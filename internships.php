@@ -9,6 +9,9 @@ include('inputdata/appliedmail.php');
    $sql="";
    $arg="";
    $app="";
+   $intern_status = "";
+   $check_mail = "";
+   $check_csr = "";
    $temp ="0";
    $num = 0;
    $default_web = "#";
@@ -140,9 +143,6 @@ else
 }
 
 
-
-
-   $con->close();
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -173,55 +173,55 @@ else
     <link rel="stylesheet" href="css/style.css">
 
       <style>
-.dropbtn {
-  background-color: #6c63ff;
-  color: white;
-  padding: 10px;
-  font-size: 14px;
-  border: none;
-}
+        .dropbtn {
+          background-color: #6c63ff;
+          color: white;
+          padding: 10px;
+          font-size: 14px;
+          border: none;
+        }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
 
-.dropdown-content a:hover {background-color: #ddd;}
+        .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-.job-post-item .one-forth {width: 222px;}
-.i_head{color: #17a2b8;}
-.i_data{color: black;}
-.disable-links { pointer-events: none;}
-#namelink
-{
-  color: black;
-}
-@media(max-width: 500px)
-{
-    #namelink{
-      color:white;
-    }
-}
-</style>
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        .job-post-item .one-forth {width: 222px;}
+        .i_head{color: #17a2b8;}
+        .i_data{color: black;}
+        .disable-links { pointer-events: none;}
+        #namelink
+        {
+          color: black;
+        }
+        @media(max-width: 500px)
+        {
+            #namelink{
+              color:white;
+            }
+        }
+      </style>
 
 
   </head>
@@ -230,15 +230,15 @@ else
 
      <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5ea28b3e69e9320caac6d3c2/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5ea28b3e69e9320caac6d3c2/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
 </script>
 <!--End of Tawk.to Script-->
   <body>
@@ -275,8 +275,8 @@ s0.parentNode.insertBefore(s1,s0);
                 <center><h2 class="mb-4">Opportunities</h2></center>
               </div>
             </div>
-              
-                  <form class="pt-3 pb-2 mb-3" method="get">
+
+        <form class="pt-3 pb-2 mb-3" method="get">
           <div class="form-row">
             <div class="form-group col-md-9">
               <input value="<?php echo($arg);?>" name="query" type="text" class="form-control" id="inputAddress"
@@ -296,8 +296,6 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
           </div>
         </form>
-              
-              
             <div class="row">
               <?php
 
@@ -310,8 +308,61 @@ s0.parentNode.insertBefore(s1,s0);
                         <h2 class="mr-3 text-black"><a href="#">'.$i_pos1[$x].'</a></h2>
                         <div class="badge-wrap">
                          <span class="bg-primary text-white badge py-2 px-3">'.$i_details[$x].'</span>
-                        </div>
-                      </div>
+                        </div>');
+                        $sql3= "SELECT status,internmail,csr from applied where csr = '$serial[$x]' AND internmail = '$login_session'";
+                        $result = $con->query($sql3);
+                        if ($result->num_rows > 0)
+                        {
+                          while($row = $result->fetch_assoc())
+                          {
+                              $intern_status = $row['status'];
+                              $check_mail = $row['internmail'];
+                              $check_csr = $row['csr'];
+                          }
+                        }
+                        if($login_session == $check_mail AND $check_csr == $serial[$x])
+                        {
+                          if($intern_status == "shortlisted")
+                          {
+                            echo('
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class=" badge-wrap">
+                                 <span class="bg-info text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                </div>
+                              ');
+                          }
+                        else if($intern_status == "selected")
+                          {
+                            echo('
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class=" badge-wrap">
+                                 <span class="bg-success text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                </div>
+                              ');
+                          }
+                          else if($intern_status == "rejected")
+                            {
+                              echo('
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  <div class=" badge-wrap">
+                                   <span class="bg-danger text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                  </div>
+                                ');
+                            }
+                          else
+                          {
+                            echo('
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class=" badge-wrap">
+                                 <span class="bg-warning text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                </div>
+                              ');
+                          }
+                        }
+                      else {
+
+                      }
+                  echo('    </div>
                       <div class="job-post-item-body d-block d-md-flex">
                         <div class="mr-3"><span class="icon-layers"></span> <a href="'.$comp_web[$x].'" target="_blank">'.$comp_name[$x].'</a></div>
                         <div class="mr-3"><span class="icon-my_location"></span> <span>'.$city[$x].', '.$state[$x].'</span></div>

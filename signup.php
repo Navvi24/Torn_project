@@ -170,6 +170,12 @@ s0.parentNode.insertBefore(s1,s0);
                  <input type="number" id="nmsg" class="form-control" maxlength="10" placeholder="Enter your Phone number" name="phn" onKeyDown="textCounter(this.form.nmsg,this.form.countDisplay);" onKeyUp="textCounter(this.form.nmsg,this.form.countDisplay);" required>
                </div>
              </div>
+             <div class="row form-group">
+               <div class="col-md-12 mb-3 mb-md-0">
+                 <label class="font-weight-bold" for="lastname">Have Referral Code?</label><small>&nbsp;(Optional)</small>
+                 <input type="text" id="fullname" class="form-control" placeholder="Enter your referral code" name="refer">
+               </div>
+             </div>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="username">Enter Your Email</label>

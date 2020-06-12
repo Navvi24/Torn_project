@@ -5,6 +5,7 @@ $lname    = "";
 $mailerr  ="";
 $phn      = "";
 $email    = "";
+$refer   = "";
 $password = "";
 $files = "";
 $tmp_name = "";
@@ -25,6 +26,8 @@ if(!empty($_POST['signup']))
       //  echo $lname;
     $phn = mysqli_real_escape_string($con, $_POST['phn']);
        // echo $phn;
+    $refer = mysqli_real_escape_string($con, $_POST['refer']);
+          // echo $referralcode;
     $email = mysqli_real_escape_string($con, $_POST['email']);
        // echo $email;
     $clg =  mysqli_real_escape_string($con, $_POST['college']);
@@ -56,8 +59,8 @@ if(!empty($_POST['signup']))
     }
     else if($filename == "")
     {
-      $sql="INSERT INTO logindetails (fname, lname, phn,  mail, college, password,resume_url)
-             VALUES('$fname','$lname','$phn','$email','$clg','$password','$filename')";
+      $sql="INSERT INTO logindetails (refer, fname, lname, phn,  mail, college, password, resume_url)
+             VALUES('$refer','$fname','$lname','$phn','$email','$clg','$password','$filename')";
 
          if (!mysqli_query($con,$sql)) {
            $error = "Error: ".mysqli_error($con);
