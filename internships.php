@@ -13,6 +13,7 @@ include('inputdata/appliedmail.php');
    $check_mail = "";
    $check_csr = "";
    $temp ="0";
+   $resume ="";
    $num = 0;
    $default_web = "#";
    $allapp                   =array();
@@ -126,16 +127,18 @@ else{
 
 
 }
-$sql2 = "SELECT applied FROM logindetails WHERE mail='$login_session'";
+$sql2 = "SELECT applied,resume_url FROM logindetails WHERE mail='$login_session'";
 $result = $con->query($sql2);
 
 if ($result->num_rows > 0)
 {
     while($row = $result->fetch_assoc())
-    {
+            
+    {   $resume = $row["resume_url"];
         $app = $row["applied"];
         $allapp = explode(";", $app);
     }
+  
 }
 else
 {
@@ -143,7 +146,75 @@ else
 }
 
 
- ?>
+
+?>
+
+
+
+<?php
+if(empty($resume)){?>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+        $('#myModal').modal({
+    backdrop: 'static',
+    keyboard: false
+})  
+	});
+</script>
+<style>
+    .bs-example{
+    	margin: 15px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Please Fill These Details  First</h5>
+                </div>
+                <form action="./inputdata/res.php"; class="p-5 bg-white"; method="post"; enctype="multipart/form-data">
+                <div class="modal-body">
+                    
+               
+                  <label class="font-weight-bold" for="firstname">College/Institution</label>
+                  <input type="text" id="college" class="form-control" placeholder="Enter your College/Institution" name="college" required>
+             
+              
+                     
+                
+                  <label class="font-weight-bold" for="firstname">Select Your Resume</label>
+                      
+                  <input type="file" id="fullname" class="form-control"  name="file" required>
+           <label class="font-weight-bold" for="firstname">Upload file must be in .pdf and .docx format</label>
+              
+                </div>
+                <div class="modal-footer">
+                  
+                    <button type="submit" class="btn btn-primary" name="signup">Submit</button>
+                    
+                </div></form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<?php  }
+?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
