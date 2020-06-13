@@ -14,6 +14,7 @@ include('inputdata/appliedmail.php');
    $check_csr = "";
    $temp ="0";
    $resume ="";
+   $clg = "";
    $num = 0;
    $default_web = "#";
    $allapp                   =array();
@@ -38,7 +39,6 @@ include('inputdata/appliedmail.php');
    $stipend_amt              =array();
    $stipend_method           =array();
    $perks                    =array();
-
 
 if(isset($_GET['query']) && !empty($_GET['query']) ){
 
@@ -127,18 +127,19 @@ else{
 
 
 }
-$sql2 = "SELECT applied,resume_url FROM logindetails WHERE mail='$login_session'";
+$sql2 = "SELECT applied,resume_url,college FROM logindetails WHERE mail='$login_session'";
 $result = $con->query($sql2);
 
 if ($result->num_rows > 0)
 {
     while($row = $result->fetch_assoc())
-            
-    {   $resume = $row["resume_url"];
+
+    {   $clg = $row["college"];
+        $resume = $row["resume_url"];
         $app = $row["applied"];
         $allapp = explode(";", $app);
     }
-  
+
 }
 else
 {
@@ -152,7 +153,7 @@ else
 
 
 <?php
-if(empty($resume)){?>
+if(empty($resume) || empty($clg)){?>
    <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -165,11 +166,11 @@ if(empty($resume)){?>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
 	$(document).ready(function(){
-		
+
         $('#myModal').modal({
     backdrop: 'static',
     keyboard: false
-})  
+})
 	});
 </script>
 <style>
@@ -186,27 +187,18 @@ if(empty($resume)){?>
                 <div class="modal-header">
                     <h5 class="modal-title">Please Fill These Details  First</h5>
                 </div>
-                <form action="./inputdata/res.php"; class="p-5 bg-white"; method="post"; enctype="multipart/form-data">
+                <form action="./inputdata/res.php" class="p-5 bg-white" method="post">
                 <div class="modal-body">
-                    
-               
                   <label class="font-weight-bold" for="firstname">College/Institution</label>
                   <input type="text" id="college" class="form-control" placeholder="Enter your College/Institution" name="college" required>
-             
-              
-                     
-                
                   <label class="font-weight-bold" for="firstname">Select Your Resume</label>
-                      
-                  <input type="file" id="fullname" class="form-control"  name="file" required>
-           <label class="font-weight-bold" for="firstname">Upload file must be in .pdf and .docx format</label>
-              
+                  <input type="file" id="fullname" class="form-control"  name="files" required>
+                  <label class="font-weight-bold" for="firstname">Upload file must be in .pdf and .docx format</label>
                 </div>
                 <div class="modal-footer">
-                  
-                    <button type="submit" class="btn btn-primary" name="signup">Submit</button>
-                    
-                </div></form>
+                    <input type="submit" class="btn btn-primary form-control" name="send">
+                </div>
+              </form>
             </div>
         </div>
     </div>
