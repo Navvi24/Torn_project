@@ -1,4 +1,5 @@
 <?php
+$url="";
   ob_start();
     include 'applied_email_layout.php';
     $mailbody = ob_get_clean();
@@ -27,7 +28,7 @@ if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
                     $mail->addReplyTo('admin@internstorm.com');
                     //$mail->addCC('cc@example.com');
                     //$mail->addBCC('bcc@example.com');
-                    //$mail->AddEmbeddedImage('../images/Logo_white.png','logo');
+                    $mail->AddEmbeddedImage('Logo_white.png','logo');
                     //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
                     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
                     $mail->isHTML(true);                                  // Set email format to HTML
@@ -41,7 +42,7 @@ if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
                         echo 'Message could not be sent.';
                         echo 'Mailer Error: ' . $mail->ErrorInfo;
                     } else {
-                      //header("Location : ../internships.php");
+                      $url = 1000;
                     }
         }
         else{}

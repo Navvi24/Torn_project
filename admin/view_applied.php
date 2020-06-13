@@ -13,6 +13,7 @@ $error = "";
   $intern_email                    = "";
   $intern_phone                    = "";
   $intern_resume                    = "";
+  $intern_clg                        = "";
   $comp_name                    = "";
   $comp_pos                    = "";
   $comp_web                    = "";
@@ -36,6 +37,7 @@ $error = "";
           $intern_fname   = $row["internfname"];
           $intern_lname    = $row["internlname"];
           $intern_email     = $row["internmail"];
+          $intern_clg     = $row["internclg"];
           $intern_phone     = $row["internphn"];
           $intern_resume   = $row["internres"];
           $comp_name      = $row["cname"];
@@ -67,7 +69,7 @@ $error = "";
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="mainpage.php">Home</a></li>
             <li class="breadcrumb-item active">View More</li>
           </ol>
         </div>
@@ -104,8 +106,12 @@ $error = "";
                 <td style="width:50%"><?php echo "$intern_email"; ?></td>
               </tr>
               <tr>
+                <th style="width:30%">Intern Institution</th>
+                <td style="width:50%"><?php echo "$intern_clg"; ?></td>
+              </tr>
+              <tr>
                 <th style="width:30%">Intern Resume</th>
-                <td style="width:50%"><?php echo "$intern_resume"; ?></td>
+                <td style="width:50%"><a href="https://www.internstorm.com/resume_files/<?php echo "$intern_resume"; ?>" target="_blank"><?php echo "$intern_resume"; ?></a></td>
               </tr>
               <tr>
                 <th style="width:30%">Internship Position</th>

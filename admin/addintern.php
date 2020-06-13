@@ -27,7 +27,7 @@ else
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="Mainpage.php">Home</a></li>
+            <li class="breadcrumb-item"><a href="mainpage.php">Home</a></li>
             <li class="breadcrumb-item active">Add Internship</li>
           </ol>
         </div>
@@ -200,10 +200,10 @@ else
                 <h3 class="font-weight-bold">Stipend And Perks</h3>
                 <br>
                 <div class="form-group">
-                  <label for="stipend_amount">Stipend(₹)</label> <span>(if internship is unpaid mention 0 in stipend)</span>
+                  <label for="stipend_amount">Stipend(₹)</label> <span>(if internship is unpaid or performance based so do not input any data in field)</span>
                   <div class="col-sm-12 row">
                     <div class="col-sm-6">
-                      <input type="number" id="total_opening" class="form-control" placeholder="Example : ₹5000 " name="stipend_amount" required>
+                      <input type="number" id="total_opening" class="form-control" placeholder="Example : ₹5000 " name="stipend_amount">
                       <div class="invalid-feedback">
                         Please enter stipend amount.
                       </div>
@@ -213,6 +213,8 @@ else
                         <option value="/Month">Month</option>
                         <option value="/week">week</option>
                         <option value="lump-sum">lump-sum</option>
+                        <option value="No-Stipend">No-Stipend</option>
+                        <option value="Performance Based">Performance Based</option>
                      </select>
                      <div class="invalid-feedback">Please choose duration.</div>
                     </div>
