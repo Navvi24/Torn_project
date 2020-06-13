@@ -24,25 +24,25 @@ $perks_value              ="";
 $perks_tmp_value          ="";
 if(isset($_POST['edit_sub']))
 {
-  $serial = $_POST['sno'];
-  $fname = $_POST['fname'];
-  $lname = $_POST['lname'];
-  $email = $_POST['email'];
-  $phone = $_POST['phn'];
-  $comp_name = $_POST['comp_name'];
-  $about_comp = $_POST['comp_about'];
-  $comp_web = $_POST['comp_web'];
-  $i_pos = $_POST['internship_pos'];
-  $i_details = $_POST['internship_detail'];
-  $city = $_POST['internship_city'];
-  $state = $_POST['state'];
-  $total_opening = $_POST['total_opening'];
-  $start_date = $_POST['internship_start_date'];
-  $i_duration_type = $_POST['duration_type'];
-  $i_duration = $_POST['duration_number'];
-  $i_description  = $_POST['about_internship'];
-  $stipend_amt = $_POST['stipend_amount'];
-  $stipend_method = $_POST['stipend_method'];
+  $serial = mysqli_real_escape_string($con, $_POST['sno']);
+  $fname = mysqli_real_escape_string($con, $_POST['fname']);
+  $lname = mysqli_real_escape_string($con, $_POST['lname']);
+  $email = mysqli_real_escape_string($con, $_POST['email']);
+  $phone = mysqli_real_escape_string($con, $_POST['phn']);
+  $comp_name = mysqli_real_escape_string($con, $_POST['comp_name']);
+  $about_comp = mysqli_real_escape_string($con, $_POST['comp_about']);
+  $comp_web = mysqli_real_escape_string($con, $_POST['comp_web']);
+  $i_pos = mysqli_real_escape_string($con, $_POST['internship_pos']);
+  $i_details = mysqli_real_escape_string($con, $_POST['internship_detail']);
+  $city = mysqli_real_escape_string($con, $_POST['internship_city']);
+  $state = mysqli_real_escape_string($con, $_POST['state']);
+  $total_opening = mysqli_real_escape_string($con, $_POST['total_opening']);
+  $start_date = mysqli_real_escape_string($con, $_POST['internship_start_date']);
+  $i_duration_type = mysqli_real_escape_string($con, $_POST['duration_type']);
+  $i_duration = mysqli_real_escape_string($con, $_POST['duration_number']);
+  $i_description  = mysqli_real_escape_string($con, $_POST['about_internship']);
+  $stipend_amt = mysqli_real_escape_string($con, $_POST['stipend_amount']);
+  $stipend_method = mysqli_real_escape_string($con, $_POST['stipend_method']);
   $perks = $_POST['perks'];
   foreach ($perks as $key => $perks_tmp_value)
   {
@@ -56,10 +56,12 @@ if(isset($_POST['edit_sub']))
 
   if(mysqli_query($con,$sql))
   {
-    header("Location: postintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
+   header("Location: postintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=1010");
   }
   else
   {
+   //$error = "Error: ".mysqli_error($con);
+    
     header("Location: postintern.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
   }
 }
