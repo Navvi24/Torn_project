@@ -88,14 +88,12 @@
       <tr>
         <td class="innerpadding borderbottom">
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td class="h2">
-                Congratulations! Your Internship Listing Is Now Active!
-              </td>
-            </tr>
-            <tr>
               <td class="bodycopy">
-                Please contact <a href="mailto:support@internstorm.com" target="_blank">support@internstorm.com</a> for any queries.<br><br>
+              Greetings Intern! <br>
+              <p>We were right when we said that we saw the spark! We’re so happy to have you placed in the company you desired!</p>
+                <p>We're so proud of you for doing well on the interviews and bagging the opportunity you deserved! We cannot wait to connect with you and see you do your best as an intern!</p>
+                <p>You’ve been summoned to do your best! Make yourself proud, Intern!</p>
+                <p>If you have absolutely any queries, please revert to us at hello@interstorm.com.</p>
                 Regards,<br>
                 Team Internstorm.
               </td>
@@ -109,6 +107,8 @@
                           </td>
                         </tr>
                     </table>
+                    <br>
+                    <br>
                 </td>
              </tr>
           </table>

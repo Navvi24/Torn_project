@@ -89,13 +89,12 @@
         <td class="innerpadding borderbottom">
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
-              <td class="h2">
-                Congratulations! Your Internship Listing Is Now Active!
-              </td>
-            </tr>
-            <tr>
               <td class="bodycopy">
-                Please contact <a href="mailto:support@internstorm.com" target="_blank">support@internstorm.com</a> for any queries.<br><br>
+              Greetings Intern! <br>
+              <p>Opportunities are sometimes tailor made to suit some interns better than others.</p>
+                <p>We’re so sorry to inform you that you didn’t make the cut for this one! Don’t lose hope though, you have such long way to long and this only the beginning. Keep an eye on your dashboard and our social media platforms for more interesting opportunities!</p>
+                <p>Better things come to those who wait, don’t they? Great things are coming your way, Intern!</p>
+                <p>If you have absolutely any queries, please revert to us at hello@interstorm.com.</p>
                 Regards,<br>
                 Team Internstorm.
               </td>

@@ -21,7 +21,10 @@ $error = "";
   $stipend_amt              ="";
   $stipend_method           = "";
 
+  $status = array();
   $intern_sr = array();
+  $asr = array();
+  $csr = array();
   $intern_fname = array();
   $intern_lname = array();
   $intern_institute = array();
@@ -29,6 +32,7 @@ $error = "";
   $intern_mail = array();
   $intern_status = array();
   $num = 0;
+  $val = 0;
     $sql = "SELECT * FROM active_internship where sr=$id";
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
@@ -58,7 +62,9 @@ if (mysqli_num_rows($result2) > 0)
 {
   while ($row = mysqli_fetch_assoc($result2))
   {
-    $intern_sr[$num]     = $row["sr"];
+    $asr[$num]  =  $row["sr"];
+    $csr[$num]  = $row["csr"];
+    $intern_sr[$num]     = $row["internsr"];
     $intern_fname[$num] = $row["internfname"];
     $intern_lname[$num] = $row["internlname"];
     $intern_institute[$num] = $row["internclg"];
@@ -72,7 +78,6 @@ else {
   echo "0";
 }
 
-  $con->close();
 ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -176,17 +181,82 @@ else {
                   <td>'.$intern_institute[$x].'</td>
                   <td><a href="https://www.internstorm.com/resume_files/'.$intern_resume[$x].'" target="_blank">'.$intern_resume[$x].'</a></td>
                   <td>'.$intern_mail[$x].'</td>
-                  <td>'.$intern_status[$x].'</td>
-                  <td>
-                  <div class="btn-group" role="group" aria-label="...">
-                      <a href="shortlist.php?asr='.$intern_sr[$x].'&csr='.$id.'" class="btn btn-info">Shortlist</a>
-                      <a href="selected.php?asr='.$intern_sr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
-                      <a href="rejected.php?asr='.$intern_sr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
-                </div>
-                  </td>
-                </tr>
+                  <td>'.$intern_status[$x].'</td> ');
 
-              ');
+                  $sql3 = "SELECT status from applied where sr = '$asr[$x]' AND csr = '$csr[$x]'";
+                  $result3 = mysqli_query($con, $sql3);
+                  if (mysqli_num_rows($result3) > 0)
+                  {
+                    while ($row = mysqli_fetch_assoc($result3))
+                    {
+                      $status[$val] = $row["status"];
+                      $val = $val + 1;
+                    }
+                  }
+                  else {
+                    echo "0";
+                  }
+
+                  if($status[$x] == "waiting")
+                  {
+                  echo('
+                      <td>
+                        <div class="btn-group" role="group" aria-label="...">
+                          <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info">Shortlist</a>
+                          <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
+                          <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                          </div>
+                      </td>
+                    </tr>
+                    ');
+                  }
+                  else if($status[$x] == "shortlisted")
+                  {
+                    echo('
+                        <td>
+                          <div class="btn-group" role="group" aria-label="...">
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                            </div>
+                        </td>
+                      </tr>
+                      ');
+                  }
+                  else if($status[$x] == "selected")
+                  {
+                    echo('
+                        <td>
+                          <div class="btn-group" role="group" aria-label="...">
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
+                            </div>
+                        </td>
+                      </tr>
+                      ');
+                  }
+                  else if($status[$x] == "rejected")
+                  {
+                    echo('
+                        <td>
+                          <div class="btn-group" role="group" aria-label="...">
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                            </div>
+                        </td>
+                      </tr>
+                      ');
+                  }
+                  else
+                  {
+                    echo('
+                        <td>
+                          <div class="btn-group" role="group" aria-label="...">
+                            <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info">Shortlist</a>
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                            </div>
+                        </td>
+                      </tr>
+                      ');
+                  }
               }
            ?>
               </tbody>
