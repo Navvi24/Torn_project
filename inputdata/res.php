@@ -1,15 +1,13 @@
 <?php
-print_r($_POST);
+//print_r($_POST);
 include("connect.php");
 include("session.php");
 $clg = "";
 $files = "";
 $tmp_name = "";
-$filename = "";
 $ext = "";
-
-$filename = $_POST['files'];
-$tmp_name = $_POST['files'];
+$filename = $_FILES["pdf"]["name"];
+$tmp_name = $_FILES["pdf"]["tmp_name"];
 $ext = pathinfo($filename, PATHINFO_EXTENSION);
 //print_r($_POST);
 if(isset($_POST['send']))
@@ -26,14 +24,18 @@ if(isset($_POST['send']))
 
         if (!mysqli_query($con,$sql)) {
           $error = "Error: ".mysqli_error($con);
-         echo "$error";
-         //header("Location: ../internship.php");
+         //echo "$error";
+         header("Location: ../internships.php");
             }else{
                $msg = "signup successfully";
                //echo "$msg";
                // $description = "";
                header("Location: ../internships.php");
             }
+    }
+    else
+    {
+       header("Location: ../internships.php");
     }
 
 

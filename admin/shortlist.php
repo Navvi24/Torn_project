@@ -1,4 +1,4 @@
-<?php
+<?php 
 include("connect.php");
 ob_start();
 include 'shortlist_mail.php';

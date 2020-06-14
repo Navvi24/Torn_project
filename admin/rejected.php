@@ -1,4 +1,4 @@
-<?php
+<?php 
 include("connect.php");
 ob_start();
 include 'reject_mail.php';

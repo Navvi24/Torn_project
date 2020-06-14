@@ -187,12 +187,12 @@ if(empty($resume) || empty($clg)){?>
                 <div class="modal-header">
                     <h5 class="modal-title">Please Fill These Details  First</h5>
                 </div>
-                <form action="./inputdata/res.php" class="p-5 bg-white" method="post">
+                <form action="./inputdata/res.php"; class="p-5 bg-white"; method="post"; enctype="multipart/form-data">
                 <div class="modal-body">
                   <label class="font-weight-bold" for="firstname">College/Institution</label>
                   <input type="text" id="college" class="form-control" placeholder="Enter your College/Institution" name="college" required>
                   <label class="font-weight-bold" for="firstname">Select Your Resume</label>
-                  <input type="file" id="fullname" class="form-control"  name="files" required>
+                  <input type="file" id="file" class="form-control"  name="pdf" required>
                   <label class="font-weight-bold" for="firstname">Upload file must be in .pdf and .docx format</label>
                 </div>
                 <div class="modal-footer">

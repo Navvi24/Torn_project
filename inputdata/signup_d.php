@@ -1,7 +1,9 @@
 <?php
    include("connect.php");
+   print_r($_POST);
+   print_r($_FILES);
 $fname    = "";
-$lname    = ""; 
+$lname    = "";
 $mailerr  ="";
 $phn      = "";
 $email    = "";

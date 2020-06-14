@@ -1,5 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
     body {margin: 0; padding: 0; min-width: 100%!important;}
