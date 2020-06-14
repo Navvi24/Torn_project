@@ -202,9 +202,9 @@ else {
                   echo('
                       <td>
                         <div class="btn-group" role="group" aria-label="...">
-                          <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info" onclick="myFunction()">Shortlist</a>&nbsp;&nbsp;
-                          <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()" >Selected</a>&nbsp;&nbsp;
-                          <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger"onclick="myFunction()" >Rejected</a>&nbsp;&nbsp;
+                          <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-info">Shortlist</a>&nbsp;&nbsp;
+                          <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-success">Selected</a>&nbsp;&nbsp;
+                          <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-danger">Rejected</a>&nbsp;&nbsp;
                           </div>
                       </td>
                     </tr>
@@ -215,8 +215,8 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()" >Selected</a>&nbsp;&nbsp;
-                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger" onclick="myFunction()" >Rejected</a>&nbsp;&nbsp;
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-success">Selected</a>&nbsp;&nbsp;
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-danger">Rejected</a>&nbsp;&nbsp;
                             </div>
                         </td>
                       </tr>
@@ -227,7 +227,7 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()">Selected</a>&nbsp;&nbsp;
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-success">Selected</a>&nbsp;&nbsp;
                             </div>
                         </td>
                       </tr>
@@ -238,7 +238,7 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger" onclick="myFunction()" >Rejected</a>&nbsp;&nbsp;
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-danger">Rejected</a>&nbsp;&nbsp;
                             </div>
                         </td>
                       </tr>
@@ -249,9 +249,9 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info" onclick="myFunction()" >Shortlist</a>&nbsp;&nbsp;
-                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()" >Selected</a>&nbsp;&nbsp;
-                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger"onclick="myFunction()" >Rejected</a>&nbsp;&nbsp;
+                            <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-info">Shortlist</a>&nbsp;&nbsp;
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-success">Selected</a>&nbsp;&nbsp;
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="confirmation btn btn-danger">Rejected</a>&nbsp;&nbsp;
                             </div>
                         </td>
                       </tr>
@@ -261,6 +261,15 @@ else {
            ?>
               </tbody>
             </table>
+            <script type="text/javascript">
+    var elems = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) {
+        if (!confirm('Are you sure?')) e.preventDefault();
+    };
+    for (var i = 0, l = elems.length; i < l; i++) {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
+</script>
           </div>
           <!-- /.card-body -->
         </div>
@@ -284,12 +293,3 @@ else {
        }
     }
     </script>
-<script>
-function myFunction() {
-  a = confirm("confirm to yes")
-  if(a==false)
-  {
-    window.location.href='viewdetails_comp.php';
-      };
-}
-</script>
