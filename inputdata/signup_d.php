@@ -1,7 +1,7 @@
 <?php
    include("connect.php");
 $fname    = "";
-$lname    = "";
+$lname    = ""; 
 $mailerr  ="";
 $phn      = "";
 $email    = "";

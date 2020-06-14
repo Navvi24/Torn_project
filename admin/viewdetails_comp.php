@@ -202,9 +202,9 @@ else {
                   echo('
                       <td>
                         <div class="btn-group" role="group" aria-label="...">
-                          <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info">Shortlist</a>
-                          <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
-                          <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                          <input type="submit" value="Shortlist"<a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info" onclick="myFunction()"></a>>
+                          <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()" >Selected</a>
+                          <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger"onclick="myFunction()" >Rejected</a>
                           </div>
                       </td>
                     </tr>
@@ -215,8 +215,8 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
-                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()" >Selected</a>
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger" onclick="myFunction()" >Rejected</a>
                             </div>
                         </td>
                       </tr>
@@ -227,7 +227,7 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()">Selected</a>
                             </div>
                         </td>
                       </tr>
@@ -238,7 +238,7 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger" onclick="myFunction()" >Rejected</a>
                             </div>
                         </td>
                       </tr>
@@ -249,9 +249,9 @@ else {
                     echo('
                         <td>
                           <div class="btn-group" role="group" aria-label="...">
-                            <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info">Shortlist</a>
-                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success">Selected</a>
-                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger">Rejected</a>
+                            <a href="shortlist.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-info" onclick="myFunction()" >Shortlist</a>
+                            <a href="selected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-success" onclick="myFunction()" >Selected</a>
+                            <a href="rejected.php?asr='.$asr[$x].'&csr='.$id.'" class="btn btn-danger"onclick="myFunction()" >Rejected</a>
                             </div>
                         </td>
                       </tr>
@@ -284,3 +284,12 @@ else {
        }
     }
     </script>
+<script>
+function myFunction() {
+  a = confirm("confirm to yes")
+  if(a==false)
+  {
+    window.location.href='viewdetails_comp.php';
+      };
+}
+</script>
