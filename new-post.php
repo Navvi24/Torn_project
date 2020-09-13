@@ -236,6 +236,15 @@ s0.parentNode.insertBefore(s1,s0);
                         <label class="font-weight-bold" for="company_website">Company Website</label><span>(Optional)</span>
                         <input type="url" id="company_website" class="form-control" placeholder="Example : https://www.internstorm.com" name="comp_web">
                       </div>
+                        
+                  
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="firstname">Select Your Compnay Logo</label>
+                  <input type="file" id="company_logo" class="form-control"  name="company_logo" required>
+                </div>
+              
+                        
+                        
                     </div>
                     <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.previous()"/>
                     <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.next()"/>
