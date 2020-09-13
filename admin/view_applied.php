@@ -110,6 +110,10 @@ $error = "";
                 <td style="width:50%"><?php echo "$intern_clg"; ?></td>
               </tr>
               <tr>
+                <th style="width:30%">Intern Institution</th>
+                <td style="width:50%"><?php echo "$intern_clg"; ?></td>
+              </tr>
+              <tr>
                 <th style="width:30%">Intern Resume</th>
                 <td style="width:50%"><a href="https://www.internstorm.com/resume_files/<?php echo "$intern_resume"; ?>" target="_blank"><?php echo "$intern_resume"; ?></a></td>
               </tr>

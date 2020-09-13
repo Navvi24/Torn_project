@@ -7,7 +7,7 @@ $error = "";
   $msg = "";
   $sql="";
   $arg="";
-$id = "";
+  $id="";
   $sr                       =array();
   $post_time                =array();
   $comp_name                =array();
@@ -41,6 +41,7 @@ $id = "";
       }
     }
   $con->close();
+
   if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
   {
    $id = $_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'];
@@ -78,7 +79,7 @@ $id = "";
       <div class="row">
         <div class="col-12">
           <div class="card">
-                <?php if ($id == 1010) {?>
+            <?php if ($id == 1010) {?>
               <div class="alert alert-success" role="alert">
                 <?php echo "Internship sucessfully updated."; ?>
               </div>
@@ -138,7 +139,7 @@ $id = "";
                     <td>'.$start_date[$x].'</td>
                     <td>'.$stipend_amt[$x].'</td>
                     <td>'.$perks[$x].'</td>
-                     <td>
+                    <td>
                     <a href="viewintern.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a><br>
                     <div class="row"  style="margin-top:20px; width:100px;padding:5px;">
                     <a href="deleteposted.php?id='.$sr[$x].'" class="btn btn-danger" style="margin-right:5px;"><i class="fas fa-trash"></i></a>

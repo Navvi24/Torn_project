@@ -90,8 +90,15 @@
             <tr>
               <td class="bodycopy">
               Greetings Intern! <br>
+<<<<<<< HEAD
                 <p>Congratulations on being shortlisted for internship. We will be in touch with you in the next 2-3 business days.</p>
                 <p>If you have any queries, please revert to us at hello@interstorm.com.</p>
+=======
+              <p>We always believed you had a special spark and we write to inform you making the cut for the application! We’re so happy to have been able to help. Things are only going to be uphill from here. You will now be put through our companies selection process and interviews through one of our team members. We cannot wait to connect with you!</p>
+                <p>Better things come to those who wait, don’t they? Great things are coming your way, Intern!</p>
+                <p>Better things come to those who wait, don’t they? Great things are coming your way, Intern!</p>
+                <p>If you have absolutely any queries, please revert to us at hello@interstorm.com.</p>
+>>>>>>> ad7a6730344041e1eafaa59c005dee9b57aa667d
                 Regards,<br>
                 Team Internstorm.
               </td>

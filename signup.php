@@ -203,7 +203,7 @@ s0.parentNode.insertBefore(s1,s0);
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="firstname">Select Your Resume</label>
-                  <input type="file" id="fullname" class="form-control"  name="file">
+                  <input type="file" id="fullname" class="form-control"  name="file" required>
                 </div>
               </div>
               <div class="row form-group">
