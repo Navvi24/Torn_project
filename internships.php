@@ -127,24 +127,9 @@ else{
 
 
 }
-$sql2 = "SELECT applied,resume_url,college FROM logindetails WHERE mail='$login_session'";
-$result = $con->query($sql2);
 
-if ($result->num_rows > 0)
-{
-    while($row = $result->fetch_assoc())
 
-    {   $clg = $row["college"];
-        $resume = $row["resume_url"];
-        $app = $row["applied"];
-        $allapp = explode(";", $app);
-    }
 
-}
-else
-{
-    echo "0 results";
-}
 
 
 
@@ -152,8 +137,8 @@ else
 
 
 
-<?php
-if(empty($resume) || empty($clg)){?>
+
+
    <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -180,33 +165,10 @@ if(empty($resume) || empty($clg)){?>
 </style>
 </head>
 <body>
-<div class="bs-example">
-    <div id="myModal" class="modal fade" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Please Fill These Details  First</h5>
-                </div>
-                <form action="./inputdata/res.php"; class="p-5 bg-white"; method="post"; enctype="multipart/form-data">
-                <div class="modal-body">
-                  <label class="font-weight-bold" for="firstname">College/Institution</label>
-                  <input type="text" id="college" class="form-control" placeholder="Enter your College/Institution" name="college" required>
-                  <label class="font-weight-bold" for="firstname">Select Your Resume</label>
-                  <input type="file" id="file" class="form-control"  name="pdf" required>
-                  <label class="font-weight-bold" for="firstname">Upload file must be in .pdf and .docx format</label>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary form-control" name="send">
-                </div>
-              </form>
-            </div>
-        </div>
-    </div>
-</div>
+
 </body>
 </html>
-<?php  }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
  <head>

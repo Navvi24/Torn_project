@@ -1,7 +1,5 @@
 <?php
    include("connect.php");
-   print_r($_POST);
-   print_r($_FILES);
 $fname    = "";
 $lname    = "";
 $mailerr  ="";
@@ -45,7 +43,7 @@ if(!empty($_POST['signup']))
     //print_r($ext);
     if (in_array($ext, array("pdf", "docx", "doc")))
     {
-     $filename = rand().' '.$email.'.'.$ext;
+     $filename = rand().'_'.$email.'.'.$ext;
      move_uploaded_file($tmp_name, "../resume_files/$filename");
      $sql="INSERT INTO logindetails (fname, lname, phn,  college, mail, password,resume_url)
             VALUES('$fname','$lname','$phn','$clg','$email','$password','$filename')";
