@@ -186,7 +186,7 @@ s0.parentNode.insertBefore(s1,s0);
                 </div>
               </div>
               <div class="bs-stepper-content">
-                <form class="needs-validation p-5 bg-white" action="inputdata/post_d.php" method="post" novalidate>
+                <form class="needs-validation p-5 bg-white"; action="inputdata/post_d.php"; method="post"; enctype="multipart/form-data" novalidate>
                   <div id="test-l-1" class="content">
                     <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
@@ -236,15 +236,26 @@ s0.parentNode.insertBefore(s1,s0);
                         <label class="font-weight-bold" for="company_website">Company Website</label><span>(Optional)</span>
                         <input type="url" id="company_website" class="form-control" placeholder="Example : https://www.internstorm.com" name="comp_web">
                       </div>
-                        
-                  
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="firstname">Select Your Compnay Logo</label>
-                  <input type="file" id="company_logo" class="form-control"  name="company_logo" required>
-                </div>
-              
-                        
-                        
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="font-weight-bold" for="firstname">Select Your Compnay Logo</label>
+                        <input type="file" id="company_logo" class="form-control" name="company_logo" accept="image/*" onchange="loadFile(event)" required>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <img id="output" height="200px" width="200px"/>
+                        <script>
+                          var loadFile = function(event) {
+                            var output = document.getElementById('output');
+                            output.src = URL.createObjectURL(event.target.files[0]);
+                            output.onload = function() {
+                              URL.revokeObjectURL(output.src)
+                            }
+                          };
+                        </script>
+                      </div>
                     </div>
                     <input type="button" value="Previous" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.previous()"/>
                     <input type="button" value="Next" class="btn btn-primary btn-next-form py-2 px-10" onclick="stepper1.next()"/>

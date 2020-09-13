@@ -1,7 +1,7 @@
 <?php
 include("./inputdata/connect.php");
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
  <head>
     <title>STORM</title><link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">

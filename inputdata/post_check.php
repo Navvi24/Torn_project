@@ -16,6 +16,21 @@ function JSalert(){
 </script>
 <?php
 }
+else if($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'] == 101000)
+{
+?>
+<script type="text/javascript">
+function JSalert(){
+  swal({
+  title: "Oh dang!",
+  text: "Please choose the appropriate company logo.",
+  icon: "error",
+  button: "CLOSE",
+});
+}JSalert();
+</script>
+<?php
+}
 else
 {
 ?>
