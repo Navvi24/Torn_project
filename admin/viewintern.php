@@ -28,6 +28,7 @@ $error = "";
   $stipend_amt              ="";
   $stipend_method           = "";
   $perks                    ="";
+  $comp_logo = "";
 
     $sql = "SELECT * FROM posted_internship where sr=$id";
     $result = mysqli_query($con, $sql);
@@ -43,6 +44,7 @@ $error = "";
           $comp_name     = $row["comp_name"];
           $about_comp    = $row["comp_about"];
           $comp_web      = $row["comp_web"];
+          $comp_logo     = $row["comp_logo"];
           $i_pos         = $row["internship_pos"];
           $i_details     = $row["internship_detail"];
           $city          = $row["internship_city"];
@@ -112,6 +114,10 @@ $error = "";
                 <td style="width:50%"><?php echo "$phone"; ?></td>
               </tr>
               <tr>
+                <th style="width:30%">Company Logo</th>
+                <td style="width:50%"><img src="http://127.0.0.1/Torn_project/company_logo/<?php echo "$comp_logo"; ?>" width="100px" height="100px"></td>
+              </tr>
+              <tr>
                 <th style="width:30%">Company Name</th>
                 <td style="width:50%"><?php echo "$comp_name"; ?></td>
               </tr>
@@ -159,7 +165,10 @@ $error = "";
                 <th style="width:30%">Perks</th>
                 <td style="width:50%"><?php echo "$perks"; ?></td>
               </tr>
-
+              <tr>
+                <th style="width:30%">Download Logo</th>
+                <td style="width:50%"><a href="http://127.0.0.1/Torn_project/company_logo/<?php echo "$comp_logo"; ?>" target="_blank" class="btn btn-info">Download</a></td>
+              </tr>
             </thead>
             </table>
             <br>
