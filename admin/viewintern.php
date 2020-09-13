@@ -115,7 +115,7 @@ $error = "";
               </tr>
               <tr>
                 <th style="width:30%">Company Logo</th>
-                <td style="width:50%"><img src="http://127.0.0.1/Torn_project/company_logo/<?php echo "$comp_logo"; ?>" width="100px" height="100px"></td>
+                <td style="width:50%"><img src="https://www.internstorm.com/company_logo/<?php echo "$comp_logo"; ?>" width="100px" height="100px"></td>
               </tr>
               <tr>
                 <th style="width:30%">Company Name</th>
@@ -167,7 +167,7 @@ $error = "";
               </tr>
               <tr>
                 <th style="width:30%">Download Logo</th>
-                <td style="width:50%"><a href="http://127.0.0.1/Torn_project/company_logo/<?php echo "$comp_logo"; ?>" target="_blank" class="btn btn-info">Download</a></td>
+                <td style="width:50%"><a href="https://www.internstorm.com/company_logo/<?php echo "$comp_logo"; ?>" target="_blank" class="btn btn-info">Download</a></td>
               </tr>
             </thead>
             </table>
