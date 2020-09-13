@@ -170,10 +170,22 @@ s0.parentNode.insertBefore(s1,s0);
                  <input type="number" id="nmsg" class="form-control" maxlength="10" placeholder="Enter your Phone number" name="phn" onKeyDown="textCounter(this.form.nmsg,this.form.countDisplay);" onKeyUp="textCounter(this.form.nmsg,this.form.countDisplay);" required>
                </div>
              </div>
+             <div class="row form-group">
+               <div class="col-md-12 mb-3 mb-md-0">
+                 <label class="font-weight-bold" for="lastname">Have a referral code?</label><small>&nbsp;(Optional)</small>
+                 <input type="text" id="fullname" class="form-control" placeholder="Enter your referral code" name="refer">
+               </div>
+             </div>
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="username">Enter Your Email</label>
                   <input type="email" id="fullname" class="form-control" placeholder="Enter your email" name="email" required>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="firstname">College/Institution</label>
+                  <input type="text" id="college" class="form-control" placeholder="Enter your College/Institution" name="college" required>
                 </div>
               </div>
               <div class="row form-group">
@@ -273,10 +285,10 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>
@@ -301,10 +313,10 @@ return true;
  if (document.getElementById('password').value ==
  document.getElementById('confirm_password').value) {
  document.getElementById('message').style.color = 'green';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is  Match';
+ document.getElementById('message').innerHTML = 'Passwords Match';
  } else {
  document.getElementById('message').style.color = 'red';
- document.getElementById('message').innerHTML = 'Password And Confirm Password Is Not Match';
+ document.getElementById('message').innerHTML = 'Passwords Don’t Match';
  }
  }
  </script>

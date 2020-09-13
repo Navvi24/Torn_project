@@ -129,9 +129,6 @@ s0.parentNode.insertBefore(s1,s0);
     		<div class="row justify-content-center">
     			<div class="col-md-10">
     				<div class="intro row text-center justify-content-center">
-    					<div class="col-md-12">
-    						<img class="img-fluid" src="images/who.jpg" style="width: 1600px;height: 500px;margin: 20px;"alt="">
-    					</div>
               <div class="col-md-12">
                 	<h2 class="mb-4"><b>Who we are</b></h2>
                   <p>We’re students who sparked the idea over chai and charcha! Who better to understand a student’s internship needs better than one of them, eh? Who are we but people who have excessive validation needs, amazing ideas, and never ending recommendations to series, movies, books, clubs, and more!</p>
@@ -158,12 +155,12 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-10">
-              <a href="new-post.php" target="_blank"> <button type="button" class="btn btn-outline-light  btn-block"> <strong><p>Are you a company ?</p></strong><br> <p style="text-align:left;">If you’re a company, we’re here to bring you the best of the lot selected carefully from the many to fit your requirements and requests. What better than to sit and sip on your coffee looking over bigger worries that need to be taken care of while we make work easier for you by bringing top-notch candidates. We agree, it’s a hard to pass off on offer, right?</p></button></a>
+              <a href="new-post.php" target="_blank"> <button type="button" class="btn btn-outline-light  btn-block"> <strong><p>Are you a company?</p></strong><br> <p style="text-align:left;">If you’re a company, we’re here to bring you the best of the lot selected carefully from the many to fit your requirements and requests. What better than to sit and sip on your coffee looking over bigger worries that need to be taken care of while we make work easier for you by bringing top-notch candidates. We agree, it’s a hard to pass off on offer, right?</p></button></a>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-5">
-              <a href="login.php" target="_blank"> <button type="button" class="btn btn-outline-light btn-block "> <strong><p>Are you a student ?</p></strong> <br> <p style="text-align:left;">Well, we indeed are your saviours in disguise! Bringing you opportunities and varied ones at that to choose from, you can officially forget what “settling for” means! with internships crafted just to your liking and need, you can say goodbye to scams and compromises. We wouldn’t go as far as to call ourselves superheroes, only if you insist.</p></button></a>
+              <a href="login.php" target="_blank"> <button type="button" class="btn btn-outline-light btn-block "> <strong><p>Are you a student?</p></strong> <br> <p style="text-align:left;">Well, we indeed are your saviours in disguise! Bringing you opportunities and varied ones at that to choose from, you can officially forget what “settling for” means! With internships crafted just to your liking and need, you can say goodbye to scams and compromises. We wouldn’t go as far as to call ourselves superheroes, only if you insist.</p></button></a>
             </div>
           </div>
         </div>
@@ -366,10 +363,10 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by Colorlib
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>

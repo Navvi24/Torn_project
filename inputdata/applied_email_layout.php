@@ -51,7 +51,7 @@
           <table width="70" align="left" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td height="70" style="padding: 0 20px 20px 0;">
-                <img class="fix" src="https://www.internstorm.com/Logo_white.png" width="70" height="70" border="0" alt="" />
+                <img class="fix" src="cid:logo" width="70" height="70" border="0" alt="" />
               </td>
             </tr>
           </table>
@@ -96,7 +96,7 @@
             <tr>
               <td class="bodycopy">
                 Greetings!<br><br>
-                You have successfully scheduled the interview for this internship. You shall be contacted by Team Internstorm shortly.<br><br>
+                Thank you for applying, We will be in touch with you in the next 5-7 business days.<br><br>
                 Regards,<br>
                 Team Internstorm.
               </td>

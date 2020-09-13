@@ -37,7 +37,7 @@ function countsub( $con )
 }
 function countquery( $con )
 {
-  $sql = "SELECT * from submail";
+  $sql = "SELECT * from c_query";
   $result = mysqli_query($con, $sql);
   $num = mysqli_num_rows($result);
   return $num;

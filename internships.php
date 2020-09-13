@@ -9,7 +9,12 @@ include('inputdata/appliedmail.php');
    $sql="";
    $arg="";
    $app="";
+   $intern_status = "";
+   $check_mail = "";
+   $check_csr = "";
    $temp ="0";
+   $resume ="";
+   $clg = "";
    $num = 0;
    $default_web = "#";
    $allapp                   =array();
@@ -35,6 +40,61 @@ include('inputdata/appliedmail.php');
    $stipend_method           =array();
    $perks                    =array();
 
+if(isset($_GET['query']) && !empty($_GET['query']) ){
+
+    $arg = mysqli_real_escape_string($con,$_GET["query"]);
+
+    switch ($_GET['filter']) {
+      case "Position":
+          $sql = "SELECT * FROM active_internship WHERE internship_pos LIKE '%$arg%'";
+          break;
+        case "City":
+          $sql = "SELECT * FROM active_internship WHERE internship_city LIKE '%$arg%'";
+          break;
+      case "State":
+          $sql = "SELECT * FROM active_internship WHERE state LIKE '%$arg%'";
+          break;
+      case "Company Name":
+          $sql = "SELECT * FROM active_internship WHERE comp_name LIKE '%$arg%'";
+          break;
+      default:
+          $sql = "SELECT * FROM active_internship";
+    }
+
+    // $msg = $sql;
+    $result = mysqli_query($con, $sql);
+    if (mysqli_num_rows($result) > 0) {
+
+      while ($row = mysqli_fetch_assoc($result)){
+
+        $serial[$num]        = $row["SR"];
+           $post_time[$num]     = $row["internship_post_time"];
+           $fname[$num]         = $row["fname"];
+           $lname[$num]         = $row["lname"];
+           $email[$num]         = $row["email"];
+           $phone[$num]         = $row["phn"];
+           $comp_name[$num]     = $row["comp_name"];
+           $about_comp[$num]    = $row["comp_about"];
+           $comp_web[$num]      = $row["comp_web"];
+           $i_pos1[$num]         = $row["internship_pos"];
+           $i_details[$num]     = $row["internship_detail"];
+           $city[$num]          = $row["internship_city"];
+           $state[$num]          = $row["state"];
+           $total_opening[$num] = $row["total_opening"];
+           $start_date[$num]    = $row["internship_start_date"];
+           $i_duration[$num]   = $row["duration_no"];
+           $i_duration_type[$num] = $row["duration_type"];
+           $i_description[$num] = $row["about_internship"];
+           $stipend_amt[$num]   = $row["stipend_amount"];
+           $stipend_method[$num] = $row["stipend_method"];
+           $perks[$num]         = $row["perks"];
+           $num = $num + 1;
+
+      }
+    }
+  }
+
+else{
      $sql = "SELECT SR, internship_post_time, fname, lname, email, phn, comp_name, comp_about, comp_web, internship_pos, internship_detail, internship_city, state, total_opening, internship_start_date, duration_no, duration_type, about_internship, stipend_amount, stipend_method, perks FROM active_internship";
      $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
@@ -66,28 +126,49 @@ include('inputdata/appliedmail.php');
      }
 
 
+}
 
-$sql2 = "SELECT applied FROM logindetails WHERE mail='$login_session'";
-$result = $con->query($sql2);
 
-if ($result->num_rows > 0)
-{
-    while($row = $result->fetch_assoc())
-    {
-        $app = $row["applied"];
-        $allapp = explode(";", $app);
+
+
+
+
+?>
+
+
+
+
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+        $('#myModal').modal({
+    backdrop: 'static',
+    keyboard: false
+})
+	});
+</script>
+<style>
+    .bs-example{
+    	margin: 15px;
     }
-}
-else
-{
-    echo "0 results";
-}
+</style>
+</head>
+<body>
 
+</body>
+</html>
 
-
-
-   $con->close();
- ?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -117,55 +198,55 @@ else
     <link rel="stylesheet" href="css/style.css">
 
       <style>
-.dropbtn {
-  background-color: #6c63ff;
-  color: white;
-  padding: 10px;
-  font-size: 14px;
-  border: none;
-}
+        .dropbtn {
+          background-color: #6c63ff;
+          color: white;
+          padding: 10px;
+          font-size: 14px;
+          border: none;
+        }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
 
-.dropdown-content a:hover {background-color: #ddd;}
+        .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-.job-post-item .one-forth {width: 222px;}
-.i_head{color: #17a2b8;}
-.i_data{color: black;}
-.disable-links { pointer-events: none;}
-#namelink
-{
-  color: black;
-}
-@media(max-width: 500px)
-{
-    #namelink{
-      color:white;
-    }
-}
-</style>
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        .job-post-item .one-forth {width: 222px;}
+        .i_head{color: #17a2b8;}
+        .i_data{color: black;}
+        .disable-links { pointer-events: none;}
+        #namelink
+        {
+          color: black;
+        }
+        @media(max-width: 500px)
+        {
+            #namelink{
+              color:white;
+            }
+        }
+      </style>
 
 
   </head>
@@ -174,15 +255,15 @@ else
 
      <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5ea28b3e69e9320caac6d3c2/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5ea28b3e69e9320caac6d3c2/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
 </script>
 <!--End of Tawk.to Script-->
   <body>
@@ -216,9 +297,30 @@ s0.parentNode.insertBefore(s1,s0);
           <div class="col-lg-12 pr-lg-5">
             <div class="row justify-content-center pb-3">
               <div class="col-md-12 heading-section ftco-animate">
-                <center><h2 class="mb-4">Internships to Opportunities</h2></center>
+                <center><h2 class="mb-4">Opportunities</h2></center>
               </div>
             </div>
+
+        <form class="pt-3 pb-2 mb-3" method="get">
+          <div class="form-row">
+            <div class="form-group col-md-9">
+              <input value="<?php echo($arg);?>" name="query" type="text" class="form-control" id="inputAddress"
+                placeholder="Search Internships" >
+            </div>
+            <div class="form-group col-md-2">
+              <select name="filter" id="inputState" class="form-control">
+                <option>Position</option>
+                <option>City</option>
+                <option>State</option>
+                <option>Company Name</option>
+
+              </select>
+            </div>
+            <div class="form-group col-md-1">
+              <button type="submit" class="btn btn-primary btn-lg py-2">Search</button>
+            </div>
+          </div>
+        </form>
             <div class="row">
               <?php
 
@@ -231,8 +333,61 @@ s0.parentNode.insertBefore(s1,s0);
                         <h2 class="mr-3 text-black"><a href="#">'.$i_pos1[$x].'</a></h2>
                         <div class="badge-wrap">
                          <span class="bg-primary text-white badge py-2 px-3">'.$i_details[$x].'</span>
-                        </div>
-                      </div>
+                        </div>');
+                        $sql3= "SELECT status,internmail,csr from applied where csr = '$serial[$x]' AND internmail = '$login_session'";
+                        $result = $con->query($sql3);
+                        if ($result->num_rows > 0)
+                        {
+                          while($row = $result->fetch_assoc())
+                          {
+                              $intern_status = $row['status'];
+                              $check_mail = $row['internmail'];
+                              $check_csr = $row['csr'];
+                          }
+                        }
+                        if($login_session == $check_mail AND $check_csr == $serial[$x])
+                        {
+                          if($intern_status == "shortlisted")
+                          {
+                            echo('
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class=" badge-wrap">
+                                 <span class="bg-info text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                </div>
+                              ');
+                          }
+                        else if($intern_status == "selected")
+                          {
+                            echo('
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class=" badge-wrap">
+                                 <span class="bg-success text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                </div>
+                              ');
+                          }
+                          else if($intern_status == "rejected")
+                            {
+                              echo('
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  <div class=" badge-wrap">
+                                   <span class="bg-danger text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                  </div>
+                                ');
+                            }
+                          else
+                          {
+                            echo('
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class=" badge-wrap">
+                                 <span class="bg-warning text-white badge py-2 px-3"><b>Internship Status :</b> '.$intern_status.'</span>
+                                </div>
+                              ');
+                          }
+                        }
+                      else {
+
+                      }
+                  echo('    </div>
                       <div class="job-post-item-body d-block d-md-flex">
                         <div class="mr-3"><span class="icon-layers"></span> <a href="'.$comp_web[$x].'" target="_blank">'.$comp_name[$x].'</a></div>
                         <div class="mr-3"><span class="icon-my_location"></span> <span>'.$city[$x].', '.$state[$x].'</span></div>
@@ -245,7 +400,7 @@ s0.parentNode.insertBefore(s1,s0);
 
                     for ($y = 0; $y < sizeof($allapp); $y++) {
                      if($allapp[$y] == $serial[$x]){
-                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-success py-2" style="margin-right: 8px; color:white;">Applied</a>');
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn disable-links btn-success py-2" style="margin-right: 8px; color:white;">Scheduled</a>');
                          $temp="1";
                       break;
 
@@ -255,7 +410,7 @@ s0.parentNode.insertBefore(s1,s0);
                         }
                     }
                             if($temp == 0 || $temp == 2){
-                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; color:white;">Apply Job</a>');
+                            echo('<a href="appliedprocess.php?applied='.$serial[$x].'&login='.$login_session.'" class="btn btn-primary py-2" style="margin-right: 8px; margin-left: -35px; color:white;">Schedule Interview</a>');
                             }
 
 
@@ -327,13 +482,13 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
           </div>
           <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
+              <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2">Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+918078646927, +917972360161</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">support@internstorm.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -341,10 +496,10 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <br><br><br>
+            <p style="font-size:12px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved This template is made with by Colorlib | website is developed by Easy Resource
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>

@@ -1,10 +1,4 @@
 <?php
-/*
-$username="root"; //DB User Name
-$password=""; //DB User password
-$database="adhoc_management"; //Enter database name here
-$servername="localhost"; //Server address
-*/
 
 $username="root"; //DB User Name
 $password=""; //DB User password

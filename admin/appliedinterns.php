@@ -9,14 +9,39 @@ $error = "";
   $sr  =array();
   $intern_fname  =array();
   $intern_lname  =array();
-  $intern_email =array();
+  $intern_clg                        = "";
+  $intern_clg =array();
   $intern_phone =array();
   $internship_pos =array();
   $comp_name =array();
   $comp_open =array();
   $num = 0;
 
-    $sql = "SELECT sr, internfname, internlname, internphn, internmail, cpos, cname, copen FROM applied ORDER BY sr DESC";
+    if(isset($_GET['query']) && !empty($_GET['query']) ){
+
+    $arg = mysqli_real_escape_string($con,$_GET["query"]);
+
+    switch ($_GET['filter']) {
+      case "First Name":
+          $sql = "SELECT * FROM applied WHERE internfname LIKE '%$arg%'";
+          break;
+      case "Intern College":
+          $sql = "SELECT * FROM applied WHERE internclg LIKE '%$arg%'";
+          break;
+      case "Intern Phone":
+          $sql = "SELECT * FROM applied WHERE internphn LIKE '%$arg%'";
+          break;
+      case "InternShip Profile":
+          $sql = "SELECT * FROM applied WHERE cpos LIKE '%$arg%'";
+          break;
+      case "Company Name":
+          $sql = "SELECT * FROM applied WHERE cname LIKE '%$arg%'";
+          break;
+      default:
+          $sql = "SELECT * FROM applied";
+    }
+
+    // $msg = $sql;
     $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
 
@@ -25,7 +50,7 @@ $error = "";
         $sr[$num]     = $row["sr"];
         $intern_fname[$num] = $row["internfname"];
         $intern_lname[$num] = $row["internlname"];
-        $intern_email[$num] = $row["internmail"];
+        $intern_clg[$num] = $row["internclg"];
         $intern_phone[$num] = $row["internphn"];
         $internship_pos[$num] = $row["cpos"];
         $comp_name[$num] = $row["cname"];
@@ -34,6 +59,28 @@ $error = "";
 
       }
     }
+  }
+
+else{
+    $sql = "SELECT sr, internfname, internlname, internphn, internclg, cpos, cname, copen FROM applied ORDER BY sr DESC";
+    $result = mysqli_query($con, $sql);
+    if (mysqli_num_rows($result) > 0) {
+
+      while ($row = mysqli_fetch_assoc($result)){
+
+        $sr[$num]     = $row["sr"];
+        $intern_fname[$num] = $row["internfname"];
+        $intern_lname[$num] = $row["internlname"];
+        $intern_clg[$num] = $row["internclg"];
+        $intern_phone[$num] = $row["internphn"];
+        $internship_pos[$num] = $row["cpos"];
+        $comp_name[$num] = $row["cname"];
+        $comp_open[$num] = $row["copen"];
+        $num = $num + 1;
+
+      }
+    }
+}
   $con->close();
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -47,7 +94,7 @@ $error = "";
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="Mainpage.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="mainpage.php">Home</a></li>
               <li class="breadcrumb-item active">Interns/Students</li>
             </ol>
           </div>
@@ -57,6 +104,26 @@ $error = "";
 
     <!-- Main content -->
     <section class="content">
+        <form class="pt-3 pb-2 mb-3" method="get">
+          <div class="form-row">
+            <div class="form-group col-md-9">
+              <input value="<?php echo($arg);?>" name="query" type="text" class="form-control" id="inputAddress"
+                placeholder="Search Internships" >
+            </div>
+            <div class="form-group col-md-2">
+              <select name="filter" id="inputState" class="form-control">
+                <option>First Name</option>
+                <option>Intern College</option>
+                <option>Intern Phone</option>
+                <option>InternShip Profile</option>
+                <option>Company Name</option>
+              </select>
+            </div>
+            <div class="form-group col-md-1">
+              <button type="submit" class="btn btn-primary btn-lg py-2">Search</button>
+            </div>
+          </div>
+        </form>
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -68,9 +135,9 @@ $error = "";
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Sr</th>
+                  <th>SR</th>
                   <th>Intern Name</th>
-                  <th>Intern Email</th>
+                  <th>Intern Institute</th>
                   <th>Intern Phone</th>
                   <th>Internship Profile</th>
                   <th>Company Name</th>
@@ -87,7 +154,7 @@ $error = "";
                   <tr>
                     <td>'.$sr[$x].'</td>
                     <td>'.$intern_fname[$x].' '.$intern_lname[$x].'</td>
-                    <td>'.$intern_email[$x].'</td>
+                    <td>'.$intern_clg[$x].'</td>
                     <td>'.$intern_phone[$x].'</td>
                     <td>'.$internship_pos[$x].'</td>
                     <td>'.$comp_name[$x].'</td>

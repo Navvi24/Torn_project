@@ -5,6 +5,7 @@ $lname    = "";
 $mailerr  ="";
 $phn      = "";
 $email    = "";
+$refer   = "";
 $password = "";
 $files = "";
 $tmp_name = "";
@@ -25,8 +26,12 @@ if(!empty($_POST['signup']))
       //  echo $lname;
     $phn = mysqli_real_escape_string($con, $_POST['phn']);
        // echo $phn;
+    $refer = mysqli_real_escape_string($con, $_POST['refer']);
+          // echo $referralcode;
     $email = mysqli_real_escape_string($con, $_POST['email']);
        // echo $email;
+    $clg =  mysqli_real_escape_string($con, $_POST['college']);
+      //echo $clg;
     $password = mysqli_real_escape_string($con, $_POST['password']);
        // echo $password;
     $pass_retype = mysqli_real_escape_string($con, $_POST['pass_retype']);
@@ -38,14 +43,15 @@ if(!empty($_POST['signup']))
     //print_r($ext);
     if (in_array($ext, array("pdf", "docx", "doc")))
     {
-     $filename = rand().'.'.$ext;
+     $filename = rand().'_'.$email.'.'.$ext;
      move_uploaded_file($tmp_name, "../resume_files/$filename");
-     $sql="INSERT INTO logindetails (fname, lname, phn,  mail, password,resume_url)
-            VALUES('$fname','$lname','$phn','$email','$password','$filename')";
+     $sql="INSERT INTO logindetails (fname, lname, phn,  college, mail, password,resume_url)
+            VALUES('$fname','$lname','$phn','$clg','$email','$password','$filename')";
 
         if (!mysqli_query($con,$sql)) {
           $error = "Error: ".mysqli_error($con);
-          header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
+       //   echo "$error";
+      header("Location: ../login.php?ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po=10100");
             }else{
                 $msg = "signup successfully";
                 $description = "";
@@ -54,8 +60,8 @@ if(!empty($_POST['signup']))
     }
     else if($filename == "")
     {
-      $sql="INSERT INTO logindetails (fname, lname, phn,  mail, password,resume_url)
-             VALUES('$fname','$lname','$phn','$email','$password','$filename')";
+      $sql="INSERT INTO logindetails (refer, fname, lname, phn,  mail, college, password, resume_url)
+             VALUES('$refer','$fname','$lname','$phn','$email','$clg','$password','$filename')";
 
          if (!mysqli_query($con,$sql)) {
            $error = "Error: ".mysqli_error($con);

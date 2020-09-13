@@ -6,7 +6,7 @@ if($_GET['kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ'] == 10100)
 {
 ?>
 <div class="alert alert-danger" role="alert">
-    <?php echo "Invalid Email and Password"; ?>
+    <?php echo "Invalid Email ID or Password"; ?>
 </div>
 <?php
 }

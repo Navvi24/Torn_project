@@ -7,7 +7,7 @@ $error = "";
   $msg = "";
   $sql="";
   $arg="";
-
+$id = "";
   $sr                       =array();
   $post_time                =array();
   $comp_name                =array();
@@ -41,6 +41,18 @@ $error = "";
       }
     }
   $con->close();
+  if(isset($_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po']))
+  {
+   $id = $_GET['ghEd8YGAEGWiaDMAMjOHeLfwSsoQypnvn5voowo7Po'];
+   if($id == 1010)
+   {
+     $msg = "Internship updated sucessfully.";
+   }
+   else
+   {
+       $err = "Internship cannot updated sucessfully.";
+   }
+  }
 ?>
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -53,7 +65,7 @@ $error = "";
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="Mainpage.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="mainpage.php">Home</a></li>
               <li class="breadcrumb-item active">Posted Internships</li>
             </ol>
           </div>
@@ -66,6 +78,15 @@ $error = "";
       <div class="row">
         <div class="col-12">
           <div class="card">
+                <?php if ($id == 1010) {?>
+              <div class="alert alert-success" role="alert">
+                <?php echo "Internship sucessfully updated."; ?>
+              </div>
+            <?php } else if($id == 10100){?>
+              <div class="alert alert-danger" role="alert">
+                <?php echo "Internship cannot updated"; ?>
+              </div>
+            <?php } else{}?>
             <?php
               if(isset($_GET['kLCT2Pln5zXEO4leV2QnwcANywVInFPFWMfH3ohT2CQ']))
               {
@@ -117,9 +138,12 @@ $error = "";
                     <td>'.$start_date[$x].'</td>
                     <td>'.$stipend_amt[$x].'</td>
                     <td>'.$perks[$x].'</td>
-                    <td>
-                    <a href="viewintern.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a>
-                  <center><a href="deleteposted.php?id='.$sr[$x].'" class="btn btn-danger" style="margin-top:20px;"><i class="fas fa-trash"></i></a></center>
+                     <td>
+                    <a href="viewintern.php?id='.$sr[$x].'" class="btn btn-primary btn-xs">View More</a><br>
+                    <div class="row"  style="margin-top:20px; width:100px;padding:5px;">
+                    <a href="deleteposted.php?id='.$sr[$x].'" class="btn btn-danger" style="margin-right:5px;"><i class="fas fa-trash"></i></a>
+                    <a href="edit_posted.php?serial='.$sr[$x].'" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                    </div>
                     </td>
 
                   </tr>

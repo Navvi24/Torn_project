@@ -69,7 +69,7 @@
           <img src="images/Logo.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo($_SESSION['login_user']); ?></a>
+          <a href="resetpass.php" class="d-block"><?php echo($_SESSION['login_user']); ?></a>
         </div>
       </div>
 
@@ -125,7 +125,7 @@
             <a href="appliedinterns.php" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
-                Interns/Students (END)
+                Interns/Students (Applied)
               </p>
             </a>
           </li>
@@ -153,7 +153,14 @@
               </p>
             </a>
           </li>
-
+          <li class="nav-item">
+            <a href="details_comp.php" class="nav-link">
+              <i class="nav-icon far fa-building"></i>
+              <p>
+                Company Details
+              </p>
+            </a>
+          </li>
              <li class="nav-item">
             <a href="chatting.php" class="nav-link">
               <i class="nav-icon far fa-address-book"></i>
